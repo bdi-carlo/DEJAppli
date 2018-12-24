@@ -1,0 +1,1640 @@
+﻿1003	14,0	cyclisme	cyclisme, en montagne, en montée, effort vigoureux
+			
+1004	16,0	cyclisme	cyclisme, en montagne, en compétition, en course
+			
+1008	8,5	cyclisme	cyclisme, BMX
+			
+1009	8,5	cyclisme	cyclisme, en montagne, général
+			
+1010	4,0	cyclisme	cyclisme, <16 km/h, loisirs, pour aller au travail ou pour le plaisir (code Taylor 115)
+			
+1011	6,8	cyclisme	cyclisme, pour aller/revenir du travail, à son rythme
+			
+1013	5,8	cyclisme	cyclisme, sur terre ou route de campagne, rythme modéré
+			
+1015	7,5	cyclisme	cyclisme, général
+			
+1018	3,5	cyclisme	cyclisme, loisir, 9 km/h
+			
+1019	5,8	cyclisme	cyclisme, loisir, 15 km/h
+			
+1020	6,8	cyclisme	cyclisme, 16-19,2 km/h, loisirs, rythme lent, effort léger
+			
+1030	8,0	cyclisme	cyclisme, 19,3-22,4 km/h, loisirs, effort modéré
+			
+1040	10,0	cyclisme	cyclisme, 22,5-25,6 km/h, course ou loisirs, rythme rapide, effort vigoureux
+			
+1050	12,0	cyclisme	cyclisme, 25,7-30,6 km/h, course/sans aspiration ou > 30,6 km/h avec aspiration, rythme très rapide, course générale
+			
+1060	15,8	cyclisme	cyclisme, > 32 km/h, course, sans aspiration
+			
+1065	8,5	cyclisme	cyclisme, 19,3 km/h, assis, mains sur les cocottes de frein ou en bas du guidon, 80 tr/min
+			
+1066	9,0	cyclisme	cyclisme, 19,3 km/h, en danseuse, mains sur les cocottes de frein, 60 tr/min
+			
+1070	5,0	cyclisme	monocyclisme
+			
+2001	2,3	exercice physique	jeu vidéo réclamant une activité (par ex. Wii Fit), effort léger (par ex. position d’équilibre, yoga)
+			
+2003	3,8	exercice physique	jeu vidéo réclamant une activité (par ex. Wii Fit), effort modéré (par ex. aérobic, résistance)
+			
+2005	7,2	exercice physique	jeu vidéo/d’arcade réclamant une activité (par ex. Exergaming, Dance Dance Revolution), effort vigoureux
+			
+2008	5,0	exercice physique	parcours d’obstacle de type militaire, programme de formation de camp d’entraînement
+			
+2010	7,0	exercice physique	cyclisme, vélo d'appartement, général
+			
+2011	3,5	exercice physique	cyclisme, vélo d'appartement, 30-50 watts, effort très léger à léger
+			
+2012	6,8	exercice physique	cyclisme, vélo d'appartement, 90-100 watts, effort modéré à vigoureux
+			
+2013	8,8	exercice physique	cyclisme, vélo d'appartement, 101-160 watts, effort vigoureux
+			
+2014	11,0	exercice physique	cyclisme, vélo d'appartement, 161-200 watts, effort vigoureux
+			
+2015	14,0	exercice physique	cyclisme, vélo d'appartement, 201-270 watts, effort très vigoureux
+			
+2017	4,8	exercice physique	cyclisme, vélo d'appartement, 51-89 watts, effort léger à modéré
+			
+2019	8,5	exercice physique	cyclisme, vélo d’appartement, cardiovélo
+			
+2020	8,0	exercice physique	gymnastique suédoise (par ex. pompes, abdominaux, tractions, sauts en écart), effort vigoureux
+			
+2022	3,8	exercice physique	gymnastique suédoise (par ex. pompes, redressements assis, fentes), effort modéré
+			
+2024	2,8	exercice physique	gymnastique suédoise (par ex. redressements assis, abdominaux), effort léger
+			
+2030	3,5	exercice physique	gymnastique suédoise, effort léger à modéré, général (par ex. exercices pour le dos), monter et descendre les escaliers (code Taylor 150)
+			
+2035	4,3	exercice physique	entraînement en circuit, effort modéré
+
+2040	8,0	exercice physique	entraînement en circuit, avec des haltères, comprenant des mouvements d'aérobic avec un temps de repos minimal, général, effort vigoureux
+			
+2045	3,5	exercice physique	exercices CurvesTM chez les femmes
+
+2048	5,0	exercice physique	machine elliptique, effort modéré
+			
+2050	6,0	exercice physique	entraînement en résistance (haltérophilie, poids libre, nautilus ou universel), force athlétique ou body-building, effort vigoureux (code Taylor 210)
+			
+2052	5,0	exercice physique	entraînement en résistance (à une masse), squats, effort lent ou explosif
+			
+2054	3,5	exercice physique	entraînement en résistance (à une masse), exercices multiples, 8-15 répétitions à des résistances variées
+			
+2060	5,5	exercice physique	exercice de club de remise en forme, général (code Taylor 160)
+			
+2061	5,0	exercice physique	exercice de club de remise en forme, général, gym/musculation en une même séance
+			
+2062	7,8	exercice physique	exercice de club de remise en forme, cours de conditionnement
+			
+2064	3,8	exercice physique	exercice à la maison, général
+			
+2065	9,0	exercice physique	tapis de course, général
+			
+2068	12,3	exercice physique	corde à sauter, général
+			
+2070	6,0	exercice physique	rame, rameur d'appartement, général, effort vigoureux
+			
+2071	4,8	exercice physique	rame, rameur d’appartement, général, effort modéré
+			
+2072	7,0	exercice physique	rame, rameur d’appartement, 100 watts, effort modéré
+			
+2073	8,5	exercice physique	rame, rameur d'appartement, 150 watts, effort vigoureux
+			
+2074	12,0	exercice physique	rame, rameur d'appartement, 200 watts, effort très vigoureux
+			
+2080	6,8	exercice physique	machine d'entraînement au ski, général
+			
+2085	11,0	exercice physique	tapis pour glissements latéraux, général
+			
+2090	6,0	exercice physique	slimnastics, jazzercise
+			
+2101	2,3	exercice physique	stretching doux
+			
+2105	3,0	exercice physique	Pilates, général
+			
+2110	6,8	exercice physique	cours d’exercices (par ex. aérobic, aquagym)
+			
+2112	2,8	exercice physique	ballon d’exercice thérapeutique, exercice au Fitball
+			
+2115	2,8	exercice physique	exercices du haut du corps, ergomètre à bras
+			
+2117	4,3	exercice physique	exercices du haut du corps, vélo d’appartement – Airdyne (bras uniquement) 40 tr/min, effort modéré
+			
+2120	5,3	exercice physique	aérobic aquatique, gymnastique suédoise aquatique, exercices dans l’eau
+			
+2135	1,3	exercice physique	bain à remous, position assise
+			
+2140	2,3	exercice physique	exercices de gymnastique en vidéo, programmes TV de remise en forme (par ex. yoga, stretching), effort léger
+			
+2143	4,0	exercice physique	exercices de gymnastique en vidéo, programmes TV de remise en forme (par ex. entraînement cardio-pulmonaire), effort modéré
+			
+2146	6,0	exercice physique	exercices de gymnastique en vidéo, programmes TV de remise en forme (par ex. entraînement cardio-pulmonaire), effort vigoureux
+			
+2150	2,5	exercice physique	yoga, Hatha
+			
+2160	4,0	exercice physique	yoga, Power
+			
+2170	2,0	exercice physique	yoga, Nadisodhana
+			
+2180	3,3	exercice physique	yoga, Surya Namaskar
+			
+2200	5,3	exercice physique	activités physiques néozélandaises (par ex. Haka Powhiri, Moteatea, Waita Tira, Whakawatea, etc.), général, effort modéré
+			
+2205	6,8	exercice physique	activités physiques néozélandaises (par ex. Haka, Taiahab), général, effort vigoureux
+			
+3010	5,0	danse	ballet, moderne ou jazz, général, répétition ou cours
+			
+3012	6,8	danse	ballet, moderne ou jazz, représentation, effort vigoureux
+			
+3014	4,8	danse	claquettes
+			
+3015	7,3	danse	aérobic, général
+			
+3016	7,5	danse	aérobic, step, avec un step de 15-20 cm
+			
+3017	9,5	danse	aérobic, step, avec un step de 25-30 cm
+			
+3018	5,5	danse	aérobic, step, avec un step de 10 cm
+			
+3019	8,5	danse	cours de step sur banc, général
+			
+3020	5,0	danse	aérobic, faible impact
+			
+3021	7,3	danse	aérobic, fort impact
+			
+3022	10,0	danse	aérobic danse avec des lests de 4,5-7 kg
+			
+3025	4,5	danse	danse ethnique ou culturelle (par ex. grecque, moyen-orientale, hula, salsa, merengue, bamba y plena, flamenco, danse du ventre et swing)
+			
+3030	5,5	danse	danse de salon, rapide (code Taylor 125)
+			
+3031	7,8	danse	danse générale (par ex. disco, folk, gigue irlandaise à claquettes, danse de groupe, polka, contra, country)
+			
+3038	11,3	danse	danse de salon, en compétition, général
+			
+3040	3,0	danse	danse de salon, lente (par ex. valse, fox-trot, slow, samba, tango, danse du XIXème siècle, mambo, cha-cha)
+3050	5,5	danse	danse à clochettes Anishinaabe
+			
+3060	3,5	danse	danse caribéenne (Abakua, Beguine, Bellair, Bongo, Brukin's, quadrille caribéen, Dinki Mini, Gere, Gumbay, Ibo, Jonkonnu, Kumina, Oreisha,Jambu)
+			
+4001	3,5	pêche et chasse	pêche, général
+			
+4005	4,5	pêche et chasse	pêche, pêche au crabe
+			
+4007	4,0	pêche et chasse	pêche, capture du poisson à la main
+			
+4010	4,3	pêche et chasse	activités liées à la pêche, recherche de vers, avec une pelle
+			
+4020	4,0	pêche et chasse	pêcher depuis la rive et marcher
+			
+4030	2,0	pêche et chasse	pêcher depuis un bateau ou canoë, position assise
+			
+4040	3,5	pêche et chasse	pêche depuis la rive, position debout (code Taylor 660)
+			
+4050	6,0	pêche et chasse	pêcher dans le courant, avec des cuissardes (code Taylor 670)
+			
+4060	2,0	pêche et chasse	pêche, glace, position assise
+			
+4061	1,8	pêche et chasse	pêcher, à la turlutte ou à la ligne, en position debout, général
+			
+4062	3,5	pêche et chasse	pêcher, épuisette, placer le filet et récupérer le poisson, général
+			
+4063	3,8	pêche et chasse	pêcher, filet fixe, poser le filet et récupérer le poisson, général
+			
+4064	3,0	pêche et chasse	pêcher, moulinet, placer le filet et récupérer le poisson, général
+			
+4065	2,3	pêche et chasse	pêcher au harpon, debout
+			
+4070	2,5	pêche et chasse	chasse, arc et flèches ou arbalète
+			
+4080	6,0	pêche et chasse	chasse, cerf, élan, gros gibier (code Taylor 170)
+			
+4081	11,3	pêche et chasse	chasse au gros gibier, en traînant la carcasse
+			
+4083	4,0	pêche et chasse	chasse aux gros animaux marins
+			
+4085	2,5	pêche et chasse	chasse au gros gibier, depuis une cache, peu de marche
+			
+4086	2,0	pêche et chasse	chasse au gros gibier à partir d'une voiture, un avion ou un bateau
+			
+4090	2,5	pêche et chasse	chasse, canard, échassier
+			
+4095	3,0	pêche et chasse	chasse, roussette, écureuil
+			
+4100	5,0	pêche et chasse	chasse, général
+			
+4110	6,0	pêche et chasse	chasse, faisans ou tétras (code Taylor 680)
+			
+4115	3,3	pêche et chasse	chasse, oiseaux
+			
+4120	5,0	pêche et chasse	chasse, lapin, écureuil, tétra des prairies, raton laveur, petit gibier (code Taylor 690)
+			
+4123	3,3	pêche et chasse	chasse, cochons sauvages
+			
+4124	2,0	pêche et chasse	piégeage, général
+			
+4125	9,5	pêche et chasse	chasse, randonnée avec équipement de chasse
+			
+4130	2,5	pêche et chasse	tir au pistolet ou ball-trap, position debout
+			
+4140	2,3	pêche et chasse	exercices de tir, position couchée
+			
+4145	2,5	pêche et chasse	exercices de tir, agenouillé ou en position debout
+			
+5010	3,3	activités domestiques	nettoyage, balayer la moquette ou les sols, général
+			
+5011	2,3	activités domestiques	nettoyage, balayer, lentement, effort léger
+			
+5012	3,8	activités domestiques	nettoyage, balayer, lentement, effort modéré
+			
+5020	3,5	activités domestiques	nettoyage, important ou majeur (par ex. nettoyage de la voiture, des fenêtres, du garage), effort modéré
+			
+5021	3,5	activités domestiques	nettoyage, lavage, debout, effort modéré
+			
+5022	3,2	activités domestiques	nettoyage des fenêtres, lavage des fenêtres, général
+			
+5023	2,5	activités domestiques	lavage, debout, effort léger
+			
+5024	4,5	activités domestiques	cirage des sols, debout, marche lente, avec une cireuse électrique
+			
+5025	2,8	activités domestiques	multiples tâches ménagères en même temps, effort léger
+			
+5026	3,5	activités domestiques	multiples tâches ménagères en même temps, effort modéré
+			
+5027	4,3	activités domestiques	multiples tâches ménagères en même temps, effort vigoureux
+			
+5030	3,3	activités domestiques	nettoyage, maison ou cabane, général, effort modéré
+			
+5032	2,3	activités domestiques	époussetage ou cirage des meubles, général
+			
+5035	3,3	activités domestiques	activités de cuisine, en général (par ex. cuisiner, laver la vaisselle, nettoyer), effort modéré
+			
+5040	2,5	activités domestiques	nettoyage, général (ranger, changer les draps, sortir les poubelles), effort léger
+			
+5041	1,8	activités domestiques	faire la vaisselle, debout ou en général (non classé en composants debout/marche)
+			
+5042	2,5	activités domestiques	faire la vaisselle, débarrasser les plats de la table, marcher, effort léger
+			
+5043	3,3	activités domestiques	passer l'aspirateur, général, effort modéré
+			
+5044	3,0	activités domestiques	dépecer des animaux, petits
+			
+5045	6,0	activités domestiques	dépecer des animaux, grands, effort vigoureux
+			
+5046	2,3	activités domestiques	découper et fumer du poisson, sécher du poisson ou de la viande
+			
+5048	4,0	activités domestiques	tanner des peaux, général
+			
+5049	3,5	activités domestiques	cuisiner ou préparer des repas, effort modéré
+			
+5050	2,0	activités domestiques	cuisiner ou préparer des repas – position debout ou assise ou en général (non classé en composants debout/marche), appareils manuels, effort léger
+			
+5051	2,5	activités domestiques	servir les aliments, mettre la table, impliquant de marcher ou de se tenir debout
+			
+5052	2,5	activités domestiques	cuisiner ou préparer des repas, marcher
+			
+5053	2,5	activités domestiques	nourrir des animaux domestiques
+			
+5055	2,5	activités domestiques	ranger des provisions (par ex. porter des provisions, faire des courses sans chariot), porter des paquets
+			
+5056	7,5	activités domestiques	porter des provisions en montant des escaliers
+			
+5057	3,0	activités domestiques	cuisiner du pain indien dans un four d'extérieur
+			
+5060	2,3	activités domestiques	faire des courses alimentaires avec ou sans chariot, debout ou en marchant
+			
+5065	2,3	activités domestiques	faire des courses non-alimentaires avec ou sans chariot, debout ou en marchant
+			
+5070	1,8	activités domestiques	repasser
+			
+5080	1,3	activités domestiques	tricoter, coudre, effort léger, emballer des cadeaux, en position assise
+			
+5082	2,8	activités domestiques	coudre à la machine
+			
+5090	2,0	activités domestiques	faire la lessive, plier ou étendre des vêtements, mettre des vêtements au lave-linge ou au sèche-linge, faire une valise, laver des vêtements à la main, impliquant d'être debout, effort léger
+			
+5092	4,0	activités domestiques	faire la lessive, pendre du linge, laver des vêtements à la main, effort modéré
+			
+5095	2,3	activités domestiques	faire la lessive, ranger des vêtements, rassembler des vêtements pour les ranger, ranger du linge propre, impliquant de marcher
+			
+5100	3,3	activités domestiques	faire le lit, changer les draps
+			
+5110	5,0	activités domestiques	récolter et fabriquer du sirop d'érable (porter des seaux, du bois)
+			
+5120	5,8	activités domestiques	déplacer des meubles, des objets, porter des cartons
+			
+5121	5,0	activités domestiques	déplacer, soulever des charges légères
+			
+5125	4,8	activités domestiques	ranger une pièce
+			
+5130	3,5	activités domestiques	nettoyer à la brosse des sols, à genoux, nettoyer à la brosse une salle de bain, une baignoire, effort modéré
+			
+5131	2,0	activités domestiques	nettoyer à la brosse des sols, à genoux, nettoyer à la brosse une salle de bain, une baignoire, effort léger
+			
+5132	6,5	activités domestiques	nettoyer à la brosse des sols, à genoux, nettoyer à la brosse une salle de bain, une baignoire, effort vigoureux
+			
+5140	4,0	activités domestiques	balayer le garage, le trottoir ou l'extérieur de la maison
+			
+5146	3,5	activités domestiques	être debout, emballer/déballer des cartons, soulever occasionnellement des objets légers, charger ou décharger des articles dans la voiture, effort modéré
+			
+5147	3,0	activités domestiques	impliquant de marcher, ranger des objets, effort modéré
+			
+5148	2,5	activités domestiques	arroser les plantes
+			
+5149	2,5	activités domestiques	faire un feu
+			
+5150	9,0	activités domestiques	porter des objets dans des escaliers, porter des cartons ou des meubles
+			
+5160	2,0	activités domestiques	être debout, tâches à effort léger (faire le plein d'essence, changer une ampoule, etc.)
+			
+5165	3,5	activités domestiques	marcher, tâches à effort modéré, hors nettoyage (se préparer à sortir, fermer/verrouiller les portes, fermer les fenêtres, etc.)
+			
+5170	2,2	activités domestiques	être assis, jouer avec un/des enfant(s), effort léger, périodes actives uniquement
+			
+5171	2,8	activités domestiques	être debout, jouer avec un/des enfant(s), effort léger, périodes actives uniquement
+			
+5175	3,5	activités domestiques	marcher/courir, jouer avec un/des enfant(s), effort modéré, périodes actives uniquement
+			
+5180	5,8	activités domestiques	marcher/courir, jouer avec un/des enfant(s), effort vigoureux, périodes actives uniquement
+			
+5181	3,0	activités domestiques	marcher et porter un petit enfant de 7 kg ou plus
+			
+5182	2,3	activités domestiques	marcher et porter un petit enfant de moins de 7 kg
+			
+5183	2,0	activités domestiques	être debout, porter un enfant
+			
+5184	2,5	activités domestiques	s’occuper d’enfants, nourrisson, général
+			
+5185	2,0	activités domestiques	s’occuper d’enfants, assis/à genoux (par ex. habiller, baigner, préparer, nourrir, soulever occasionnellement l'enfant) effort léger, général
+			
+5186	3,0	activités domestiques	s’occuper d’enfants, debout (par ex. habiller, baigner, préparer, nourrir, soulever occasionnellement l'enfant) effort modéré
+			
+5188	1,5	activités domestiques	être allongé avec un bébé
+			
+5189	2,0	activités domestiques	allaiter, assise ou allongée
+			
+5190	2,5	activités domestiques	être assis, jouer avec des animaux, effort léger, périodes actives uniquement
+			
+5191	2,8	activités domestiques	être debout, jouer avec des animaux, effort léger, périodes actives uniquement
+			
+5192	3,0	activités domestiques	marcher/courir, jouer avec des animaux, général, effort léger, périodes actives uniquement
+			
+5193	4,0	activités domestiques	marcher/courir, jouer avec des animaux, effort modéré, périodes actives uniquement
+			
+5194	5,0	activités domestiques	marcher/courir, jouer avec des animaux, effort vigoureux, périodes actives uniquement
+			
+5195	3,5	activités domestiques	être debout, baigner le chien
+			
+5197	2,3	activités domestiques	s’occuper des animaux, animaux domestiques, général
+			
+5200	4,0	activités domestiques	s'occuper de personnes âgées, d'adultes handicapés, baigner, habiller, coucher et lever, périodes actives uniquement
+			
+5205	2,3	activités domestiques	s'occuper de personnes âgées, d'adultes handicapés, nourrir, peigner, effort léger, périodes actives uniquement
+			
+6010	3,0	réparation domestique	réparation d'un avion
+			
+6020	4,0	réparation domestique	travailler sur la carrosserie d'une automobile
+			
+6030	3,3	réparation domestique	réparation automobile, effort léger ou modéré
+			
+6040	3,0	réparation domestique	menuiserie, général, atelier (code Taylor 620)
+			
+6050	6,0	réparation domestique	menuiserie, extérieur de la maison, installer des gouttières, construire une clôture (code Taylor 640)
+			
+6052	3,8	réparation domestique	menuiserie, extérieur de la maison, construire une clôture
+			
+6060	3,3	réparation domestique	menuiserie, finition ou restauration de meubles
+			
+6070	6,0	réparation domestique	menuiserie, scier du bois de feuillus
+			
+6072	4,0	réparation domestique	menuiserie, travaux de rénovation résidentielle, effort modéré
+			
+6074	2,3	réparation domestique	menuiserie, travaux de rénovation résidentielle, effort léger
+			
+6080	5,0	réparation domestique	calfeutrer, isoler une cabane en bois
+			
+6090	4,5	réparation domestique	calfeutrer, hors cabane
+			
+6100	5,0	réparation domestique	nettoyer les gouttières
+			
+6110	5,0	réparation domestique	creuser un garage
+			
+6120	5,0	réparation domestique	poser des doubles fenêtres
+			
+6122	5,0	réparation domestique	poser des plaques de plâtre à l’intérieur d’une maison
+			
+6124	3,0	réparation domestique	planter des clous
+			
+6126	2,5	réparation domestique	réparation domestique, général, effort léger
+			
+6127	4,5	réparation domestique	réparation domestique, général, effort modéré
+			
+6128	6,0	réparation domestique	réparation domestique, général, effort vigoureux
+			
+6130	4,5	réparation domestique	poser ou retirer de la moquette
+			
+6140	3,8	réparation domestique	poser du carrelage ou du linoléum, réparer des appareils
+			
+6144	3,0	réparation domestique	réparer des appareils
+			
+6150	5,0	réparation domestique	peindre, extérieur de la maison (code Taylor 650)
+			
+6160	3,3	réparation domestique	peindre, intérieur de la maison, papier peint, décapage de peinture
+			
+6165	4,5	réparation domestique	peindre, (code Taylor 630)
+			
+6167	3,0	réparation domestique	plomberie, général
+			
+6170	3,0	réparation domestique	poser et retirer une bâche – voilier
+			
+6180	6,0	réparation domestique	poser la toiture
+			
+6190	4,5	réparation domestique	poncer les sols avec une ponceuse
+			
+6200	4,5	réparation domestique	décaper et peindre un voilier ou un hors-bord
+			
+6205	2,0	réparation domestique	affûter des outils
+			
+6210	5,0	réparation domestique	étaler de la terre à l'aide d'une pelle
+			
+6220	4,5	réparation domestique	laver et cirer la coque d'un voilier ou un avion
+			
+6225	2,0	réparation domestique	laver et cirer une voiture
+			
+6230	4,5	réparation domestique	laver une clôture, peindre une clôture, effort modéré
+			
+6240	3,3	réparation domestique	câblage, dériver-connecter
+			
+7010	1,0	inactivité, repos/effort léger	être allongé en silence et regarder la télévision
+			
+7011	1,3	inactivité, repos/effort léger	être allongé en silence sans rien faire, être allongé dans un lit sans dormir, écouter de la musique (sans parler ni lire)
+			
+7020	1,3	inactivité, repos/effort léger	être assis en silence et regarder la télévision
+			
+7021	1,3	inactivité, repos/effort léger	être assis en silence, général
+			
+7022	1,5	inactivité, repos/effort léger	être assis en silence, s’agiter, général, agiter les mains
+			
+7023	1,8	inactivité, repos/effort léger	être assis, agiter les pieds
+			
+7024	1,3	inactivité, repos/effort léger	être assis, fumer
+			
+7025	1,5	inactivité, repos/effort léger	être assis, écouter de la musique (sans parler ni lire), regarder un film au cinéma
+			
+7026	1,3	inactivité, repos/effort léger	être assis à un bureau, la tête dans les mains
+			
+7030	1,0	inactivité, repos/effort léger	dormir
+			
+7040	1,3	inactivité, repos/effort léger	être debout en silence, être dans une file d'attente
+			
+7041	1,8	inactivité, repos/effort léger	être debout, s’agiter
+			
+7050	1,3	inactivité, repos/effort léger	être allongé, écrire
+			
+7060	1,3	inactivité, repos/effort léger	être allongé, parler ou parler au téléphone
+			
+7070	1,3	inactivité, repos/effort léger	être allongé, lire
+			
+7075	1,0	inactivité, repos/effort léger	méditer
+			
+8009	3,3	pelouse et jardin	porter, charger ou empiler du bois, charger/décharger ou transporter du bois de charpente, effort léger à modéré
+			
+8010	5,5	pelouse et jardin	porter, charger ou empiler du bois, charger/décharger ou transporter du bois de charpente
+			
+8019	4,5	pelouse et jardin	couper du bois, fendre des bûches, effort modéré
+			
+8020	6,3	pelouse et jardin	couper du bois, fendre des bûches, effort vigoureux
+			
+8025	3,5	pelouse et jardin	débroussailler, éclaircir un jardin, effort modéré
+			
+8030	6,3	pelouse et jardin	débroussailler, sous-bois ou terrain, porter des branches, tirer une brouette, effort vigoureux
+			
+8040	5,0	pelouse et jardin	creuser un bac à sable, pelleter du sable
+			
+8045	3,5	pelouse et jardin	creuser, bêcher, garnir le jardin, composter, effort léger à modéré
+			
+8050	5,0	pelouse et jardin	creuser, bêcher, garnir le jardin, composter (code Taylor 590)
+			
+8052	7,8	pelouse et jardin	creuser, bêcher, garnir le jardin, composter, effort vigoureux
+			
+8055	2,8	pelouse et jardin	conduire un tracteur
+			
+8057	8,3	pelouse et jardin	abattre des arbres de grande taille
+			
+8058	5,3	pelouse et jardin	abattre des arbres de taille moyenne à petite
+			
+8060	5,8	pelouse et jardin	jardiner avec des outils motorisés lourds, labourer un jardin, utiliser une tronçonneuse
+			
+8065	2,3	pelouse et jardin	jardiner, avec des conteneurs, personnes de plus de 60 ans
+			
+8070	4,0	pelouse et jardin	canaux d'irrigation, ouvrir et fermer des barrages
+			
+8080	6,3	pelouse et jardin	poser des pierres concassées
+			
+8090	5,0	pelouse et jardin	poser du gazon
+			
+8095	5,5	pelouse et jardin	tondre la pelouse, général
+			
+8100	2,5	pelouse et jardin	tondre la pelouse, conduire une tondeuse (code Taylor 550)
+			
+8110	6,0	pelouse et jardin	tondre la pelouse, marcher, tondeuse manuelle (code Taylor 570)
+			
+8120	5,0	pelouse et jardin	tondre la pelouse, marcher, tondeuse à moteur, effort modéré ou vigoureux
+			
+8125	4,5	pelouse et jardin	tondre la pelouse, tondeuse à moteur, effort léger ou modéré (code Taylor 590)
+			
+8130	2,5	pelouse et jardin	utiliser une souffleuse à neige, marcher
+			
+8135	2,0	pelouse et jardin	planter, rempoter, transplanter des germes ou plantes, effort léger
+			
+8140	4,3	pelouse et jardin	planter des germes, buissons, penché, effort modéré
+			
+8145	4,3	pelouse et jardin	planter des cultures ou jardiner, penché, effort modéré
+			
+8150	4,5	pelouse et jardin	planter des arbres
+			
+8160	3,8	pelouse et jardin	ratisser la pelouse ou des feuilles, effort modéré
+			
+8165	4,0	pelouse et jardin	ratisser la pelouse (code Taylor 600)
+			
+8170	4,0	pelouse et jardin	ratisser le toit avec un grattoir à neige
+			
+8180	3,0	pelouse et jardin	conduire une souffleuse à neige
+			
+8190	4,0	pelouse et jardin	mettre en sac de l'herbe, des feuilles
+			
+8192	5,5	pelouse et jardin	pelleter de la terre ou de la boue
+			
+8195	5,3	pelouse et jardin	pelleter de la neige, à la main, effort modéré
+			
+8200	6,0	pelouse et jardin	pelleter de la neige, à la main (code Taylor 610)
+			
+8202	7,5	pelouse et jardin	pelleter de la neige, à la main, effort vigoureux
+			
+8210	4,0	pelouse et jardin	tailler des arbustes ou des arbres, outil de coupe manuel
+			
+8215	3,5	pelouse et jardin	tailler des arbustes ou des arbres, outil de coupe à moteur, utilisation d'un souffleur de feuilles, d'une débroussailleuse, effort modéré
+			
+8220	3,0	pelouse et jardin	marcher, appliquer de l'engrais ou ensemencer une pelouse, distributeur roulant
+			
+8230	1,5	pelouse et jardin	arroser la pelouse ou le jardin, debout ou en marchant
+			
+8239	3,5	pelouse et jardin	désherber, cultiver le jardin, effort léger à modéré
+			
+8240	4,5	pelouse et jardin	désherber, cultiver le jardin (code Taylor 580)
+			
+8241	5,0	pelouse et jardin	désherber, cultiver le jardin, avec une houe, effort modéré à vigoureux
+			
+8245	3,8	pelouse et jardin	jardiner, général, effort modéré
+			
+8246	3,5	pelouse et jardin	cueillir des fruits sur les arbres, ramasser des fruits/légumes, effort modéré
+			
+8248	4,5	pelouse et jardin	cueillir des fruits, glaner des fruits, ramasser des fruits/légumes, monter une échelle pour cueillir des fruits, effort vigoureux
+			
+8250	3,3	pelouse et jardin	impliquant de marcher/d'être debout – récolter le jardin, effort léger, cueillir des fleurs ou ramasser des légumes
+			
+8251	3,0	pelouse et jardin	marcher, ranger des outils de jardinage
+			
+8255	5,5	pelouse et jardin	brouetter, pousser un chariot ou une brouette de jardinage
+			
+8260	3,0	pelouse et jardin	travaux de cour, général, effort léger
+			
+8261	4,0	pelouse et jardin	travaux de cour, général, effort modéré
+			
+8262	6,0	pelouse et jardin	travaux de cour, général, effort vigoureux
+			
+9000	1,5	divers	jouer à des jeux de société, en position assise
+			
+9005	2,5	divers	jouer au casino, debout
+			
+9010	1,5	divers	jouer aux cartes, en position assise
+			
+9013	1,5	divers	jouer aux échecs, en position assise
+			
+9015	1,5	divers	copier des documents, debout
+			
+9020	1,8	divers	dessiner, écrire, peindre, debout
+			
+9025	1,0	divers	rire, en position assise
+			
+9030	1,3	divers	être assis, lire un livre, un journal, etc.
+			
+9040	1,3	divers	être assis, écrire, faire du travail de bureau, taper sur un clavier
+			
+9045	1,0	divers	être assis, jouer à des jeux vidéo traditionnels, jeux d'ordinateur
+			
+9050	1,8	divers	être debout, parler en face à face, au téléphone, à l’ordinateur ou envoyer des messages textuels, effort léger
+			
+9055	1,5	divers	être assis, parler en face à face, au téléphone, à l’ordinateur ou envoyer des messages textuels, effort léger
+			
+9060	1,3	divers	être assis, étudier, général, y compris lire et/ou écrire, effort léger
+			
+9065	1,8	divers	être assis, en classe, général, y compris prendre des notes ou discuter en classe
+			
+9070	1,8	divers	être debout, lire
+			
+9071	2,5	divers	être debout, divers
+			
+9075	1,8	divers	être assis, arts et artisanat, sculpture sur bois, tissage, filage de la laine, effort léger
+			
+9080	3,0	divers	être assis, arts et artisanat, sculpture sur bois, tissage, filage de la laine, effort modéré
+			
+9085	2,5	divers	être debout, arts et artisanat, peinture sur sable, sculpture, tissage, effort léger
+			
+9090	3,3	divers	être debout, arts et artisanat, peinture sur sable, sculpture, tissage, effort modéré
+			
+9095	3,5	divers	être debout, arts et artisanat, peinture sur sable, sculpture, tissage, effort vigoureux
+			
+9100	1,8	divers	activités de repos/réunions de famille impliquant de s'asseoir, de se détendre, de parler et de manger
+			
+9101	3,0	divers	activités de repos/réunions de famille impliquant de jouer avec des enfants
+			
+9105	2,0	divers	tourisme/voyage/vacances impliquant de conduire un véhicule
+			
+9106	3,5	divers	tourisme/voyage/vacances impliquant de marcher
+			
+9110	2,5	divers	faire du camping impliquant d'être debout, de marcher, d'être assis, effort léger à modéré
+			
+9115	1,5	divers	être assis lors d'un événement sportif, spectateur
+			
+10010	1,8	jouer de la musique	accordéon, assis
+			
+10020	2,3	jouer de la musique	violoncelle, assis
+			
+10030	2,3	jouer de la musique	diriger un orchestre, debout
+			
+10035	2,5	jouer de la musique	contrebasse, debout
+			
+10040	3,8	jouer de la musique	batterie, assis
+			
+10045	3,0	jouer de la musique	percussions (par ex. bongo, conga, benbe), effort modéré, assis
+			
+10050	2,0	jouer de la musique	flûte, assis
+			
+10060	1,8	jouer de la musique	cor, debout
+			
+10070	2,3	jouer de la musique	piano, assis
+			
+10074	2,0	jouer de la musique	jouer d’un instrument de musique, général
+			
+10077	2,0	jouer de la musique	orgue, assis
+			
+10080	3,5	jouer de la musique	trombone, debout
+			
+10090	1,8	jouer de la musique	trompette, debout
+			
+10100	2,5	jouer de la musique	violon, assis
+			
+10110	1,8	jouer de la musique	instrument à bois, assis
+			
+10120	2,0	jouer de la musique	guitare, classique, folk, assis
+			
+10125	3,0	jouer de la musique	guitare, groupe de rock and roll, debout
+			
+10130	4,0	jouer de la musique	fanfare, majorette, marcher, rythme modéré, général
+			
+10131	5,5	jouer de la musique	fanfare, jouer d'un instrument, marcher, rythme soutenu, général
+			
+10135	3,5	jouer de la musique	fanfare, tambour-major, marcher
+			
+11003	2,3	profession	poste de travail actif, bureau sur tapis roulant, marcher
+			
+11006	3,0	profession	agent de bord d'avion
+			
+11010	4,0	profession	boulangerie, général, effort modéré
+			
+11015	2,0	profession	boulangerie, effort léger
+			
+11020	2,3	profession	reliure de livres
+			
+11030	6,0	profession	construction de routes, conduire des machines lourdes
+			
+11035	2,0	profession	construction de routes, gérer la circulation, debout
+			
+11038	2,5	profession	charpenterie, général, effort léger
+			
+11040	4,3	profession	charpenterie, général, effort modéré
+			
+11042	7,0	profession	charpenterie, général, effort lourd ou vigoureux
+			
+11050	8,0	profession	port de charges lourdes (par ex. briques, outils)
+			
+11060	8,0	profession	montée de charges modérées dans des escaliers, transport de cartons (11-22 kg)
+			
+11070	4,0	profession	femme de chambre, concierge d'hôtel, faire le lit, nettoyer une salle de bains, pousser un chariot
+			
+11080	5,3	profession	extraction de charbon, perforation du charbon, de la roche
+			
+11090	5,0	profession	extraction de charbon, montage des supports
+			
+11100	5,5	profession	extraction de charbon, général
+			
+11110	6,3	profession	extraction de charbon, pelleter le charbon
+			
+11115	2,5	profession	cuisiner, chef
+			
+11120	4,0	profession	construction, à l'extérieur, rénovation, structures nouvelles (par ex. réparation de toit, divers)
+			
+11125	2,3	profession	travail de concierge, effort léger (par ex. nettoyer lavabos et toilettes, épousseter, passer l'aspirateur, nettoyage léger)
+			
+11126	3,8	profession	travail de concierge, effort modéré (par ex. armoire électrique, balayer, passer la serpillère, sortir les poubelles, passer l'aspirateur)
+			
+11130	3,3	profession	travaux d'électricité (par ex. brancher des fils, dériver-connecter)
+			
+11135	1,8	profession	ingénieur (par ex. mécanique ou électrique)
+			
+11145	7,8	profession	agriculture, effort vigoureux (par ex. fabriquer des bottes de foin, nettoyer une grange)
+			
+11146	4,8	profession	agriculture, effort modéré (par ex. nourrir des animaux, regrouper du bétail à pied et/ou cheval, épandre du fumier, récolter des cultures)
+			
+11147	2,0	profession	agriculture, effort léger (par ex. nettoyer des déjections animales, préparer de la nourriture pour animaux)
+			
+11170	2,8	profession	agriculture, conduites (par ex. conduire un tracteur ou une moissonneuse)
+			
+11180	3,5	profession	agriculture, alimenter de petits animaux
+			
+11190	4,3	profession	agriculture, alimenter le bétail, les chevaux
+			
+11191	4,3	profession	agriculture, transporter de l'eau pour les animaux, transporter de l'eau en général
+			
+11192	4,5	profession	agriculture, s'occuper des animaux (par ex. toilettage, brossage, tonte des moutons, aide à la mise bas, soins médicaux, marquage), général
+			
+11195	3,8	profession	agriculture, riz, plantation, activités de traitement du grain
+			
+11210	3,5	profession	agriculture, traire à la main, nettoyage des seaux, effort modéré
+			
+11220	1,3	profession	agriculture, traire à la machine, effort léger
+			
+11240	8,0	profession	pompier, général
+			
+11244	6,8	profession	pompier, secours de victime, accident automobile, utilisation d’une gaffe
+			
+11245	8,0	profession	pompier, levage et montée de l’échelle avec l’équipement complet, exercice d’extinction de feu
+			
+11246	9,0	profession	pompier, transport de tuyaux au sol, transport du matériel, ouverture de murs, etc., en portant l’équipement complet
+			
+11247	3,5	profession	pêche, commerciale, effort léger
+			
+11248	5,0	profession	pêche, commerciale, effort modéré
+			
+11249	7,0	profession	pêche, commerciale, effort vigoureux
+			
+11250	17,5	profession	foresterie, couper du bois à la hache, très vite, hache de 1,25 kg, 51 coups/minute, effort violent
+			
+11260	5,0	profession	foresterie, couper du bois à la hache, lentement, hache de 1,25 kg, 19 coups/minute, effort modéré
+			
+11262	8,0	profession	foresterie, couper du bois à la hache, vite, hache de 1,25 kg, 35 coups/minute, effort vigoureux
+			
+11264	4,5	profession	foresterie, effort modéré (par ex. scier du bois à la tronçonneuse, désherber, biner)
+			
+11266	8,0	profession	foresterie, effort vigoureux (par ex. écorcer, abattre ou élaguer des arbres, porter ou empiler des buches, planter des semences, scier du bois à la main)
+			
+11370	4,5	profession	pelleterie
+			
+11375	4,0	profession	collecte d’ordures, marcher, verser des conteneurs dans un camion
+			
+11378	1,8	profession	coiffeur (par ex. tresser des cheveux, manucurer, maquiller)
+			
+11380	7,3	profession	palefrenier, nourrir des chevaux, nettoyer des stalles, laver, bouchonner, coiffer, faire travailler les chevaux à la longe ou les monter
+			
+11381	4,3	profession	cheval, nourrir, abreuver, nettoyer des stalles, impliquant de marcher et porter des charges
+			
+11390	7,3	profession	course de chevaux, galop
+			
+11400	5,8	profession	course de chevaux, trot
+			
+11410	3,8	profession	course de chevaux, pas
+			
+11413	3,0	profession	cuisinière
+			
+11415	4,0	profession	jardinier, jardinage, général
+			
+11418	3,3	profession	blanchisseur
+			
+11420	3,0	profession	serrurier
+			
+11430	3,0	profession	travail à la machine (par ex. usinage, tôlerie, montage de machine, tournage, soudage), effort léger à modéré
+			
+11450	5,0	profession	travail à la machine, utilisation d'une poinçonneuse, effort modéré
+			
+11472	1,8	profession	gestionnaire, propriété
+			
+11475	2,8	profession	travail manuel ou non qualifié, général, effort léger
+			
+11476	4,5	profession	travail manuel ou non qualifié, général, effort modéré
+			
+11477	6,5	profession	travail manuel ou non qualifié, général, effort vigoureux
+			
+11480	4,3	profession	maçonnerie, béton, effort modéré
+			
+11482	2,5	profession	maçonnerie, béton, effort léger
+			
+11485	4,0	profession	massothérapeute, debout
+			
+11490	7,5	profession	déplacer, porter ou pousser des objets lourds, 34 kg ou plus (par ex. bureaux, déménagement), périodes actives uniquement
+			
+11495	12,0	profession	plongée sous-marine, homme-grenouille, commandos de marine
+			
+11500	2,5	profession	utiliser un équipement de travail lourd, automatisé, sans conduire
+			
+11510	4,5	profession	travail dans une orangeraie, cueillette des oranges
+			
+11514	3,3	profession	peinture, maison, meubles, effort modéré
+			
+11516	3,0	profession	activités de plomberie
+			
+11520	2,0	profession	impression, travailleur de l'industrie du papier, debout
+			
+11525	2,5	profession	police, faire la circulation, debout
+			
+11526	2,5	profession	police, conduire un véhicule de police, assis
+			
+11527	1,3	profession	police, être conduit dans un véhicule de police, assis
+			
+11528	4,0	profession	police, effectuer une arrestation, debout
+			
+11529	2,3	profession	postier, marcher pour livrer le courrier
+			
+11530	2,0	profession	cordonnerie, général
+			
+11540	7,8	profession	pelleter, creuser des fossés
+			
+11550	8,8	profession	pelleter, plus de 7 kg/minute, en creusant profondément, effort vigoureux
+			
+11560	5,0	profession	pelleter, moins de 4,5 kg/minute, effort modéré
+			
+11570	6,5	profession	pelleter, 4,5-7 kg/minute, effort vigoureux
+			
+11580	1,5	profession	travail assis, effort léger (par ex. travail de bureau, travail de laboratoire de chimie, travail sur ordinateur, réparation d’ensemble léger, réparation de montre, lecture)
+			
+11585	1,5	profession	être assis, réunions, effort léger, général, et/ou impliquant une discussion (par ex. déjeuner d'affaires)
+			
+11590	2,5	profession	travail assis, effort modéré (par ex. pousser de lourds leviers, conduire une tondeuse/un chariot élévateur, commander une grue)
+			
+11593	2,8	profession	être assis, enseigner le stretching ou le yoga, ou cours d’exercices légers
+			
+11600	3,0	profession	être debout, effort léger (par ex. barman, employé de magasin, assemblage, remplissage, reproduction, bibliothécaire, installer un sapin de Noël, être debout et parler au travail, changer de vêtements lors de l'enseignement de l'éducation physique, debout)
+			
+11610	3,0	profession	être debout, effort léger/modéré (par ex. assembler/réparer des pièces lourdes, souder, stocker des pièces, réparer des automobiles, être debout, emballer des objets, soins infirmiers à des patients)
+			
+11615	4,5	profession	être debout, effort modéré, soulever des articles en permanence, 5–10 kg, avec une marche limitée ou sur place
+			
+11620	3,5	profession	être debout, effort modéré, levage intermittent de 23 kg, nouer/lover des cordages
+			
+11630	4,5	profession	être debout, effort modéré/important (par ex. soulever plus de 23 kg, maçonner, peindre, tapisser)
+			
+11708	5,3	profession	aciérie, effort modéré (par ex. ébarber, forger, retourner des moules)
+			
+11710	8,3	profession	aciérie, effort vigoureux (par ex. laminer à la main, laminer des aciers marchands, enlever des scories, alimenter un four)
+			
+11720	2,3	profession	confection, coupe de tissu
+			
+11730	2,5	profession	confection, général
+			
+11740	1,8	profession	confection, coudre à la main
+			
+11750	2,5	profession	confection, coudre à la machine
+			
+11760	3,5	profession	confection, pressing
+			
+11763	2,0	profession	confection, tisser, effort léger (par ex. opérations de finition, lavage, teinture, visite, métrage, paperasse)
+			
+11765	4,0	profession	confection, tissage, effort modéré (par ex. opérations de filage et tissage, apporter des boîtes de fil aux filateurs, chargement d’ensouple de chaîne,	bobinage, ourdissage, découpe de tissu)
+			
+11766	6,5	profession	conduite de camion, chargement et déchargement du camion, arrimage de la charge, marcher en portant des charges lourdes
+			
+11767	2,0	profession	camion, conduire un camion de livraison, un taxi, un bus navette, un bus scolaire
+			
+11770	1,3	profession	taper des documents avec une machine à écrire électrique, mécanique ou un ordinateur
+			
+11780	6,3	profession	utiliser des outils motorisés lourds tels que des outils pneumatiques (par ex. marteaux-piqueurs, foreuses)
+			
+11790	8,0	profession	utiliser des outils lourds (non motorisés) tels que des pelles, des pioches, des barres à mine, des bêches
+			
+11791	2,0	profession	marcher au travail, à moins de 3,5 km/h, dans un bureau ou laboratoire, rythme très lent
+			
+11792	3,5	profession	marcher au travail à 5 km/h, dans un bureau, rythme modéré, sans rien porter
+			
+11793	4,3	profession	marcher au travail à 6 km/h, dans un bureau, rythme rapide, sans rien porter
+			
+11795	3,5	profession	marcher au travail, à 3 km/h, rythme lent, en portant des objets légers pesant moins de 11 kg
+			
+11796	3,0	profession	marcher, ranger des affaires au travail, se préparer à partir
+			
+11797	3,8	profession	marcher, à 4 km/h, rythme lent, en portant des objets lourds de plus de 11 kg
+			
+11800	4,5	profession	marcher à 5 km/h, rythme modéré, en portant des objets légers de moins de 11 kg
+			
+11805	3,5	profession	marcher, pousser un fauteuil roulant
+			
+11810	4,8	profession	marcher à 6 km/h, rythme rapide, en portant des objets pesant moins de 11 kg
+			
+11820	5,0	profession	marcher ou descendre des escaliers ou se tenir debout en portant des objets pesant de 11 à 22 kg
+			
+11830	6,5	profession	marcher ou descendre des escaliers ou se tenir debout en portant des objets pesant de 22 à 33 kg
+			
+11840	7,5	profession	marcher ou descendre des escaliers ou se tenir debout en portant des objets pesant de 33 à 45 kg
+			
+11850	8,5	profession	marcher ou descendre des escaliers ou se tenir debout en portant des objets pesant de 45 kg ou plus
+			
+11870	3,0	profession	employé d'un magasin de décor, acteur de théâtre, technicien de coulisses
+			
+12010	6,0	course	combinaison jogging/marche (composant jogging inférieur à 10 minutes) (code Taylor 180)
+			
+12020	7,0	course	jogging, général
+			
+12025	8,0	course	jogging, sur-place
+			
+12027	4,5	course	jogging, sur un mini-trampoline
+			
+12029	6,0	course	courir à 6,5 km/h (9 min/km)
+			
+12030	8,3	course	courir à 8 km/h (7,5 min/km)
+			
+12040	9,0	course	courir à 8,4 km/h (7,3 min/km)
+			
+12050	9,8	course	courir à 9,6 km/h (6,25 min/km)
+			
+12060	10,5	course	courir à 10.8 km/h (5,5 min/km)
+			
+12070	11,0	course	courir à 11,25 km/h (5,3 min/km)
+			
+12080	11,5	course	courir à 12 km/h (5 min/km)
+			
+12090	11,8	course	courir à 12,9 km/h (4,65 min/km)
+			
+12100	12,3	course	courir à 13,8 km/h (4,3 min/km)
+			
+12110	12,8	course	courir à 14,5 km/h (4,1 min/km)
+			
+12120	14,5	course	courir à 16 km/h (3,75 min/km)
+			
+12130	16,0	course	courir à 17,7 km/h (3,4 min/km)
+			
+12132	19,0	course	courir à 19,3 km/h (3,1 min/km)
+			
+12134	19,8	course	courir à 20,9 km/h (2,9 min/km)
+			
+12135	23,0	course	courir à 22,5 km/h (2,66 min/km)
+			
+12140	9,0	course	courir, cross
+			
+12150	8,0	course	courir (code Taylor 200)
+			
+12170	15,0	course	courir, escaliers, montée
+			
+12180	10,0	course	courir, sur une piste, entraînement d’équipe
+			
+12190	8,0	course	courir, entraînement, pousser un fauteuil roulant ou landau
+			
+12200	13,3	course	courir, marathon
+			
+13000	2,3	hygiène de vie	être debout, se préparer à aller au lit, général
+			
+13009	1,8	hygiène de vie	aller à la selle assis
+			
+13010	1,5	hygiène de vie	se baigner, assis
+			
+13020	2,5	hygiène de vie	s'habiller, se déshabiller, debout ou assis
+			
+13030	1,5	hygiène de vie	manger, assis
+			
+13035	2,0	hygiène de vie	parler et manger ou manger uniquement, debout
+			
+13036	1,5	hygiène de vie	prendre des médicaments, assis ou debout
+			
+13040	2,0	hygiène de vie	se préparer, se laver les mains, se raser, se brosser les dents, se maquiller, assis ou debout
+			
+13045	2,5	hygiène de vie	se coiffer, debout
+			
+13046	1,3	hygiène de vie	se faire coiffer ou manucurer par quelqu'un, assis
+			
+13050	2,0	hygiène de vie	se doucher, se sécher, debout
+			
+14010	2,8	activité sexuelle	mode actif, effort vigoureux
+			
+14020	1,8	activité sexuelle	général, effort modéré
+			
+14030	1,3	activité sexuelle	mode passif, effort léger, baisers, embrassades
+			
+15000	5,5	sports	jeux traditionnels d’Alaska, épreuves olympiques esquimaudes, général
+			
+15010	4,3	sports	tir à l'arc, hors chasse
+			
+15020	7,0	sports	badminton, compétition (code Taylor 450)
+			
+15030	5,5	sports	badminton, double ou simple, général
+			
+15040	8,0	sports	basket-ball, match (code Taylor 490)
+			
+15050	6,0	sports	basket-ball, hors match, général (code Taylor 480)
+			
+15055	6,5	sports	basket-ball, général
+			
+15060	7,0	sports	basket-ball, arbitrage (code Taylor 500)
+			
+15070	4,5	sports	basket-ball, tir au panier
+			
+15072	9,3	sports	basket-ball, exercices, entraînement
+			
+15075	7,8	sports	basket-ball, fauteuil roulant
+			
+15080	2,5	sports	billard
+			
+15090	3,0	sports	bowling (code Taylor 390)
+			
+15092	3,8	sports	bowling, en intérieur, piste de bowling
+			
+15100	12,8	sports	boxe, sur ring, général
+			
+15110	5,5	sports	boxe, sac de frappe
+			
+15120	7,8	sports	boxe, entraînement (sparring-partner)
+			
+15130	7,0	sports	ballon-balai
+			
+15135	5,8	sports	jeux d’enfants, jeux d’adultes (par ex. marelle, 4-square, ballon prisonnier, équipement de cours de récréation, t-ball, spirobole, billes, jeux d'arcade), effort modéré
+			
+15138	6,0	sports	majorette, mouvements de gymnastique, compétition
+			
+15140	4,0	sports	entraîner, football, football américain, basketball, baseball, natation, etc.
+			
+15142	8,0	sports	entraîner, jouer activement à un sport avec des joueurs
+			
+15150	4,8	sports	cricket, frappe, service, défense
+			
+15160	3,3	sports	croquet
+			
+15170	4,0	sports	curling
+			
+15180	2,5	sports	fléchettes, mur ou gazon
+			
+15190	6,0	sports	course de dragster, pousser ou conduire une voiture
+			
+15192	8,5	sports	course de voiture, monoplace
+			
+15200	6,0	sports	escrime
+			
+15210	8,0	sports	football américain, compétition
+			
+15230	8,0	sports	football américain, touch, flag, général (code Taylor 510)
+			
+15232	4,0	sports	football américain, touch, flag, effort léger
+			
+15235	2,5	sports	football américain ou baseball, jeu de balle
+			
+15240	3,0	sports	frisbee, général
+			
+15250	8,0	sports	frisbee, ultimate
+			
+15255	4,8	sports	golf, général
+			
+15265	4,3	sports	golf, marcher, porter des clubs
+			
+15270	3,0	sports	golf, minigolf, practice
+			
+15285	5,3	sports	golf, marcher, tirer des clubs
+			
+15290	3,5	sports	golf, avec un chariot électrique (code Taylor 070)
+			
+15300	3,8	sports	gymnastique, général
+			
+15310	4,0	sports	footbag
+			
+15320	12,0	sports	handball, général (code Taylor 520)
+			
+15330	8,0	sports	handball, équipe
+			
+15335	4,0	sports	accrobranches, éléments multiples
+			
+15340	3,5	sports	deltaplane
+			
+15350	7,8	sports	hockey, sur gazon
+			
+15360	8,0	sports	hockey sur glace, général
+			
+15362	10,0	sports	hockey sur glace, compétition
+			
+15370	5,5	sports	équitation, général
+			
+15375	4,3	sports	toilettage de cheval, donner à manger, à boire, nettoyer les étables avec marche et port de charges
+			
+15380	4,5	sports	seller, nettoyer, toiletter, poser et retirer le harnais d’un cheval
+			
+15390	5,8	sports	équitation, trot
+			
+15395	7,3	sports	équitation, petit ou grand galop
+			
+15400	3,8	sports	équitation, pas
+			
+15402	9,0	sports	équitation, saut d’obstacles
+			
+15408	1,8	sports	charrette à cheval, conduire, être debout ou assis
+			
+15410	3,0	sports	lancer de fer à cheval, quoits
+			
+15420	12,0	sports	pelote basque
+			
+15425	5,3	sports	arts martiaux, différents types, rythme lent, débutants, entraînement
+			
+15430	10,3	sports	arts martiaux, différents types, rythme modéré (par ex. judo, ju-jitsu, karaté, kick-boxing, taekwondo, tai-bo, boxe thaïe)
+			
+15440	4,0	sports	jonglage
+			
+15450	7,0	sports	kickball
+			
+15460	8,0	sports	crosse
+			
+15465	3,3	sports	boulingrin, pétanque, activité extérieure
+			
+15470	4,0	sports	moto-cross, sports automobiles sur circuit, véhicule tous terrains, général
+			
+15480	9,0	sports	course d'orientation
+			
+15490	10,0	sports	jokari, compétition
+			
+15500	6,0	sports	jokari, loisirs, général (code Taylor 460)
+			
+15510	8,0	sports	polo
+			
+15520	10,0	sports	racquetball, compétition
+			
+15530	7,0	sports	racquetball, général (code Taylor 470)
+			
+15533	8,0	sports	escalade, varappe (code Taylor 470) (ancien code = 17120)
+			
+15535	7,5	sports	escalade, varappe, grande difficulté
+			
+15537	5,8	sports	escalade, varappe, difficulté faible à modérée
+			
+15540	5,0	sports	escalade, descente en rappel
+			
+15542	4,0	sports	rodéo, général, effort léger
+			
+15544	5,5	sports	rodéo, général, effort modéré
+			
+15546	7,0	sports	rodéo, général, effort vigoureux
+			
+15550	12,3	sports	corde à sauter, rythme rapide, 120-160 sauts/min
+			
+15551	11,8	sports	corde à sauter, rythme modéré, 100-120 sauts/min, général, saut de 60 cm, saut simple
+			
+15552	8,8	sports	corde à sauter, rythme lent, < 100 sauts/min, saut de 60 cm, saut rythmé
+			
+15560	8,3	sports	rugby à quinze, équipe, compétition
+			
+15562	6,3	sports	rugby, touch, hors compétition
+			
+15570	3,0	sports	jeu de palets
+			
+15580	5,0	sports	skate, général, effort modéré
+			
+15582	6,0	sports	skate, compétition, effort vigoureux
+			
+15590	7,0	sports	patin à roulettes (code Taylor 360)
+			
+15591	7,5	sports	roller, patin en ligne, 14,4 km/h, rythme loisir
+			
+15592	9,8	sports	roller, patin en ligne, 17,7 km/h, rythme modéré, exercice d’entraînement
+			
+15593	12,3	sports	roller, patin en ligne, 21 à 21,7 km/h, rythme rapide, exercice d’entraînement
+			
+15594	14,0	sports	roller, patin en ligne, 24,0 km/h, effort maximal
+			
+15600	3,5	sports	saut en parachute, saut d’un point fixe, saut à l’élastique
+			
+15605	10,0	sports	football, compétition
+			
+15610	7,0	sports	football, loisirs, général (code Taylor 540)
+			
+15620	5,0	sports	softball ou baseball, lancer rapide ou lent, général (code Taylor 440)
+			
+15625	4,0	sports	softball, entraînement
+			
+15630	4,0	sports	softball, arbitrage
+			
+15640	6,0	sports	softball, lancer
+			
+15645	3,3	sports	spectateur de sport, très excité, passionné, mouvements physiques
+			
+15650	12,0	sports	squash (code Taylor 530)
+			
+15652	7,3	sports	squash, général
+			
+15660	4,0	sports	tennis de table, ping-pong (code Taylor 410)
+			
+15670	3,0	sports	tai chi, qi gong, général
+			
+15672	1,5	sports	tai chi, qi gong, position assise, effort léger
+			
+15675	7,3	sports	tennis, général
+			
+15680	6,0	sports	tennis, double, (code Taylor 430)
+			
+15685	4,5	sports	tennis, double
+			
+15690	8,0	sports	tennis, simple, (code Taylor 420)
+			
+15695	5,0	sports	tennis, frapper la balle, jeu récréatif, effort modéré
+			
+15700	3,5	sports	trampoline, récréatif
+			
+15702	4,5	sports	trampoline, compétition
+			
+15710	4,0	sports	volley-ball (code Taylor 400)
+			
+15711	6,0	sports	volley-ball, compétition, gymnase
+			
+15720	3,0	sports	volley-ball, hors compétition, équipe de 6-9 joueurs, général
+			
+15725	8,0	sports	beach-volley, dans le sable
+			
+15730	6,0	sports	lutte (un match = 5 minutes)
+			
+15731	7,0	sports	wallyball, général
+			
+15732	4,0	sports	athlétisme (par ex. lancer de poids, lancer de disque, lancer de marteau)
+			
+15733	6,0	sports	athlétisme (par ex. saut en hauteur, saut en longueur, triple saut, lancer de javelot, saut à la perche)
+			
+15734	10,0	sports	athlétisme (par ex. steeple, course de haies)
+			
+16010	2,5	transport	conduire une voiture ou un camion léger (hors semi-remorque)
+			
+16015	1,3	transport	se déplacer en voiture ou en camion
+			
+16016	1,3	transport	se déplacer en bus ou train
+			
+16020	1,8	transport	se déplacer en avion ou en hélicoptère
+			
+16030	3,5	transport	scooter, moto
+			
+16035	6,3	transport	tirer un pousse-pousse
+			
+16040	6,0	transport	pousser un avion à l'intérieur et à l'extérieur d'un hangar
+			
+16050	2,5	transport	conduire un camion, un semi-remorque, un tracteur > 1 tonne ou un bus
+			
+16060	3,5	transport	marcher à 4,5-5 km/h, sur le plat, rythme modéré, sol ferme
+			
+17010	7,0	marche	randonnée (code Taylor 050)
+			
+17012	7,8	marche	randonnée ou marche organisée avec un sac à dos
+			
+17020	5,0	marche	porter une charge de 7 kg (par ex. valise), à plat ou en descendant des escaliers
+			
+17021	2,3	marche	porter un enfant de 7 kg, marche lente
+			
+17025	8,3	marche	porter une charge en montant des escaliers, général
+			
+17026	5,0	marche	porter une charge de 0,5-7 kg en montant des escaliers
+			
+17027	6,0	marche	porter une charge de 7-11 kg en montant des escaliers
+			
+17028	8,0	marche	porter une charge de 11-22 kg en montant des escaliers
+			
+17029	10,0	marche	porter une charge de 22-33 kg en montant des escaliers
+			
+17030	12,0	marche	porter une charge > 34 kg en montant des escaliers
+			
+17031	3,5	marche	charger/décharger une voiture impliquant de la marche
+			
+17033	6,3	marche	randonner en collines, sans charge
+			
+17035	6,5	marche	randonner en collines en portant une charge de 0 à 4 kg
+			
+17040	7,3	marche	randonner en collines en portant une charge de 4,5 à 9 kg
+			
+17050	8,3	marche	randonner en collines en portant une charge de 9,5 à 19 kg
+			
+17060	9,0	marche	randonner en collines en portant une charge supérieure à 19 kg
+			
+17070	3,5	marche	descendre des escaliers
+			
+17080	6,0	marche	randonnée, à travers champs (code Taylor 040)
+			
+17082	5,3	marche	randonner ou marcher à allure normale à travers champs et versants de colline
+			
+17085	2,5	marche	admirer les oiseaux, marche lente
+			
+17088	4,5	marche	marche militaire, vitesse modérée, sans sac
+			
+17090	8,0	marche	marche militaire rapide, sans sac
+			
+17100	4,0	marche	pousser ou tirer une poussette avec un enfant ou marcher avec des enfants, 4 à 5 km/h
+			
+17105	3,8	marche	pousser un fauteuil roulant, cadre privé
+			
+17110	6,5	marche	marche athlétique
+			
+17130	8,0	marche	monter des escaliers, utiliser ou monter sur une échelle (code Taylor 030)
+			
+17133	4,0	marche	monter des escaliers, rythme lent
+			
+17134	8,8	marche	monter des escaliers, rythme rapide
+			
+17140	5,0	marche	utiliser des béquilles
+			
+17150	2,0	marche	marcher à la maison
+			
+17151	2,0	marche	marcher à moins de 3 km/h, à plat, flâner, rythme très lent
+			
+17152	2,8	marche	marcher à 3 km/h, à plat, rythme lent, sol ferme
+			
+17160	3,5	marche	marcher pour le plaisir (code Taylor 010)
+			
+17161	2,5	marche	marcher de la maison à la voiture ou au bus, de la voiture ou du bus vers d'autres endroits, de la voiture ou du bus vers et depuis le lieu de travail
+			
+17162	2,5	marche	marcher vers la maison du voisin ou la maison familiale dans un but social
+			
+17165	3,0	marche	promener le chien
+			
+17170	3,0	marche	marcher à 4 km/h, à plat, sol ferme
+			
+17180	3,3	marche	marcher à 4 km/h, en descente
+			
+17190	3,5	marche	marcher à 4,5-5 km/h, à plat, rythme modéré, sol ferme
+			
+17200	4,3	marche	marcher à 5,5 km/h, à plat, rythme rapide, sol ferme, marcher pour faire de l'exercice
+			
+17210	5,3	marche	marcher à 4,5-5,5 km/h, en montée de 1 à 5 %
+			
+17211	8,0	marche	marcher à 4,5-5,5 km/h, en montée de 6-15 %
+			
+17220	5,0	marche	marcher à 6,5 km/h, à plat, sol ferme, rythme très rapide
+			
+17230	7,0	marche	marcher à 7 km/h, à plat, sol ferme, rythme extrêmement rapide
+			
+17231	8,3	marche	marcher à 8 km/h, à plat, sol ferme
+			
+17235	9,8	marche	marcher à 8 km/h, en montée de 3 %
+			
+17250	3,5	marche	marcher pour le plaisir, pause de travail
+			
+17260	4,8	marche	marcher dans l'herbe
+			
+17262	4,5	marche	marcher à un rythme normal, dans un champ labouré ou dans du sable
+			
+17270	4,0	marche	marcher pour aller au travail ou à l'école (code Taylor 015)
+			
+17280	2,5	marche	marcher vers et depuis une dépendance
+			
+17302	4,8	marche	marcher pour l’exercice à 5,5-6,5 km/h avec des bâtons de ski, marche nordique, à plat, rythme modéré
+			
+17305	9,5	marche	marcher pour l’exercice à 8 km/h avec des bâtons de ski, marche nordique, à plat, rythme rapide
+			
+17310	6,8	marche	marcher pour l’exercice avec des bâtons de ski, marche nordique, en montée
+			
+17320	6,0	marche	marcher, en arrière, 5,5 km/h, à plat
+			
+17325	8,0	marche	marcher, en arrière à 5,5 km/h, en montée de 5%
+			
+18010	2,5	activités nautiques et aquatiques	navigation, au moteur, barrer
+			
+18012	1,3	activités nautiques et aquatiques	navigation, au moteur, passager, effort léger
+			
+18020	4,0	activités nautiques et aquatiques	canoë, pendant une randonnée avec camping (code Taylor 270)
+			
+18025	3,3	activités nautiques et aquatiques	canoë, récolte de riz sauvage en faisant tomber le riz des tiges
+			
+18030	7,0	activités nautiques et aquatiques	canoë, portage
+			
+18040	2,8	activités nautiques et aquatiques	canoë, pagayer à 3,2-4,8 km/h, effort léger
+			
+18050	5,8	activités nautiques et aquatiques	canoë, pagayer à 6,4-8 km/h, effort modéré
+			
+18060	12,5	activités nautiques et aquatiques	canoë, pagayer, kayak, compétition, > 9,65 km/h, effort vigoureux
+			
+18070	3,5	activités nautiques et aquatiques	canoë, pagayer pour le plaisir, général (code Taylor 250)
+			
+18080	12,0	activités nautiques et aquatiques	canoë, pagayer, compétition, en équipe ou en couple (code Taylor 260)
+			
+18090	3,0	activités nautiques et aquatiques	plongeon, tremplin ou plateforme
+			
+18100	5,0	activités nautiques et aquatiques	kayak, effort modéré
+			
+18110	4,0	activités nautiques et aquatiques	bateau à aubes
+			
+18120	3,0	activités nautiques et aquatiques	voile, voilier et planche à voile, windsurf, voile sur glace, général (code Taylor 235)
+			
+18130	4,5	activités nautiques et aquatiques	voile, compétition
+			
+18140	3,3	activités nautiques et aquatiques	voile, Sunfish/Laser/Hobby Cat, quillards, navigation hauturière, croisière, plaisance
+			
+18150	6,0	activités nautiques et aquatiques	ski nautique ou wakeboard (code Taylor 220)
+			
+18160	7,0	activités nautiques et aquatiques	scooter des mers, conduire, dans l'eau
+			
+18180	15,8	activités nautiques et aquatiques	plongée sous-marine, rythme rapide
+			
+18190	11,8	activités nautiques et aquatiques	plongée sous-marine, rythme modéré
+			
+18200	7,0	activités nautiques et aquatiques	plongée sous-marine, général (code Taylor 310)
+			
+18210	5,0	activités nautiques et aquatiques	plongée libre (code Taylor 310)
+			
+18220	3,0	activités nautiques et aquatiques	surf, corps ou planche, général
+			
+18222	5,0	activités nautiques et aquatiques	surf, corps ou planche, compétition
+			
+18225	6,0	activités nautiques et aquatiques	planche à rame, en position debout
+			
+18230	9,8	activités nautiques et aquatiques	longueurs de piscine, nage libre, rythme rapide, effort vigoureux
+			
+18240	5,8	activités nautiques et aquatiques	longueurs de piscine, nage libre, crawl, rythme lent, effort modéré ou léger
+			
+18250	9,5	activités nautiques et aquatiques	natation, nage sur le dos, général, entraînement ou compétition
+			
+18255	4,8	activités nautiques et aquatiques	natation, nage sur le dos, loisirs
+			
+18260	10,3	activités nautiques et aquatiques	natation, brasse, général, entraînement ou compétition
+			
+18265	5,3	activités nautiques et aquatiques	natation, brasse, loisirs
+			
+18270	13,8	activités nautiques et aquatiques	natation, papillon, général
+			
+18280	10,0	activités nautiques et aquatiques	natation, crawl, rythme rapide (~70 mètres/minute), effort vigoureux
+			
+18290	8,3	activités nautiques et aquatiques	natation, crawl, rythme rapide (~45 mètres/minute), effort vigoureux
+			
+18300	6,0	activités nautiques et aquatiques	natation, lac, océan, rivière (codes Taylor 280, 295)
+			
+18310	6,0	activités nautiques et aquatiques	natation, loisirs, sans longueurs, général
+			
+18320	7,0	activités nautiques et aquatiques	natation, nage indienne, général
+			
+18330	8,0	activités nautiques et aquatiques	natation, synchronisée
+			
+18340	9,8	activités nautiques et aquatiques	natation, sur-place, rythme rapide, effort vigoureux
+			
+18350	3,5	activités nautiques et aquatiques	natation, sur-place, effort modéré, général
+			
+18352	2,3	activités nautiques et aquatiques	descendre en chambre à air, flotter sur une rivière, général
+			
+18355	5,5	activités nautiques et aquatiques	aérobic aquatique, gymnastique suédoise aquatique
+			
+18360	10,0	activités nautiques et aquatiques	water polo
+			
+18365	3,0	activités nautiques et aquatiques	water volley-ball
+			
+18366	9,8	activités nautiques et aquatiques	water jogging
+			
+18367	2,5	activités nautiques et aquatiques	marcher dans l’eau, effort léger, rythme lent
+			
+18368	4,5	activités nautiques et aquatiques	marcher dans l’eau, effort modéré, rythme modéré
+			
+18369	6,8	activités nautiques et aquatiques	marcher dans l’eau, effort vigoureux, rythme soutenu
+			
+18370	5,0	activités nautiques et aquatiques	rafting, kayak, canoë en eau vive
+			
+18380	5,0	activités nautiques et aquatiques	planche à voile, sans pomper pour gagner en vitesse
+			
+18385	11,0	activités nautiques et aquatiques	planche à voile ou kitesurf, entraînement
+			
+18390	13,5	activités nautiques et aquatiques	planche à voile, compétition, en pompant pour gagner en vitesse
+			
+19005	7,5	activités hivernales	randonnée en traîneau à chiens en tant que musher
+			
+19006	2,5	activités hivernales	randonnée en traîneau à chiens en tant que passager
+			
+19010	6,0	activités hivernales	retrait de la glace, maison, créer/forer des trous
+			
+19011	2,0	activités hivernales	pêche sur glace, position assise
+			
+19018	14,0	activités hivernales	patinage, dance sur glace
+			
+19020	5,5	activités hivernales	patinage sur glace à 14,5 km/h ou moins
+			
+19030	7,0	activités hivernales	patinage sur glace, général (code Taylor 360)
+			
+19040	9,0	activités hivernales	patinage sur glace, rythme rapide, plus de 14,5 km/h, hors compétition
+			
+19050	13,3	activités hivernales	patinage de vitesse, compétition
+			
+19060	7,0	activités hivernales	saut à ski, monter en portant des skis
+			
+19075	7,0	activités hivernales	ski, général
+			
+19080	6,8	activités hivernales	ski de fond à 4 km/h, rythme lent ou effort léger, marche nordique
+			
+19090	9,0	activités hivernales	ski de fond à 6,5-8 km/h, rythme et effort modérés, général
+			
+19100	12,5	activités hivernales	ski de fond à 8-12,5 km/h, rythme rapide, effort vigoureux
+			
+19110	15,0	activités hivernales	ski de fond à plus de 13 km/h, skieur d’élite, course
+			
+19130	15,5	activités hivernales	ski de fond, neige dure, montée, maximum, alpinisme
+			
+19135	13,3	activités hivernales	ski de fond, patinage
+			
+19140	13,5	activités hivernales	ski de fond, biathlon, pas de patineur
+			
+19150	4,3	activités hivernales	ski, descente, ski alpin ou snowboard, effort léger, périodes d’activité uniquement
+			
+19160	5,3	activités hivernales	ski, descente, ski alpin ou snowboard, effort modéré, général, périodes d’activité uniquement
+			
+19170	8,0	activités hivernales	ski, descente, effort vigoureux, course
+			
+19175	12,5	activités hivernales	ski, ski à roulettes, coureurs d’élite
+			
+19180	7,0	activités hivernales	traîneau, toboggan, bobsleigh, luge (code Taylor 370)
+			
+19190	5,3	activités hivernales	raquettes à neige, effort modéré
+			
+19192	10,0	activités hivernales	raquettes à neige, effort vigoureux
+			
+19200	3,5	activités hivernales	moto des neiges, conduire, effort modéré
+			
+19202	2,0	activités hivernales	moto des neiges, passager
+			
+19252	5,3	activités hivernales	déblayer la neige à la pelle, à la main, effort modéré
+			
+19254	7,5	activités hivernales	déblayer la neige à la pelle, à la main, effort vigoureux
+			
+19260	2,5	activités hivernales	passer la souffleuses à neige, marcher et pousser
+			
+20000	1,3	activités religieuses	être assis à l'église, pendant la messe, assister à une cérémonie, être assis en silence
+			
+20001	2,0	activités religieuses	être assis, jouer d'un instrument à l'église
+			
+20005	1,8	activités religieuses	être assis à l'église, parler ou chanter, assister à une cérémonie, être assis, participation active
+			
+20010	1,3	activités religieuses	être assis, lire des textes religieux à la maison
+			
+20015	1,3	activités religieuses	être debout à l'église (en silence), assister à une cérémonie
+			
+20020	2,0	activités religieuses	être debout, chanter à l'église, assister à une cérémonie, être debout, participation active
+			
+20025	1,3	activités religieuses	être à genoux à l'église ou à la maison, prier
+			
+20030	1,8	activités religieuses	être debout, parler à l'église
+			
+20035	2,0	activités religieuses	marcher dans l'église
+			
+20036	2,0	activités religieuses	marcher à moins de 3 km/h, rythme très lent
+			
+20037	3,5	activités religieuses	marcher à 5 km/h, rythme modéré, sans rien porter
+			
+20038	4,3	activités religieuses	marcher à 5,5 km/h, rythme rapide, sans rien porter
+			
+20039	2,0	activités religieuses	combinaison marcher/se tenir debout à des fins religieuses, placer l'assistance
+			
+20040	5,0	activités religieuses	faire une louange en dansant ou en courant, danse spirituelle dans l'église
+			
+20045	2,5	activités religieuses	servir des aliments à l'église
+			
+20046	2,0	activités religieuses	préparer des aliments à l'église
+			
+20047	3,3	activités religieuses	faire la vaisselle, nettoyer la cuisine à l'église
+			
+20050	1,5	activités religieuses	manger à l'église
+			
+20055	2,0	activités religieuses	manger/parler à l'église ou manger debout, fêtes religieuses
+			
+20060	3,3	activités religieuses	nettoyer l'église
+			
+20061	4,0	activités religieuses	travail général dans la cour de l'église
+			
+20065	3,5	activités religieuses	être debout, effort modéré (soulever des objets lourds, assembler à un rythme rapide)
+			
+20095	4,5	activités religieuses	être debout, effort modéré à important, travail manuel, soulevez des charges ≥ 22,5 kg, maintenance lourde
+			
+20100	1,3	activités religieuses	taper des documents avec une machine à écrire électrique, mécanique ou un ordinateur
+			
+21000	1,5	activités bénévoles	être assis, réunion, général, et/ou impliquant une discussion
+			
+21005	1,5	activités bénévoles	être assis, travail de bureau léger, général
+			
+21010	2,5	activités bénévoles	être assis, travail modéré
+			
+21015	2,3	activités bénévoles	être debout, travail léger (remplissage, discussion, assemblage)
+			
+21016	2,0	activités bénévoles	être assis, s'occuper d'enfants, périodes actives uniquement
+			
+21017	3,0	activités bénévoles	être debout, s'occuper d'enfants, périodes actives uniquement
+			
+21018	3,5	activités bénévoles	marcher/courir, jouer avec les enfants, effort modéré, périodes actives uniquement
+			
+21019	5,8	activités bénévoles	marcher/courir, jouer avec des enfants, effort vigoureux, périodes actives uniquement
+			
+21020	3,0	activités bénévoles	être debout, travail léger/modéré (par ex. faire des cartons, assembler/réparer, installer des chaises/meubles)
+			
+21025	3,5	activités bénévoles	être debout, effort modéré (soulever 22,5kg, assembler à un rythme rapide)
+			
+21030	4,5	activités bénévoles	être debout, travail modéré/vigoureux
+			
+21035	1,3	activités bénévoles	taper des documents avec une machine à écrire électrique, mécanique ou un ordinateur
+			
+21040	2,0	activités bénévoles	marcher à moins de 3 km/h, rythme très lent
+			
+21045	3,5	activités bénévoles	marcher à 5 km/h, rythme modéré, sans rien porter
+			
+21050	4,3	activités bénévoles	marcher à 5,5 km/h, rythme rapide, sans rien porter
+			
+21055	3,5	activités bénévoles	marcher à 4 km/h, rythme lent, en portant des objets pesant moins de 11 kg
+			
+21060	4,5	activités bénévoles	marcher à 5 km/h, rythme modéré, en portant des objets pesant moins de 11 kg, en poussant quelque chose
+			
+21065	4,8	activités bénévoles	marcher à 6 km/h, rythme rapide, en portant des objets pesant moins de 11 kg
+			
+21070	3,0	activités bénévoles	combinaison marcher/arrêt debout, à des fins bénévoles
