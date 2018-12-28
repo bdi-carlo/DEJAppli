@@ -1,0 +1,27 @@
+body{
+  padding-top: 10px;
+  background-color: grey;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header{
+  font-size: 32px;
+  font-style: bold;
+}
+
+[class*="col-"], footer{
+  background-color: lightgreen;
+  border: 2px solid black;
+  border-radius: 6px;
+  line-height: 40px;
+  text-align: center;
+}
+
+[class*="bloc"]{
+  margin-top: 100px;
+}
+
+[class*="row"]{
+  margin-bottom: 40px;
+}
