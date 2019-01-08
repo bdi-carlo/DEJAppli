@@ -22,27 +22,31 @@
           </div>
           <div class="row">
             <div id="imc">
-              <div class="col-md-offset-2 col-md-8 col-md-offset-2">
-                <div class="form-group">
-                  <label for="sexe">Sexe</label>
-                  <select id="sexe" class="form-control">
-                    <option value="h">Homme</option>.
-                    <option value="f">Femme</option>
-                  </select>
-                </div>
+              <div class="row">
+                <div class="col-xs-offset-2 col-xs-8 col-xs-offset-2">
+                  <div class="form-group">
+                    <label for="sexe">Sexe</label>
+                    <select id="sexe" class="form-control">
+                      <option value="h">Homme</option>.
+                      <option value="f">Femme</option>
+                    </select>
+                  </div>
 
-                <div class="form-group">
-                  <label for="taille">Taille en cm</label>
-                  <input id="taille" type="number" class="form-control">
-                </div>
+                  <div class="form-group">
+                    <label for="taille">Taille en cm</label>
+                    <input id="taille" type="number" class="form-control">
+                  </div>
 
-                <div class="form-group">
-                  <label for="poids">Poids en kg</label>
-                  <input id="poids" type="number" class="form-control">
+                  <div class="form-group">
+                    <label for="poids">Poids en kg</label>
+                    <input id="poids" type="number" class="form-control">
+                  </div>
                 </div>
               </div>
 
-              <button type="button" @click="calcul()">Calculer</button>
+              <div class="row">
+                <button type="button" @click="calcul()">Calculer</button>
+              </div>
             </div>
           </div>
 
