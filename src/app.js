@@ -25,6 +25,10 @@ var imc = new Vue({
   }
 })
 
+function getActivity(){
+
+}
+
 var dej = new Vue({
   el: '#dej',
 
@@ -37,8 +41,13 @@ var dej = new Vue({
   },
 
   methods:{
-    ajouteActivite: function( uneActivite ){
-
+    ajouteActivite: function(){
+      // create a new div element
+      //var newDiv = document.getElementById("test");
+      // and give it some content
+      //var newContent = document.createTextNode("Hi there and greetings!");
+      // add the text node to the newly created div
+      //newDiv.appendChild(newContent);
     }
   }
 })
