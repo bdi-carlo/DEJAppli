@@ -1,0 +1,20 @@
+{% if error %}
+<p><strong>Utilisateur inconnu ou mauvais de mot de passe.</strong></p>
+{% endif %}
+
+{% if user.is_authenticated %}
+<h1>Bienvenue A l'accueil</h1>
+
+<!-- <a href="/imc"> <input type="button" value="Service"> </a> -->
+<!-- </br></br> -->
+<a href="/deconnexion"> <input type="button" value="deconnexion"> </a>
+
+<!-- Vous êtes connecté, {{ user.username }} ! -->
+{% else %}
+<form method="post" action=".">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Se connecter" />
+</form>
+<a href="/creercompte"> <input type="button" value="Creer compte"> </a>
+{% endif %}
