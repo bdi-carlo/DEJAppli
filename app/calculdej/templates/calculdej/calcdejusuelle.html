@@ -1,0 +1,55 @@
+<h1> activites Usuelles </h1>
+
+{% if envoi %}Votre message a bien été envoyé !{% endif %}
+
+<form id="calcForm" method="post"
+ data-act-url="{% url 'load_act' %}">
+    {% csrf_token %}
+    <table>
+      {{ formDej.as_table }}
+    </table>
+    <button type="submit" name="btnajouter">Ajouter</button>
+</form>
+<div>
+  <a href="{% url 'calculdejloisir' %}"> <input type="button" value="Suivant"> </a>
+</div>
+
+
+<!-- <table>
+  <thead>
+       <tr>
+           <th>Categorie</th>
+           <th>Activite</th>
+           <th>Duree</th>
+       </tr>
+   </thead>
+   <tbody>
+       {% for trav in travails %}
+       <tr>
+           <td>{{ trav.categorieTrav }} </td>
+           <td>{{ trav.activiteTrav }} </td>
+           <td>{{ trav.dureeTrav }} </td>
+       </tr>
+       <tr>
+      {%endfor%}
+</table> -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $("#id_cat").change(function () {
+      var url = $("#calcForm").attr("data-act-url");  // get the url of the `load_cities` view
+      var cat_select = $(this).val();  // get the selected country ID from the HTML input
+      // alert(cat_sls$elect);
+      $.ajax({                       // initialize an AJAX request
+        url: url,                    // set the url of the request (= localhost:8000/hr/ajax/load-cities/)
+        data: {
+          'cat': cat_select       // add the country id to the GET parameters
+        },
+        success: function (data) {   // `data` is the return of the `load_cities` view function
+          // acts = activites.filter(categorie=cat)
+          $("#id_act").html(data);  // replace the contents of the city input with the data that came from the server
+        }
+      });
+
+    });
+  </script>
