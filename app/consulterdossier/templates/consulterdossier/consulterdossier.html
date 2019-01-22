@@ -1,1 +1,25 @@
-<h1> Dosiers </h1>
+<h1> Dossiers </h1>
+<div>
+  <a href="{% url 'connexion' %}"> <input type="button" value="Accueil"> </a>
+</div>
+
+<table>
+  <thead>
+       <tr>
+           <th>Doissier</th>
+       </tr>
+   </thead>
+   <tbody>
+       {% for d in dossiers %}
+       <tr>
+           <td>{{ d }} </td>
+           <td>
+             <form method="post">
+                 {% csrf_token %}
+                 <button type="submit" name="btnaffdetails" value="{{d.id}}">Afficher details</button>
+             </form>
+          </td>
+       </tr>
+      {%endfor%}
+    </tbody>
+</table>
