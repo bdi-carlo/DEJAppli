@@ -7,8 +7,11 @@
 
 <a href="/calculdej"> <input type="button" value="Calcul DEJ"> </a>
 </br></br>
+{% if user.username == 'admin' %}
 <a href="/consulterdossier"> <input type="button" value="Consulter Dossier"> </a>
 </br></br>
+{% endif %}
+
 <a href="/deconnexion"> <input type="button" value="deconnexion"> </a>
 
 <!-- Vous êtes connecté, {{ user.username }} ! -->
