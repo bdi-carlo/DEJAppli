@@ -144,12 +144,12 @@ def calculdejsport(request):
             coef_act = act.coef
             dp = duree * coef_act
             Travail.objects.create(dossierTrav=dossier,categorieTrav=cat,activiteTrav=act,dureeTrav=duree)
-            Travail.objects.create(dossierTrav=dossier,categorieTrav=cat,activiteTrav=act,dureeTrav=duree)
             envoi = True
     elif request.method == 'POST' and 'btnterminer' in request.POST:
         dossier.dernier=False
         dossier.save()
-        return render(request, 'calculdej/calculdejresultat.html', locals())
+        # return render(request, 'calculdej/calculdejresultat.html', locals())
+        return calculdejresultat(request)
 
     elif request.method == 'POST' and 'btnsupprimer' in request.POST:
         id_supp = int(request.POST.get('btnsupprimer'))
@@ -158,9 +158,22 @@ def calculdejsport(request):
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Sportives')
     return render(request, 'calculdej/calcdejsport.html', locals())
 
+
 @login_required
 def calculdejresultat(request):
-    return render(request, 'calculdej/calculdejresultat.html')
+    dossier = Dossier.objects.all()
+    dossier = dossier.reverse()[0]
+
+    # dossier = Dossier.objects.filter(dernier=True)
+    # if dossier:
+    #     dossier = dossier.reverse()[0]
+    # else:
+    #     dossier = Dossier.objects.create(titre="ttt",auteur=request.user,dernier=True)
+    # if dossier.dernier != True:
+    #     dossier = Dossier.objects.create(titre="ttt",auteur=request.user,dernier=True)
+
+    travails = Travail.objects.filter(dossierTrav=dossier)
+    return render(request, 'calculdej/calculdejresultat.html', locals())
 
 
 @login_required

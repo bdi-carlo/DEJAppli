@@ -1,1 +1,24 @@
 <h1> Resultat DEJ </h1>
+
+<table>
+  <thead>
+       <tr>
+           <th>Categorie</th>
+           <th>Activite</th>
+           <th>Duree</th>
+       </tr>
+   </thead>
+   <tbody>
+       {% for trav in travails %}
+       <tr>
+           <td>{{ trav.categorieTrav }} </td>
+           <td>{{ trav.activiteTrav }} </td>
+           <td>{{ trav.dureeTrav }} </td>
+       </tr>
+       <tr>
+      {%endfor%}
+</table>
+
+<div>
+  <a href="{% url 'connexion' %}"> <input type="button" value="Accueil"> </a>
+</div>
