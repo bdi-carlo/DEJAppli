@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .forms import CalculDejForm, CalculImcForm, ValideForm
+from .forms import CalculDejForm, SupprimerForm, CalculImcForm
+# from .forms import CalculDejForm, SupprimerForm, CalculImcForm, ValideForm
 from calculdej.models import Categorie
 from calculdej.models import Activite
 from calculdej.models import Dossier
@@ -11,9 +12,22 @@ def calculdej(request):
     return render(request, 'calculdej/calculdej.html')
 
 @login_required
+def calculdejimc(request):
+    formImc = CalculImcForm(request.POST or None)
+    if request.method == 'POST' and 'btncalcul' in request.POST:
+        if formImc.is_valid():
+            poids = formImc.cleaned_data['poids']
+            taille = formImc.cleaned_data['taille']
+            imc = round(poids/(taille*taille),2)
+    return render(request, 'calculdej/calculdejimc.html', locals())
+
+
+@login_required
 def calculdejprofessionnelle(request):
     formDej = CalculDejForm(request.POST or None)
+    formSupp = SupprimerForm(request.POST or None)
     formDej.CatProfessionnelles()
+    cat = None
     dossier = Dossier.objects.filter(dernier=True)
     if dossier:
         dossier = dossier.reverse()[0]
@@ -35,7 +49,11 @@ def calculdejprofessionnelle(request):
         dossier.dernier=False
         dossier.save()
 
-    travails = Travail.objects.filter(dossierTrav=dossier)
+    elif request.method == 'POST' and 'btnsupprimer' in request.POST:
+        id_supp = int(request.POST.get('btnsupprimer'))
+        Travail.objects.get(id=id_supp).delete()
+
+    travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Professionnelles')
     return render(request, 'calculdej/calcdejprofessionnelle.html', locals())
 
 
@@ -43,6 +61,7 @@ def calculdejprofessionnelle(request):
 def calculdejusuelle(request):
     formDej = CalculDejForm(request.POST or None)
     formDej.CatUsuelles()
+    cat = None
     dossier = Dossier.objects.filter(dernier=True)
     if dossier:
         dossier = dossier.reverse()[0]
@@ -64,7 +83,11 @@ def calculdejusuelle(request):
         dossier.dernier=False
         dossier.save()
 
-    travails = Travail.objects.filter(dossierTrav=dossier)
+    elif request.method == 'POST' and 'btnsupprimer' in request.POST:
+        id_supp = int(request.POST.get('btnsupprimer'))
+        Travail.objects.get(id=id_supp).delete()
+
+    travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Usuelles')
     return render(request, 'calculdej/calcdejusuelle.html', locals())
 
 @login_required
@@ -72,6 +95,7 @@ def calculdejloisir(request):
     formDej = CalculDejForm(request.POST or None)
     formDej.CatLoisirs()
     dossier = Dossier.objects.filter(dernier=True)
+    cat = None
     if dossier:
         dossier = dossier.reverse()[0]
     else:
@@ -92,13 +116,18 @@ def calculdejloisir(request):
         dossier.dernier=False
         dossier.save()
 
-    travails = Travail.objects.filter(dossierTrav=dossier)
+    elif request.method == 'POST' and 'btnsupprimer' in request.POST:
+        id_supp = int(request.POST.get('btnsupprimer'))
+        Travail.objects.get(id=id_supp).delete()
+
+    travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Loisirs')
     return render(request, 'calculdej/calcdejloisir.html', locals())
 
 @login_required
 def calculdejsport(request):
     formDej = CalculDejForm(request.POST or None)
     formDej.CatSportives()
+    cat = None
     dossier = Dossier.objects.filter(dernier=True)
     if dossier:
         dossier = dossier.reverse()[0]
@@ -115,12 +144,18 @@ def calculdejsport(request):
             coef_act = act.coef
             dp = duree * coef_act
             Travail.objects.create(dossierTrav=dossier,categorieTrav=cat,activiteTrav=act,dureeTrav=duree)
+            Travail.objects.create(dossierTrav=dossier,categorieTrav=cat,activiteTrav=act,dureeTrav=duree)
             envoi = True
-    elif request.method == 'POST' and 'btnenvoyer' in request.POST:
+    elif request.method == 'POST' and 'btnterminer' in request.POST:
         dossier.dernier=False
         dossier.save()
+        return render(request, 'calculdej/calculdejresultat.html', locals())
 
-    travails = Travail.objects.filter(dossierTrav=dossier)
+    elif request.method == 'POST' and 'btnsupprimer' in request.POST:
+        id_supp = int(request.POST.get('btnsupprimer'))
+        Travail.objects.get(id=id_supp).delete()
+
+    travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Sportives')
     return render(request, 'calculdej/calcdejsport.html', locals())
 
 @login_required

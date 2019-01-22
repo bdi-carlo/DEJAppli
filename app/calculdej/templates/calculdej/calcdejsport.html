@@ -11,11 +11,13 @@
     <button type="submit" name="btnajouter">Ajouter</button>
 </form>
 
-<div>
-  <a href="{% url 'calculdejresultat' %}"> <input type="button" value="Terminer"> </a>
-</div>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit" name="btnterminer">Terminer</button>
+    <!-- <a href="{% url 'calculdejresultat' %}"> <input type="button" name="btnterminer" value="Terminer"> </a> -->
+</form>
 
-<!-- <table>
+<table>
   <thead>
        <tr>
            <th>Categorie</th>
@@ -29,10 +31,17 @@
            <td>{{ trav.categorieTrav }} </td>
            <td>{{ trav.activiteTrav }} </td>
            <td>{{ trav.dureeTrav }} </td>
+           <td>{{ trav.id }} </td>
+           <td>
+             <form method="post">
+                 {% csrf_token %}
+                 <button type="submit" name="btnsupprimer" value="{{trav.id}}">Supprimer</button>
+             </form>
+            </td>
        </tr>
        <tr>
       {%endfor%}
-</table> -->
+</table>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script>
