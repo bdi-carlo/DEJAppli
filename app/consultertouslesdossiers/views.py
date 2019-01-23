@@ -9,14 +9,14 @@ from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required, user_passes_test
 
 
-# def check_user(user):
-#     if user.is_authenticated:
-#         username = user.get_username()
-#
-#     return username=='admin'
+def check_user(user):
+    if user.is_authenticated:
+        username = user.get_username()
+
+    return username=='admin'
 
 @login_required
-# @user_passes_test(check_user)
-def consulterdossier(request):
-    dossiers = Dossier.objects.filter(auteur=request.user)
-    return render(request, 'consulterdossier/consulterdossier.html', locals())
+@user_passes_test(check_user)
+def consultertouslesdossiers(request):
+    dossiers = Dossier.objects.all()
+    return render(request, 'consultertouslesdossiers/consultertouslesdossiers.html', locals())

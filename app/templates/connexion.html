@@ -1,3 +1,5 @@
+
+
 {% if error %}
 <p><strong>Utilisateur inconnu ou mauvais de mot de passe.</strong></p>
 {% endif %}
@@ -7,8 +9,10 @@
 
 <a href="/calculdej"> <input type="button" value="Calcul DEJ"> </a>
 </br></br>
+<a href="/consulterdossier"> <input type="button" value="Consulter Mes Dossier"> </a>
+</br></br>
 {% if user.username == 'admin' %}
-<a href="/consulterdossier"> <input type="button" value="Consulter Dossier"> </a>
+<a href="/consultertouslesdossiers"> <input type="button" value="Consulter Tous les Dossier"> </a>
 </br></br>
 {% endif %}
 
