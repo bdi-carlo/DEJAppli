@@ -1,6 +1,10 @@
-<h1>creer un compte</h1>
+{% extends "base.html" %}
 
-<form method="post">
+{% block header %}<h1>Création compte</h1>{% endblock %}
+
+{% block content %}
+
+<form class="form-horizontal" method="post">
  {% csrf_token %}
  {% for field in form %}
    <div>
@@ -11,5 +15,7 @@
      {% endfor %}
    </div>
  {% endfor %}
- <button type="submit">Sign up</button>
+ <button class="btn btn-default" type="submit">S'inscrire</button>
 </form>
+
+{% endblock %}

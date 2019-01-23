@@ -1,3 +1,9 @@
-<h1>Bienvenue sur la page de calcul DEJ !</h1>
-<h2> Tutoriel </h2>
-<a href="{% url 'calculdejimc' %}"> <input type="button" value="Commencer"> </a>
+{% extends "base.html" %}
+
+{% block header %}<h1>Ma Dépense Energétique Journalière</h1>{% endblock %}
+
+{% block content %}
+
+<a class="btn btn-default" href="{% url 'calculdejimc' %}" role="button">Commencer</a>
+
+{% endblock %}

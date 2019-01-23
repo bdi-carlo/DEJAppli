@@ -1,0 +1,35 @@
+body{
+  background-color: #BDBDBD;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[class*="col-"], footer{
+  text-align: center;
+}
+
+[class*="row"]{
+  margin-bottom: 40px;
+}
+
+#content{
+  padding-top: 50px;
+}
+
+#erreur{
+  font-weight: bold;
+  color: red;
+}
+
+[class*="btn-block"]{
+  margin-bottom: 20px;
+}
+
+header{
+  text-align: center;
+  background-color: #343736;
+  margin-top: 10px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  color: white;
+}
