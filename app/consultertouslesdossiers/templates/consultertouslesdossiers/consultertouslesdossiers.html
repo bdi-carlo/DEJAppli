@@ -7,12 +7,13 @@
   <thead>
        <tr>
            <th>Doissier</th>
+           <th>Auteur</th>
        </tr>
    </thead>
    <tbody>
        {% for d in dossiers %}
        <tr>
-           <td>{{ d }} </td>
+           <td>{{ d }}</td>
            <td>{{ d.auteur }}</td>
            <td>
              <form method="post">

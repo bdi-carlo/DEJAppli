@@ -6,4 +6,5 @@ urlpatterns = [
         url('', include('auth.urls')),
         url('calculdej/', include('calculdej.urls')),
         url('consulterdossier/', include('consulterdossier.urls')),
+        url('consultertouslesdossiers/', include('consultertouslesdossiers.urls')),
 ]
