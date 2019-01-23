@@ -37,8 +37,8 @@ class CalculDejForm(forms.Form):
         self.fields['cat'].queryset = l
 
 class CalculImcForm(forms.Form):
-    poids = forms.DecimalField(decimal_places=2,min_value=0.1)
-    taille = forms.DecimalField(decimal_places=2,min_value=0.1)
+    poids = forms.DecimalField(decimal_places=2,min_value=0.0)
+    taille = forms.DecimalField(decimal_places=2,min_value=0.0)
 
-class ValideForm(forms.Form):
+class SupprimerForm(forms.Form):
     pass

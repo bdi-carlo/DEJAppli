@@ -1,0 +1,15 @@
+<h1>Calcul de l'IMC !</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <table>
+      {{ formImc.as_table }}
+    </table>
+    <button type="submit" name="btncalcul">Envoyer</button>
+</form>
+<div>
+  <a href="{% url 'calculdejprofessionnelle' %}"> <input type="button" value="Suivant"> </a>
+</div>
+<div>
+  <h1> Votre Imc est de : {{ imc }} </h1>
+</div>

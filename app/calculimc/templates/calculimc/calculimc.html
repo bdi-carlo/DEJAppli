@@ -1,0 +1,14 @@
+<h1>CALCUL IMC !</h1>
+
+<div>
+  <a href="{% url 'connexion' %}"> <input type="button" value="Accueil"> </a>
+</div>
+
+<form method="post">
+    {% csrf_token %}
+    <table>
+      {{ formImc.as_table }}
+    </table>
+    <button type="submit">Envoyer</button>
+    <h1> Votre Imc est de : {{ imc }}</h1>
+</form>
