@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'calculdej',
     'consulterdossier',
     'consultertouslesdossiers',
+    'calculimc',
 ]
 
 MIDDLEWARE = [
