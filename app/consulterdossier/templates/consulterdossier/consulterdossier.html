@@ -1,26 +1,28 @@
-<h1> Dossiers </h1>
-<div>
-  <a href="{% url 'connexion' %}"> <input type="button" value="Accueil"> </a>
-</div>
+{% extends "base.html" %}
 
-<table>
+{% block header %}<h1>Mes Dossiers</h1>{% endblock %}
+
+{% block content %}
+
+<table class="table">
   <thead>
        <tr>
-           <th>Doissier</th>
+           <th>Dossiers</th>
        </tr>
    </thead>
    <tbody>
        {% for d in dossiers %}
        <tr>
            <td>{{ d }} </td>
-           <td>{{ d.auteur }}</td>
            <td>
              <form method="post">
                  {% csrf_token %}
-                 <button type="submit" name="btnaffdetails" value="{{d.id}}">Afficher details</button>
+                 <button class="btn btn-xs" type="submit" name="btnaffdetails" value="{{d.id}}">Afficher details</button>
              </form>
           </td>
        </tr>
       {%endfor%}
     </tbody>
 </table>
+
+{% endblock %}
