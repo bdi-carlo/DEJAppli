@@ -8,6 +8,8 @@ def calculimc(request):
     formImc = CalculImcForm(request.POST or None)
     if formImc.is_valid():
         poids = formImc.cleaned_data['poids']
-        taille = formImc.cleaned_data['taille']
-        imc = round(poids/(taille*taille),2)
+        taille = (formImc.cleaned_data['taille'])/100
+        imc = round((poids/(taille*taille)),2)
+    else:
+        imc = 0
     return render(request, 'calculimc/calculimc.html', locals())

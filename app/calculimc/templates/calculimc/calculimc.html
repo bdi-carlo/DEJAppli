@@ -4,13 +4,14 @@
 
 {% block content %}
 
+<h2 class="row" style="color:red;">{{ imc }}</h2>
+
 <form class="form-horizontal" method="post">
     {% csrf_token %}
     <table class="table">
       {{ formImc.as_table }}
     </table>
     <button class="btn btn-default" type="submit">Calculer</button>
-    <h2> Votre Imc est de : {{ imc }}</h2>
 </form>
 
 {% endblock %}
