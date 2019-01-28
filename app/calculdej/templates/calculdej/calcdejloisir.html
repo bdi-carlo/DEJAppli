@@ -1,4 +1,9 @@
-<h1> activites de Loisirs </h1>
+{% extends "base.html" %}
+
+{% block title %}DEJAppli - Ma DEJ{% endblock %}
+{% block header %}<h1>Activités Loisirs</h1>{% endblock %}
+
+{% block content %}
 
 {% if envoi %}Votre message a bien été envoyé !{% endif %}
 
@@ -8,13 +13,13 @@
     <table>
       {{ formDej.as_table }}
     </table>
-    <button type="submit" name="btnajouter">Ajouter</button>
+    <button class="btn btn-default" type="submit" name="btnajouter">Ajouter</button>
 </form>
 <div>
-  <a href="{% url 'calculdejsport' %}"> <input type="button" value="Suivant"> </a>
+  <a class="btn btn-default" href="{% url 'calculdejsport' %}" role="button">Suivant</a>
 </div>
 
-<table>
+<table class="table">
   <thead>
        <tr>
            <th>Categorie</th>
@@ -32,7 +37,7 @@
            <td>
              <form method="post">
                  {% csrf_token %}
-                 <button type="submit" name="btnsupprimer" value="{{trav.id}}">Supprimer</button>
+                 <button class="btn btn-danger btn-xs" type="submit" name="btnsupprimer" value="{{trav.id}}">Supprimer</button>
              </form>
             </td>
        </tr>
@@ -58,4 +63,6 @@
       });
 
     });
-  </script>
+</script>
+
+{% endblock %}

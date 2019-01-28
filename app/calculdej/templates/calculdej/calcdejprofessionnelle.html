@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% block title %}DEJAppli - Ma DEJ{% endblock %}
 {% block header %}<h1>Activités Professionnelles</h1>{% endblock %}
 
 {% block content %}
@@ -9,13 +10,11 @@
 <form class ="form-horizontal" id="calcForm" method="post"
  data-act-url="{% url 'load_act' %}">
     {% csrf_token %}
-    <table class="table">
-      {{ formDej.as_table }}
-    </table>
-    <button type="submit" name="btnajouter">Ajouter</button>
+    {{ formDej.as_p }}
+    <button class="btn btn-default" type="submit" name="btnajouter">Ajouter</button>
 </form>
 <div>
-  <a href="{% url 'calculdejusuelle' %}"> <input type="button" value="Suivant"> </a>
+  <a class="btn btn-default" href="{% url 'calculdejusuelle' %}" role="button">Suivant</a>
 </div>
 
 <div>
@@ -24,7 +23,7 @@
   {{ dossier.id }}
 </div>
 
-<table>
+<table class="table">
   <thead>
        <tr>
            <th>Categorie</th>
@@ -42,7 +41,7 @@
            <td>
              <form method="post">
                  {% csrf_token %}
-                 <button class="btn btn-danger btn-xs type="submit" name="btnsupprimer" value="{{trav.id}}">Supprimer</button>
+                 <button class="btn btn-danger btn-xs" type="submit" name="btnsupprimer" value="{{trav.id}}">Supprimer</button>
              </form>
             </td>
        </tr>

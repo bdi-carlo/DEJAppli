@@ -1,11 +1,16 @@
-<h1> Resultat DEJ </h1>
+{% extends "base.html" %}
 
-<table>
+{% block title %}DEJAppli - Ma DEJ{% endblock %}
+{% block header %}<h1>Résultats</h1>{% endblock %}
+
+{% block content %}
+
+<table class="table">
   <thead>
        <tr>
            <th>Categorie</th>
-           <th>Activite</th>
-           <th>Duree</th>
+           <th>Activités</th>
+           <th>Durée</th>
        </tr>
    </thead>
    <tbody>
@@ -19,6 +24,4 @@
       {%endfor%}
 </table>
 
-<div>
-  <a href="{% url 'connexion' %}"> <input type="button" value="Accueil"> </a>
-</div>
+{% endblock %}
