@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% load crispy_forms_tags %}
 {% block header %}
     {% if user.is_authenticated %}<h1>Bienvenue {{user.username}}</h1> <a id="deco" class="btn btn-danger btn-xs" href="/deconnexion" role="button">Déconnexion</a>{% else %}<h1>Connexion</h1>{% endif %}
 {% endblock %}
@@ -18,16 +19,21 @@
 
 <!-- Vous êtes connecté, {{ user.username }} ! -->
 {% else %}
-<form class="form-horizontal" method="post" action=".">
+<form id="formConnect" class="form-horizontal" method="post" action=".">
     {% csrf_token %}
-    {{ form.as_p }}
+    <div class="form-row">
+      {{ form.username|as_crispy_field }}
+    </div>
+    <div class="form-row">
+      {{ form.password|as_crispy_field }}
+    </div>
     {% if error %}
     <p id="erreur">Utilisateur inconnu ou mauvais de mot de passe.</p>
     {% endif %}
     <button class="btn btn-default" type="submit">Se connecter</button>
 </form>
 <br>
-<a class="btn btn-default" href="/creercompte" role="button">Créer un compte</a>
+<a class="btn btn-default btn-xs" href="/creercompte" role="button">Créer un compte</a>
 {% endif %}
 
 {% endblock %}
