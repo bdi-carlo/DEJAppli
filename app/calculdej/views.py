@@ -6,6 +6,7 @@ from calculdej.models import Activite
 from calculdej.models import Dossier
 from calculdej.models import Travail
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 
 @login_required
 def calculdej(request):
@@ -52,6 +53,7 @@ def calculdejprofessionnelle(request):
     elif request.method == 'POST' and 'btnsupprimer' in request.POST:
         id_supp = int(request.POST.get('btnsupprimer'))
         Travail.objects.get(id=id_supp).delete()
+        return HttpResponseRedirect(request.path_info)
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Professionnelles')
     return render(request, 'calculdej/calcdejprofessionnelle.html', locals())
@@ -86,6 +88,7 @@ def calculdejusuelle(request):
     elif request.method == 'POST' and 'btnsupprimer' in request.POST:
         id_supp = int(request.POST.get('btnsupprimer'))
         Travail.objects.get(id=id_supp).delete()
+        return HttpResponseRedirect(request.path_info)
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Usuelles')
     return render(request, 'calculdej/calcdejusuelle.html', locals())
@@ -119,6 +122,7 @@ def calculdejloisir(request):
     elif request.method == 'POST' and 'btnsupprimer' in request.POST:
         id_supp = int(request.POST.get('btnsupprimer'))
         Travail.objects.get(id=id_supp).delete()
+        return HttpResponseRedirect(request.path_info)
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Loisirs')
     return render(request, 'calculdej/calcdejloisir.html', locals())
@@ -154,6 +158,7 @@ def calculdejsport(request):
     elif request.method == 'POST' and 'btnsupprimer' in request.POST:
         id_supp = int(request.POST.get('btnsupprimer'))
         Travail.objects.get(id=id_supp).delete()
+        return HttpResponseRedirect(request.path_info)
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Sportives')
     return render(request, 'calculdej/calcdejsport.html', locals())

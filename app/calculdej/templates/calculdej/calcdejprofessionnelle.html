@@ -1,34 +1,28 @@
-{% extends "base.html" %}
+{% extends "baseActivite.html" %}
 
+{% load crispy_forms_tags %}
 {% block title %}DEJAppli - Ma DEJ{% endblock %}
 {% block header %}<h1>Activités Professionnelles</h1>{% endblock %}
 
-{% block content %}
-
-{% if envoi %}Votre message a bien été envoyé !{% endif %}
+{% block form %}
 
 <form class ="form-horizontal" id="calcForm" method="post"
  data-act-url="{% url 'load_act' %}">
     {% csrf_token %}
-    {{ formDej.as_p }}
-    <button class="btn btn-default" type="submit" name="btnajouter">Ajouter</button>
+    {{ formDej|crispy }}
+    <button class="btn btn-success" type="submit" name="btnajouter">Ajouter</button>
 </form>
-<div>
-  <a class="btn btn-default" href="{% url 'calculdejusuelle' %}" role="button">Suivant</a>
-</div>
 
-<div>
-  {{ cat }}
-<br>
-  {{ dossier.id }}
-</div>
+{% endblock %}
+
+{% block tab %}
 
 <table class="table">
   <thead>
        <tr>
-           <th>Categorie</th>
-           <th>Activite</th>
-           <th>Duree</th>
+           <th>Catégorie</th>
+           <th>Activités</th>
+           <th>Durée</th>
        </tr>
    </thead>
    <tbody>
@@ -37,7 +31,6 @@
            <td>{{ trav.categorieTrav }} </td>
            <td>{{ trav.activiteTrav }} </td>
            <td>{{ trav.dureeTrav }} </td>
-           <td>{{ trav.id }} </td>
            <td>
              <form method="post">
                  {% csrf_token %}
@@ -68,5 +61,11 @@
 
     });
   </script>
+
+{% endblock %}
+
+{% block footer %}
+
+<a class="btn btn-default" href="{% url 'calculdejusuelle' %}" role="button">Suivant</a>
 
 {% endblock %}

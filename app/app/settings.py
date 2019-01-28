@@ -25,7 +25,7 @@ SECRET_KEY = 'xp3h)$c-+zu_cqwp@i_xop6syqe_!y+v=72i9plypx+(qlcs$n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'consulterdossier',
     'consultertouslesdossiers',
     'calculimc',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

@@ -32,4 +32,9 @@ header{
   padding-bottom: 1px;
   padding-top: 1px;
   color: white;
+  position: relative;
+}
+
+#contentActivity{
+  margin-top: 40px;
 }
