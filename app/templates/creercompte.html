@@ -1,21 +1,16 @@
 {% extends "base.html" %}
 
+{% load crispy_forms_tags %}
 {% block header %}<h1>Création compte</h1>{% endblock %}
 
 {% block content %}
 
-<form class="form-horizontal" method="post">
- {% csrf_token %}
- {% for field in form %}
-   <div>
-     {{ field.label_tag }}<br>
-     {{ field }}
-     {% for error in field.errors %}
-       <p style="color: red">{{ error }}</p>
-     {% endfor %}
-   </div>
- {% endfor %}
- <button class="btn btn-default" type="submit">S'inscrire</button>
+<form id="formConnect" class="form-horizontal" method="post">
+  {% csrf_token %}
+  {{ form|crispy }}
+  <button class="btn btn-default" type="submit">S'inscrire</button>
 </form>
+<br>
+<a class="btn btn-default btn-xs" href="/" role="button">J'ai déjà un compte</a>
 
 {% endblock %}
