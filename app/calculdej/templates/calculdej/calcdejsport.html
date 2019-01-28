@@ -1,25 +1,21 @@
-{% extends "base.html" %}
+{% extends "baseActivite.html" %}
 
+{% load crispy_forms_tags %}
 {% block title %}DEJAppli - Ma DEJ{% endblock %}
 {% block header %}<h1>Activités Sportives</h1>{% endblock %}
 
-{% block content %}
-{% if envoi %}Votre message a bien été envoyé !{% endif %}
+{% block form %}
 
 <form id="calcForm" method="post"
  data-act-url="{% url 'load_act' %}">
     {% csrf_token %}
-    <table>
-      {{ formDej.as_table }}
-    </table>
-    <button class="btn btn-default" type="submit" name="btnajouter">Ajouter</button>
+    {{ formDej|crispy }}
+    <button class="btn btn-success" type="submit" name="btnajouter">Ajouter</button>
 </form>
 
-<form method="post">
-  {% csrf_token %}
-  <button class="btn btn-default" type="submit" name="btnterminer">Terminer</button>
-    <!-- <a href="{% url 'calculdejresultat' %}"> <input type="button" name="btnterminer" value="Terminer"> </a> -->
-</form>
+{% endblock %}
+
+{% block tab %}
 
 <table class="table">
   <thead>
@@ -66,5 +62,15 @@
 
     });
 </script>
+
+{% endblock %}
+
+{% block footer %}
+
+<form method="post">
+  {% csrf_token %}
+  <button class="btn btn-default" type="submit" name="btnterminer">Terminer</button>
+    <!-- <a href="{% url 'calculdejresultat' %}"> <input type="button" name="btnterminer" value="Terminer"> </a> -->
+</form>
 
 {% endblock %}

@@ -12,6 +12,7 @@
     <div class="container">
 
       <header>
+        {% if user.is_authenticated %}<a id="home" class="btn btn-primary" href="{% url 'connexion' %}" role="button">Acceuil</a>{% endif %}
         {% block header %}{% endblock %}
       </header>
 
@@ -22,7 +23,7 @@
       </div>
 
       <footer>
-        <a class="btn btn-primary " href="{% url 'connexion' %}" role="button">Acceuil</a>
+        {% block footer %}{% endblock %}
       </footer>
 
     </div>

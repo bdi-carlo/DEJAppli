@@ -12,7 +12,7 @@
     <div class="container">
 
       <header>
-        <a class="btn btn-primary " href="{% url 'connexion' %}" role="button">Acceuil</a>
+        <a id="home" class="btn btn-primary" href="{% url 'connexion' %}" role="button">Acceuil</a>
         {% block header %}{% endblock %}
       </header>
 
@@ -28,7 +28,7 @@
       </div>
 
       <footer>
-          {% block footer %}{% endblock %}
+        {% block footer %}{% endblock %}
       </footer>
 
     </div>

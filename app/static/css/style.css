@@ -38,3 +38,10 @@ header{
 #contentActivity{
   margin-top: 40px;
 }
+
+#home{
+  position: absolute;
+  left: 10px;
+  top: 50%; /* poussé de la moitié de hauteur du référent */
+  transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+}
