@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% load crispy_forms_tags %}
 {% block title %}DEJAppli - Mon IMC{% endblock %}
 {% block header %}<h1>Mon IMC</h1>{% endblock %}
 
@@ -9,9 +10,7 @@
 
 <form class="form-horizontal" method="post">
     {% csrf_token %}
-    <table class="table">
-      {{ formImc.as_table }}
-    </table>
+    {{ formImc|crispy }}
     <button class="btn btn-default" type="submit">Calculer</button>
 </form>
 
