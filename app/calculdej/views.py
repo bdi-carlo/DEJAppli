@@ -8,18 +8,23 @@ from calculdej.models import Travail
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 
+poids = 0
+taille = 0
+sexe = "M"
+age = 21
+
 @login_required
 def calculdej(request):
     return render(request, 'calculdej/calculdej.html')
 
 @login_required
 def calculdejimc(request):
+    global poids, taille, sexe, age
     formImc = CalculImcForm(request.POST or None)
     if request.method == 'POST' and 'btncalcul' in request.POST:
         if formImc.is_valid():
             poids = formImc.cleaned_data['poids']
             taille = formImc.cleaned_data['taille']
-            imc = round(poids/(taille*taille),2)
     return render(request, 'calculdej/calculdejimc.html', locals())
 
 
@@ -163,9 +168,34 @@ def calculdejsport(request):
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Sportives')
     return render(request, 'calculdej/calcdejsport.html', locals())
 
+# Calcul d'une DE en fonction d'une Catégorie et de sa liste d'Activités
+def calculDE( cat, activites, MB, TD ):
+    dureeNap = 0
+    sommeNap = 0
+    for tmp in activites:
+        if cat == "Professionnelles" or cat == "Usuelles":
+            dureeNap += tmp.dureeTrav
+            sommeNap += tmp.dureeTrav * tmp.activiteTrav.coef
+        if cat == "Loisirs" or cat == "Sportives":
+            dureeNap += tmp.dureeTrav/7
+            sommeNap += tmp.dureeTrav/7 * tmp.activiteTrav.coef
+    if dureeNap == 0:
+        return 0
+    else:
+        nap = sommeNap / dureeNap
+        return (float(nap) * float(MB)) / (float(TD) * float(dureeNap))
 
 @login_required
 def calculdejresultat(request):
+    global poids
+    global taille
+    global sexe
+    global age
+
+    MB = 0 # Métabolisme de Base
+    TD = 0 # Temps total
+
+    # Récupération du dossier en cours et sauvegarde de celui-ci
     dossier = Dossier.objects.filter(dernier=True)
     if dossier:
         dossier = dossier.reverse()[0]
@@ -176,6 +206,48 @@ def calculdejresultat(request):
     dossier.dernier=False
     dossier.save()
     travails = Travail.objects.filter(dossierTrav=dossier)
+
+
+    pros = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Professionnelles')
+    sports = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Sportives')
+    usuelles = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Usuelles')
+    loisirs = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Loisirs')
+
+    # Calcul du Métabolisme de Base
+    if sexe == "M":
+        MB = 13.707*poids+492.3*(taille/100)-6.673*age+77.607
+    else:
+        MB = 9.740*poids+172.9*(taille/100)-4.737*age+667.051
+
+    # Calcul Durée Totale
+    for tmp in travails:
+        test = False
+        for cat in Categorie.objects.filter(typeCat="Sportives"):
+            if tmp.categorieTrav == cat:
+                test = True
+        for cat in Categorie.objects.filter(typeCat="Loisirs"):
+            if tmp.categorieTrav == cat:
+                test = True
+        if test:
+            TD += tmp.dureeTrav/7
+        else:
+            TD += tmp.dureeTrav
+
+    # Calcul DE Professionnelles
+    DEProfessionnelles = calculDE( "Professionnelles", pros, MB, TD )
+
+    # Calcul DE Usuelles
+    DEUsuelles = calculDE( "Usuelles", usuelles, MB, TD )
+
+    # Calcul DE Loisirs
+    DELoisirs = calculDE( "Loisirs", loisirs, MB, TD )
+
+    # Calcul DE Sportives
+    DESports = calculDE( "Sportives", sports, MB, TD )
+
+    # Calcul DE Totale
+    DE = (DEProfessionnelles+DEUsuelles+DELoisirs+DESports)/24/60
+
     return render(request, 'calculdej/calculdejresultat.html', locals())
 
 
