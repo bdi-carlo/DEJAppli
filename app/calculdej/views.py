@@ -13,14 +13,14 @@ def calculdej(request):
     return render(request, 'calculdej/calculdej.html')
 
 @login_required
-def calculdejimc(request):
+def calculdejmb(request):
     formImc = CalculImcForm(request.POST or None)
     if request.method == 'POST' and 'btncalcul' in request.POST:
         if formImc.is_valid():
             poids = formImc.cleaned_data['poids']
             taille = formImc.cleaned_data['taille']
             imc = round(poids/(taille*taille),2)
-    return render(request, 'calculdej/calculdejimc.html', locals())
+    return render(request, 'calculdej/calculdejmb.html', locals())
 
 
 @login_required

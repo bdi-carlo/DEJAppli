@@ -37,8 +37,11 @@ class CalculDejForm(forms.Form):
         self.fields['cat'].queryset = l
 
 class CalculImcForm(forms.Form):
+    CHOICES=[('M','M'),('F','F')]
+    sexe = forms.ChoiceField(choices=CHOICES, widget=forms.RadioSelect)
     poids = forms.DecimalField(decimal_places=2,min_value=0.0)
     taille = forms.DecimalField(decimal_places=2,min_value=0.0)
+    age = forms.IntegerField(min_value=0)
 
 class SupprimerForm(forms.Form):
     pass
