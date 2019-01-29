@@ -33,9 +33,9 @@ def calculdejprofessionnelle(request):
     if dossier:
         dossier = dossier.reverse()[0]
     else:
-        dossier = Dossier.objects.create(titre="ttt",auteur=request.user,dernier=True)
+        dossier = Dossier.objects.create(auteur=request.user,dernier=True)
     if dossier.dernier != True:
-        dossier = Dossier.objects.create(titre="ttt",auteur=request.user,dernier=True)
+        dossier = Dossier.objects.create(auteur=request.user,dernier=True)
 
     if request.method == 'POST' and 'btnajouter' in request.POST:
         if formDej.is_valid():
@@ -68,9 +68,9 @@ def calculdejusuelle(request):
     if dossier:
         dossier = dossier.reverse()[0]
     else:
-        dossier = Dossier.objects.create(titre="ttt",auteur=request.user,dernier=True)
+        dossier = Dossier.objects.create(auteur=request.user,dernier=True)
     if dossier.dernier != True:
-        dossier = Dossier.objects.create(titre="ttt",auteur=request.user,dernier=True)
+        dossier = Dossier.objects.create(auteur=request.user,dernier=True)
 
     if request.method == 'POST' and 'btnajouter' in request.POST:
         if formDej.is_valid():
@@ -102,9 +102,9 @@ def calculdejloisir(request):
     if dossier:
         dossier = dossier.reverse()[0]
     else:
-        dossier = Dossier.objects.create(titre="ttt",auteur=request.user,dernier=True)
+        dossier = Dossier.objects.create(auteur=request.user,dernier=True)
     if dossier.dernier != True:
-        dossier = Dossier.objects.create(titre="ttt",auteur=request.user,dernier=True)
+        dossier = Dossier.objects.create(auteur=request.user,dernier=True)
 
     if request.method == 'POST' and 'btnajouter' in request.POST:
         if formDej.is_valid():
@@ -136,9 +136,9 @@ def calculdejsport(request):
     if dossier:
         dossier = dossier.reverse()[0]
     else:
-        dossier = Dossier.objects.create(titre="ttt",auteur=request.user,dernier=True)
+        dossier = Dossier.objects.create(auteur=request.user,dernier=True)
     if dossier.dernier != True:
-        dossier = Dossier.objects.create(titre="ttt",auteur=request.user,dernier=True)
+        dossier = Dossier.objects.create(auteur=request.user,dernier=True)
 
     if request.method == 'POST' and 'btnajouter' in request.POST:
         if formDej.is_valid():
@@ -170,9 +170,9 @@ def calculdejresultat(request):
     if dossier:
         dossier = dossier.reverse()[0]
     else:
-        dossier = Dossier.objects.create(titre="ttt",auteur=request.user,dernier=True)
+        dossier = Dossier.objects.create(auteur=request.user,dernier=True)
     if dossier.dernier != True:
-        dossier = Dossier.objects.create(titre="ttt",auteur=request.user,dernier=True)
+        dossier = Dossier.objects.create(auteur=request.user,dernier=True)
     dossier.dernier=False
     dossier.save()
     travails = Travail.objects.filter(dossierTrav=dossier)

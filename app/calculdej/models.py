@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 
 class Categorie(models.Model):
@@ -31,7 +32,8 @@ class Activite(models.Model):
         return self.titre
 
 class Dossier(models.Model):
-    titre = models.CharField(max_length=30,default="")
+    #titre = models.CharField(max_length=30,default="")
+    date = models.DateTimeField(default=timezone.now, blank=True, verbose_name="Date création")
     auteur = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     dernier = models.BooleanField(default=True)
 

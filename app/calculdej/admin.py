@@ -14,10 +14,10 @@ class ActiviteAdmin(admin.ModelAdmin):
    search_fields  = ('titre', 'categorie')
 
 class DossierAdmin(admin.ModelAdmin):
-    list_display   = ('titre','auteur','dernier')
+    list_display   = ('date','auteur','dernier')
     list_filter    = ('auteur',)
     ordering       = ('auteur', )
-    search_fields  = ('titre', 'auteur')
+    search_fields  = ('date', 'auteur')
 
 class TravailAdmin(admin.ModelAdmin):
     list_display   = ('dossierTrav','categorieTrav','activiteTrav','dureeTrav')
