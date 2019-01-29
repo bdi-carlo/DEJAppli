@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import CalculDejForm, SupprimerForm, CalculImcForm
+from .forms import CalculDejForm, SupprimerForm, CalculMBForm
 # from .forms import CalculDejForm, SupprimerForm, CalculImcForm, ValideForm
 from calculdej.models import Categorie
 from calculdej.models import Activite
@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 
 poids = 0
-taille = 0
+taille = 8
 sexe = "M"
 age = 21
 
@@ -18,23 +18,20 @@ def calculdej(request):
     return render(request, 'calculdej/calculdej.html')
 
 @login_required
-<<<<<<< HEAD
-def calculdejimc(request):
-    global poids, taille, sexe, age
-=======
 def calculdejmb(request):
->>>>>>> mamadou
-    formImc = CalculImcForm(request.POST or None)
+    global poids
+    global taille
+    global sexe
+    global age
+    formImc = CalculMBForm(request.POST or None)
     if request.method == 'POST' and 'btncalcul' in request.POST:
         if formImc.is_valid():
             poids = formImc.cleaned_data['poids']
             taille = formImc.cleaned_data['taille']
-<<<<<<< HEAD
-    return render(request, 'calculdej/calculdejimc.html', locals())
-=======
+            sexe = formImc.cleaned_data['sexe']
+            age = formImc.cleaned_data['age']
             imc = round(poids/(taille*taille),2)
     return render(request, 'calculdej/calculdejmb.html', locals())
->>>>>>> mamadou
 
 
 @login_required
