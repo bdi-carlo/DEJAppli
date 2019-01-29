@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from .forms import CalculDejForm, SupprimerForm, CalculMBForm
 # from .forms import CalculDejForm, SupprimerForm, CalculImcForm, ValideForm
 from calculdej.models import Categorie
@@ -8,16 +7,13 @@ from calculdej.models import Travail
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from django.urls import reverse
 
 poids = 0
 taille = 8
 sexe = "M"
 age = 21
-
-
-from django.shortcuts import render, redirect
-from django.urls import reverse
-
 
 @login_required
 def calculdej(request):
@@ -30,11 +26,6 @@ def calculdejmb(request):
     global sexe
     global age
 
-    poids = taille = age = 0
-    sexeF = "M"
-
-
-
     formImc = CalculMBForm(request.POST or None)
     if request.method == 'POST' and 'btnsuivantt' in request.POST:
         if formImc.is_valid():
@@ -43,9 +34,7 @@ def calculdejmb(request):
             sexe = formImc.cleaned_data['sexe']
             age = formImc.cleaned_data['age']
             imc = round(poids/(taille*taille),2)
-            # return calculdejprofessionnelle(request)
             return redirect(reverse(calculdejprofessionnelle))
-
 
     return render(request, 'calculdej/calculdejmb.html', locals())
 
@@ -205,7 +194,7 @@ def calculDE( cat, activites, MB, TD ):
         return 0
     else:
         nap = sommeNap / dureeNap
-        return (float(nap) * float(MB)) / (float(TD) * float(dureeNap))
+        return float(nap) * float(MB) / float(TD) * float(dureeNap)
 
 @login_required
 def calculdejresultat(request):
@@ -238,8 +227,14 @@ def calculdejresultat(request):
     # Calcul du Métabolisme de Base
     if sexe == "M":
         MB = 13.707*float(poids)+492.3*(float(taille)/100)-6.673*int(age)+77.607
+        naj1 = 2.5
+        naj2 = 5.0
+        naj3 = 7.5
     else:
         MB = 9.740*float(poids)+172.9*(float(taille)/100)-4.737*int(age)+667.051
+        naj1 = 2.0
+        naj2 = 4.6
+        naj3 = 6.0
 
     # Calcul Durée Totale
     for tmp in travails:
@@ -268,12 +263,18 @@ def calculdejresultat(request):
     DESports = calculDE( "Sportives", sports, MB, TD )
 
     # Calcul DE Totale
-    DE = (DEProfessionnelles+DEUsuelles+DELoisirs+DESports)/24/60
+    DE = round(((DEProfessionnelles+DEUsuelles+DELoisirs+DESports)/24/60),2)
 
-    p = poids
-    t = taille
-    s = sexe
-    a = age
+    # Détermination du niveau d'activité journalière
+    if DE < naj1:
+        niveau = "faible"
+    elif DE < naj2:
+        niveau = "modéré"
+    elif DE < naj3:
+        niveau = "intense"
+    else:
+        niveau = "très intense"
+
     return render(request, 'calculdej/calculdejresultat.html', locals())
 
 
