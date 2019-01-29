@@ -6,13 +6,15 @@
 
 {% block content %}
 
-<form class="form-horizontal" method="post">
+<form method="post">
     {% csrf_token %}
     {{ formImc|crispy }}
+    <input type="submit" name="btnsuivant" value="suivant">
+    <!-- <input type="submit" name="btnsuivant" value="suivant" onclick=onclick=window.location.href='{% url 'calculdejprofessionnelle' %}'> -->
 </form>
 
 {% endblock %}
 
 {% block footer %}
-<a class="btn btn-default" href="{% url 'calculdejprofessionnelle' %}" role="button">Suivant</a>
+<!-- <a class="btn btn-default" href="{% url 'calculdejprofessionnelle' %}" role="button">Suivant</a> -->
 {% endblock %}

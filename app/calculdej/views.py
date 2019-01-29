@@ -23,14 +23,20 @@ def calculdejmb(request):
     global taille
     global sexe
     global age
+
+    poids = taille = age = 0
+    sexeF = "M"
+
     formImc = CalculMBForm(request.POST or None)
-    if request.method == 'POST' and 'btncalcul' in request.POST:
+    if request.method == 'POST' and 'btnsuivant' in request.POST:
         if formImc.is_valid():
             poids = formImc.cleaned_data['poids']
             taille = formImc.cleaned_data['taille']
             sexe = formImc.cleaned_data['sexe']
             age = formImc.cleaned_data['age']
             imc = round(poids/(taille*taille),2)
+            return calculdejprofessionnelle(request)
+
     return render(request, 'calculdej/calculdejmb.html', locals())
 
 
@@ -221,9 +227,9 @@ def calculdejresultat(request):
 
     # Calcul du Métabolisme de Base
     if sexe == "M":
-        MB = 13.707*poids+492.3*(taille/100)-6.673*age+77.607
+        MB = 13.707*float(poids)+492.3*(float(taille)/100)-6.673*int(age)+77.607
     else:
-        MB = 9.740*poids+172.9*(taille/100)-4.737*age+667.051
+        MB = 9.740*float(poids)+172.9*(float(taille)/100)-4.737*int(age)+667.051
 
     # Calcul Durée Totale
     for tmp in travails:
@@ -254,6 +260,10 @@ def calculdejresultat(request):
     # Calcul DE Totale
     DE = (DEProfessionnelles+DEUsuelles+DELoisirs+DESports)/24/60
 
+    p = poids
+    t = taille
+    s = sexe
+    a = age
     return render(request, 'calculdej/calculdejresultat.html', locals())
 
 
