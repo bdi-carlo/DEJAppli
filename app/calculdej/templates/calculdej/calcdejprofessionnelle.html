@@ -6,7 +6,7 @@
 
 {% block form %}
 
-<form class ="form-horizontal" id="calcForm" method="post"
+<form id="calcForm" method="post"
  data-act-url="{% url 'load_act' %}">
     {% csrf_token %}
     {{ formDej|crispy }}

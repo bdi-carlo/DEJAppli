@@ -7,11 +7,17 @@ from calculdej.models import Dossier
 from calculdej.models import Travail
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 
 poids = 0
 taille = 8
 sexe = "M"
 age = 21
+
+
+from django.shortcuts import render, redirect
+from django.urls import reverse
+
 
 @login_required
 def calculdej(request):
@@ -27,15 +33,19 @@ def calculdejmb(request):
     poids = taille = age = 0
     sexeF = "M"
 
+
+
     formImc = CalculMBForm(request.POST or None)
-    if request.method == 'POST' and 'btnsuivant' in request.POST:
+    if request.method == 'POST' and 'btnsuivantt' in request.POST:
         if formImc.is_valid():
             poids = formImc.cleaned_data['poids']
             taille = formImc.cleaned_data['taille']
             sexe = formImc.cleaned_data['sexe']
             age = formImc.cleaned_data['age']
             imc = round(poids/(taille*taille),2)
-            return calculdejprofessionnelle(request)
+            # return calculdejprofessionnelle(request)
+            return redirect(reverse(calculdejprofessionnelle))
+
 
     return render(request, 'calculdej/calculdejmb.html', locals())
 
