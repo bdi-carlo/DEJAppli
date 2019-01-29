@@ -9,8 +9,7 @@
 <form method="post">
     {% csrf_token %}
     {{ formImc|crispy }}
-    <input type="submit" name="btnsuivant" value="suivant">
-    <!-- <input type="submit" name="btnsuivant" value="suivant" onclick=onclick=window.location.href='{% url 'calculdejprofessionnelle' %}'> -->
+    <input class="btn btn-default" type="submit" name="btnsuivant" value="suivant">
 </form>
 
 {% endblock %}
