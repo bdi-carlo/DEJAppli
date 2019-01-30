@@ -6,54 +6,50 @@
 
 {% block form %}
 
-<form id="calcForm" method="post"
- data-act-url="{% url 'load_act' %}">
-    {% csrf_token %}
-    {{ formDej|crispy }}
-    <button class="btn btn-success" type="submit" name="btnajouter">Ajouter</button>
-</form>
 
+<!-- {{ formDej|crispy }} -->
+<!-- {{ formDeplacement|crispy }} -->
+
+
+<div class="container">
+
+<form id="calcForm" method="post"
+ data-act-url="{% url 'load_act' %}" class="form-inline">
 <div>
-  <p> vous deplacez-vous au travail ?
-  <input type="radio" name="rdouinon" onclick="myFunction()" value="Non"/> Non
-  <input type="radio" name="rdouinon" onclick="myFunction()" value="Oui"/> Oui
-  </p>
+  {% csrf_token %}
+  {% for field in formDej %}
+    <div class="form-group has-feedback">
+      {{ field }}
+    </div>
+  {% endfor %}
 </div>
 
-<form method="post" id="myDIV" style="display: none">
-    {% csrf_token %}
-    {{ formDeplacement|crispy }}
+<div id="myDIV" style="display: none" class="row">
+  </br>
+  <p> Remplissez les champs suivants </p>
+  {% for field in formDeplacement %}
+  <label> {{ field.label }}</label>
+  <div>
+    {{ field }}
+  </div></br>
+  {% endfor %}
+</div>
+
+</div>
+
+<div class="container info-form">
+  <p> vous deplacez-vous au travail ?
+  <input type="radio" id="btn1" name="rdouinon" checked="checked" onclick="myFunctionNon()" value="Non"/> Non
+  <input type="radio" id="btn1" name="rdouinon" onclick="myFunctionOui()" value="Oui"/> Oui
+  </p>
+
+</div>
+
+<div class="container">
+  <input id="btnSuivant" class="btn btn-default" type="submit" name="btnsuivant" value="Suivant">
+</div>
+
 </form>
-
-{% endblock %}
-
-{% block tab %}
-
-<table class="table">
-  <thead>
-       <tr>
-           <th>Catégorie</th>
-           <th>Activités</th>
-           <th>Durée</th>
-       </tr>
-   </thead>
-   <tbody>
-       {% for trav in travails %}
-       <tr>
-           <td>{{ trav.categorieTrav }} </td>
-           <td>{{ trav.activiteTrav }} </td>
-           <td>{{ trav.dureeTrav }} </td>
-           <td>
-             <form method="post">
-                 {% csrf_token %}
-                 <button class="btn btn-danger btn-xs" type="submit" name="btnsupprimer" value="{{trav.id}}">Supprimer</button>
-             </form>
-            </td>
-       </tr>
-       <tr>
-      {%endfor%}
-</table>
-
 
 {% endblock %}
 
@@ -80,15 +76,25 @@
   </script>
 
   <script type="text/javascript">
-  function myFunction() {
+  function myFunctionNon() {
     var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
+    if (x.style.display === "block") {
       x.style.display = "none";
     }
   }
-  </script>
-<a class="btn btn-default" href="{% url 'calculdejusuelle' %}" role="button">Suivant</a>
 
+  function myFunctionOui() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    }
+
+  }
+  </script>
+
+<!-- <a class="btn btn-default" href="{% url 'calculdejusuelle' %}" role="button" name="asuivant">Suivant</a> -->
+<!-- <form method="post">
+  {% csrf_token %}
+  <input id="btnSuivant" class="btn btn-default" type="submit" name="btnsuivant" value="Suivant">
+</form> -->
 {% endblock %}

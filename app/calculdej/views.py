@@ -16,6 +16,12 @@ taille = 0
 sexe = "M"
 age = 0
 
+dureelentsansport = 0
+dureemoderesansport = 0
+dureemodereavecport = 0
+dureeintense = 0
+
+
 @login_required
 def calculdej(request):
     return render(request, 'calculdej/calculdej.html')
@@ -41,6 +47,11 @@ def calculdejmb(request):
 
 @login_required
 def calculdejprofessionnelle(request):
+    global dureelentsansport
+    global dureemoderesansport
+    global dureemodereavecport
+    global dureeintense
+
     formDej = CalculDejForm(request.POST or None)
     formDeplacement = DeplacementForm(request.POST or None)
     formDej.CatProfessionnelles()
@@ -53,23 +64,30 @@ def calculdejprofessionnelle(request):
     if dossier.dernier != True:
         dossier = Dossier.objects.create(auteur=request.user,dernier=True)
 
-    if request.method == 'POST' and 'btnajouter' in request.POST:
-        if formDej.is_valid():
+    if request.method == 'POST' and 'btnsuivant' in request.POST:
+        if formDej.is_valid() and formDeplacement.is_valid():
             cat = formDej.cleaned_data['cat']
             act = formDej.cleaned_data['act']
             duree = formDej.cleaned_data['duree']
             coef_act = act.coef
             dp = duree * coef_act
             Travail.objects.create(dossierTrav=dossier,categorieTrav=cat,activiteTrav=act,dureeTrav=duree)
-            envoi = True
-    elif request.method == 'POST' and 'btnenvoyer' in request.POST:
-        dossier.dernier=False
-        dossier.save()
+            # envoi = True
+            if 'rdouinon' in request.POST:
+                valrd = str(request.POST.get('rdouinon'))
+                if valrd == "Oui":
+                    dureelentsansport = formDeplacement.cleaned_data['dureelentsansport']
+                    dureemoderesansport = formDeplacement.cleaned_data['dureemoderesansport']
+                    dureemodereavecport = formDeplacement.cleaned_data['dureemodereavecport']
+                    dureeintense = formDeplacement.cleaned_data['dureeintense']
+                elif valrd == "Non":
+                    dureelentsansport = 0
+                    dureemoderesansport = 0
+                    dureemodereavecport = 0
+                    dureeintense = 0
 
-    elif request.method == 'POST' and 'btnsupprimer' in request.POST:
-        id_supp = int(request.POST.get('btnsupprimer'))
-        Travail.objects.get(id=id_supp).delete()
-        return HttpResponseRedirect(request.path_info)
+            return redirect(reverse(calculdejusuelle))
+
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Professionnelles')
     return render(request, 'calculdej/calcdejprofessionnelle.html', locals())
@@ -97,9 +115,6 @@ def calculdejusuelle(request):
             dp = duree * coef_act
             Travail.objects.create(dossierTrav=dossier,categorieTrav=cat,activiteTrav=act,dureeTrav=duree)
             envoi = True
-    elif request.method == 'POST' and 'btnenvoyer' in request.POST:
-        dossier.dernier=False
-        dossier.save()
 
     elif request.method == 'POST' and 'btnsupprimer' in request.POST:
         id_supp = int(request.POST.get('btnsupprimer'))
@@ -131,9 +146,6 @@ def calculdejloisir(request):
             dp = duree * coef_act
             Travail.objects.create(dossierTrav=dossier,categorieTrav=cat,activiteTrav=act,dureeTrav=duree)
             envoi = True
-    elif request.method == 'POST' and 'btnenvoyer' in request.POST:
-        dossier.dernier=False
-        dossier.save()
 
     elif request.method == 'POST' and 'btnsupprimer' in request.POST:
         id_supp = int(request.POST.get('btnsupprimer'))
@@ -202,6 +214,10 @@ def calculdejresultat(request):
     global taille
     global sexe
     global age
+    global dureelentsansport
+    global dureemoderesansport
+    global dureemodereavecport
+    global dureeintense
 
     MB = 0 # Métabolisme de Base
     TD = 0 # Temps total
@@ -286,6 +302,11 @@ def calculdejresultat(request):
     dossier.dernier=False
     dossier.save()
 
+    d1 = dureelentsansport
+    d2 = dureemoderesansport
+    d3 = dureemodereavecport
+    d4 = dureeintense
+    d5 = 55
     return render(request, 'calculdej/calculdejresultat.html', locals())
 
 

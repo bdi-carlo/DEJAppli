@@ -56,7 +56,13 @@ class CalculMBForm(forms.Form):
     age = forms.IntegerField(min_value=0)
 
 class DeplacementForm(forms.Form):
-    dureelentsansport = forms.DecimalField(label="lent sans port de charge",decimal_places=2,min_value=0)
-    dureemoderesansport = forms.DecimalField(label="modéré sans port de charge",decimal_places=2,min_value=0)
-    dureemodereavecport = forms.DecimalField(label="modéré avec port de charge",decimal_places=2,min_value=0)
-    dureeintense = forms.DecimalField(label="intense",decimal_places=2,min_value=0)
+    dureelentsansport = forms.DecimalField(initial=0, label="lent sans port de charge",decimal_places=2,min_value=0)
+    dureemoderesansport = forms.DecimalField(initial=0, label="modéré sans port de charge",decimal_places=2,min_value=0)
+    dureemodereavecport = forms.DecimalField(initial=0, label="modéré avec port de charge",decimal_places=2,min_value=0)
+    dureeintense = forms.DecimalField(initial=0, label="intense",decimal_places=2,min_value=0)
+
+    def initialval(self):
+        self.fields['dureelentsansport'] = 0
+        self.fields['dureemoderesansport'] = 0
+        self.fields['dureemodereavecport'] = 0
+        self.fields['dureeintense'] = 0
