@@ -1,4 +1,4 @@
-from .forms import CalculDejForm, SupprimerForm, CalculMBForm
+from .forms import CalculDejForm, DeplacementForm, CalculMBForm
 # from .forms import CalculDejForm, SupprimerForm, CalculImcForm, ValideForm
 from calculdej.models import Categorie
 from calculdej.models import Activite
@@ -41,7 +41,7 @@ def calculdejmb(request):
 @login_required
 def calculdejprofessionnelle(request):
     formDej = CalculDejForm(request.POST or None)
-    formSupp = SupprimerForm(request.POST or None)
+    formDeplacement = DeplacementForm(request.POST or None)
     formDej.CatProfessionnelles()
     cat = None
     dossier = Dossier.objects.filter(dernier=True)

@@ -10,8 +10,22 @@
  data-act-url="{% url 'load_act' %}">
     {% csrf_token %}
     {{ formDej|crispy }}
-    <button class="btn btn-success" type="submit" name="btnajouter">Ajouter</button>
+    <!-- <button class="btn btn-success" type="submit" name="btnajouter">Ajouter</button> -->
 </form>
+
+<div>
+  <p> vous deplacez-vous au travail ?
+  <input type="radio" name="rdouinon" value="Non"/> Non
+  <input type="radio" name="rdouinon" onclick="myFunction()" value="Oui"/> Oui
+  </p>
+</div>
+
+<!-- <div id="myDIV" style="display: none"> -->
+<form method="post" id="myDIV" style="display: none">
+    {% csrf_token %}
+    {{ formDeplacement|crispy }}
+</form>
+<!-- </div> -->
 
 {% endblock %}
 
@@ -62,6 +76,16 @@
     });
   </script>
 
+  <script type="text/javascript">
+  function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  </script>
 {% endblock %}
 
 {% block footer %}

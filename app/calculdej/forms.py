@@ -45,5 +45,8 @@ class CalculMBForm(forms.Form):
     taille = forms.DecimalField(decimal_places=2,min_value=0.0)
     age = forms.IntegerField(min_value=0)
 
-class SupprimerForm(forms.Form):
-    pass
+class DeplacementForm(forms.Form):
+    dureelentsansport = forms.DecimalField(label="lent sans port de charge",decimal_places=2,min_value=0)
+    dureemoderesansport = forms.DecimalField(label="modéré sans port de charge",decimal_places=2,min_value=0)
+    dureemodereavecport = forms.DecimalField(label="modéré avec port de charge",decimal_places=2,min_value=0)
+    dureeintense = forms.DecimalField(label="intense",decimal_places=2,min_value=0)
