@@ -20,12 +20,18 @@
            <td>
              <form method="post">
                  {% csrf_token %}
-                 <button class="btn btn-xs" type="submit" name="btnaffdetails" value="{{d.id}}">Afficher details</button>
+                 <button onclick="details()" class="btn btn-xs" type="submit" name="btnaffdetails" value="{{d.id}}">Afficher details</button>
              </form>
           </td>
        </tr>
       {%endfor%}
     </tbody>
 </table>
+
+<script type="text/javascript">
+function details(){
+  alert("\n {{ auteur }} le {{ date }} \n L'IMC était de {{ imc}} \n La dépense énergétique instantanée de {{ de }} kcal/min");
+}
+</script>
 
 {% endblock %}

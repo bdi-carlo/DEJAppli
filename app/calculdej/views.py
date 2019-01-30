@@ -11,9 +11,9 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 
 poids = 0
-taille = 8
+taille = 0
 sexe = "M"
-age = 21
+age = 0
 
 @login_required
 def calculdej(request):
@@ -33,7 +33,6 @@ def calculdejmb(request):
             taille = formImc.cleaned_data['taille']
             sexe = formImc.cleaned_data['sexe']
             age = formImc.cleaned_data['age']
-            imc = round(poids/(taille*taille),2)
             return redirect(reverse(calculdejprofessionnelle))
 
     return render(request, 'calculdej/calculdejmb.html', locals())
@@ -205,6 +204,7 @@ def calculdejresultat(request):
 
     MB = 0 # Métabolisme de Base
     TD = 0 # Temps total
+    imc = round((poids/((taille/100)*(taille/100))),2)
 
     # Récupération du dossier en cours et sauvegarde de celui-ci
     dossier = Dossier.objects.filter(dernier=True)
@@ -214,10 +214,10 @@ def calculdejresultat(request):
         dossier = Dossier.objects.create(auteur=request.user,dernier=True)
     if dossier.dernier != True:
         dossier = Dossier.objects.create(auteur=request.user,dernier=True)
-    dossier.dernier=False
-    dossier.save()
-    travails = Travail.objects.filter(dossierTrav=dossier)
 
+    dossier.save()
+
+    travails = Travail.objects.filter(dossierTrav=dossier)
 
     pros = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Professionnelles')
     sports = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Sportives')
@@ -274,6 +274,16 @@ def calculdejresultat(request):
         niveau = "intense"
     else:
         niveau = "très intense"
+
+    # Enregistrement des informations dans le dossier
+    dossier = Dossier.objects.filter(dernier=True).reverse()[0]
+    dossier.imc = imc
+    dossier.age = age
+    dossier.sexe = sexe
+    dossier.de = DE
+
+    dossier.dernier=False
+    dossier.save()
 
     return render(request, 'calculdej/calculdejresultat.html', locals())
 

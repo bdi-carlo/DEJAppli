@@ -19,4 +19,13 @@ def check_user(user):
 @user_passes_test(check_user)
 def consultertouslesdossiers(request):
     dossiers = Dossier.objects.all()
+
+    if request.method == 'POST' and 'btnaffdetails' in request.POST:
+        id_dossier = int(request.POST.get('btnaffdetails'))
+        dossier = Dossier.objects.get(id=id_dossier)
+        auteur = dossier.auteur
+        date = dossier.date
+        imc = dossier.imc
+        de = dossier.de
+
     return render(request, 'consultertouslesdossiers/consultertouslesdossiers.html', locals())
