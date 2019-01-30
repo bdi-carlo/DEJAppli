@@ -10,7 +10,7 @@
  data-act-url="{% url 'load_act' %}">
     {% csrf_token %}
     {{ formDej|crispy }}
-    <!-- <button class="btn btn-success" type="submit" name="btnajouter">Ajouter</button> -->
+    <button class="btn btn-success" type="submit" name="btnajouter">Ajouter</button>
 </form>
 
 <div>
@@ -20,12 +20,10 @@
   </p>
 </div>
 
-<!-- <div id="myDIV" style="display: none"> -->
 <form method="post" id="myDIV" style="display: none">
     {% csrf_token %}
     {{ formDeplacement|crispy }}
 </form>
-<!-- </div> -->
 
 {% endblock %}
 
@@ -55,6 +53,11 @@
        <tr>
       {%endfor%}
 </table>
+
+
+{% endblock %}
+
+{% block footer %}
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script>
@@ -86,10 +89,6 @@
     }
   }
   </script>
-{% endblock %}
-
-{% block footer %}
-
 <a class="btn btn-default" href="{% url 'calculdejusuelle' %}" role="button">Suivant</a>
 
 {% endblock %}

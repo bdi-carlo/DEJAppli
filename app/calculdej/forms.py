@@ -21,12 +21,22 @@ class CalculDejForm(forms.Form):
             self.fields['act'].queryset = Activite.objects.none()
 
     def CatProfessionnelles(self):
-        l = Categorie.objects.filter(typeCat='Professionnelles')
-        self.fields['cat'].queryset = l
+        lc = Categorie.objects.filter(typeCat='Professionnelles')
+        c = lc.reverse()[0]
+        la = Activite.objects.filter(categorie=c)
+        self.fields['cat'].queryset = lc
+        self.fields['cat'].empty_label = None
+        self.fields['act'].queryset = la
+
+
 
     def CatUsuelles(self):
-        l = Categorie.objects.filter(typeCat='Usuelles')
-        self.fields['cat'].queryset = l
+        lc = Categorie.objects.filter(typeCat='Usuelles')
+        c = lc.reverse()[0]
+        la = Activite.objects.filter(categorie=c)
+        self.fields['cat'].queryset = lc
+        self.fields['cat'].empty_label = None
+        self.fields['act'].queryset = la
 
     def CatLoisirs(self):
         l = Categorie.objects.filter(typeCat='Loisirs')

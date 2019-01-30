@@ -9,6 +9,7 @@ from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
+from decimal import Decimal
 
 poids = 0
 taille = 0
