@@ -4,9 +4,9 @@ from django.forms import formset_factory
 from django.contrib.auth.models import User
 
 class CalculDejForm(forms.Form):
-    cat = forms.ModelChoiceField(queryset=Categorie.objects.all())
-    act = forms.ModelChoiceField(queryset=None)
-    duree = forms.DecimalField(decimal_places=2,min_value=0)
+    cat = forms.ModelChoiceField(label="Catégorie", queryset=Categorie.objects.all())
+    act = forms.ModelChoiceField(label="Activité", queryset=None)
+    duree = forms.DecimalField(label="Durée (h)", decimal_places=2,min_value=0)
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['act'].queryset = Activite.objects.none()
@@ -56,10 +56,10 @@ class CalculMBForm(forms.Form):
     age = forms.IntegerField(min_value=0)
 
 class DeplacementForm(forms.Form):
-    dureelentsansport = forms.DecimalField(initial=0, label="lent sans port de charge",decimal_places=2,min_value=0)
-    dureemoderesansport = forms.DecimalField(initial=0, label="modéré sans port de charge",decimal_places=2,min_value=0)
-    dureemodereavecport = forms.DecimalField(initial=0, label="modéré avec port de charge",decimal_places=2,min_value=0)
-    dureeintense = forms.DecimalField(initial=0, label="intense",decimal_places=2,min_value=0)
+    dureelentsansport = forms.DecimalField(initial=0, label="Lent sans port de charge",decimal_places=2,min_value=0)
+    dureemoderesansport = forms.DecimalField(initial=0, label="Modéré sans port de charge",decimal_places=2,min_value=0)
+    dureemodereavecport = forms.DecimalField(initial=0, label="Modéré avec port de charge",decimal_places=2,min_value=0)
+    dureeintense = forms.DecimalField(initial=0, label="Intense",decimal_places=2,min_value=0)
 
     def initialval(self):
         self.fields['dureelentsansport'] = 0

@@ -9,7 +9,12 @@
 <form id="calcForm" method="post"
  data-act-url="{% url 'load_act' %}">
     {% csrf_token %}
-    {{ formDej|crispy }}
+    <div style="display: none">
+      {{ formDej.cat|as_crispy_field }}
+    </div>
+    {{ formDej.act|as_crispy_field }}
+    {{ formDej.duree|as_crispy_field }}
+    
     <button class="btn btn-success" type="submit" name="btnajouter">Ajouter</button>
 </form>
 
