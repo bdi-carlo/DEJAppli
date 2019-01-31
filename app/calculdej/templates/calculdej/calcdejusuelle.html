@@ -4,6 +4,12 @@
 {% block title %}DEJAppli - Ma DEJ{% endblock %}
 {% block header %}<h1>Activités Usuelles</h1>{% endblock %}
 
+{% block explication %}
+
+<h4>Ajoutez toutes les activités usuelles que vous faites en heure par jour.</h4>
+
+{% endblock %}
+
 {% block form %}
 
 <form id="calcForm" method="post"
@@ -14,7 +20,7 @@
     </div>
     {{ formDej.act|as_crispy_field }}
     {{ formDej.duree|as_crispy_field }}
-    
+
     <button class="btn btn-success" type="submit" name="btnajouter">Ajouter</button>
 </form>
 

@@ -8,8 +8,14 @@
 
 <form method="post">
     {% csrf_token %}
-    {{ formImc|crispy }}
-    <input id="btnSuivant" class="btn btn-default" type="submit" name="btnsuivantt" value="Suivant">
+    <div class="row">
+      <div class="col-sm-offset-3 col-sm-6 col-sm-offset-3">
+        {{ formImc|crispy }}
+      </div>
+    </div>
+    <div class="row">
+      <input class="btn btn-default" type="submit" name="btnsuivantt" value="Suivant">
+    </div>
 </form>
 
 {% endblock %}

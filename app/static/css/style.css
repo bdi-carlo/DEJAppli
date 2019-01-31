@@ -39,6 +39,10 @@ header{
   margin-top: 40px;
 }
 
+#explication{
+  text-align: center;
+}
+
 #home{
   position: absolute;
   left: 10px;
