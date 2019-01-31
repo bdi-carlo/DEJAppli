@@ -16,11 +16,7 @@ taille = 0
 sexe = "M"
 age = 0
 
-dureelentsansport = 0
-dureemoderesansport = 0
-dureemodereavecport = 0
-dureeintense = 0
-
+deplacements = []
 
 @login_required
 def calculdej(request):
@@ -47,10 +43,7 @@ def calculdejmb(request):
 
 @login_required
 def calculdejprofessionnelle(request):
-    global dureelentsansport
-    global dureemoderesansport
-    global dureemodereavecport
-    global dureeintense
+    global deplacements
 
     formDej = CalculDejForm(request.POST or None)
     formDeplacement = DeplacementForm(request.POST or None)
@@ -76,15 +69,12 @@ def calculdejprofessionnelle(request):
             if 'rdouinon' in request.POST:
                 valrd = str(request.POST.get('rdouinon'))
                 if valrd == "Oui":
-                    dureelentsansport = formDeplacement.cleaned_data['dureelentsansport']
-                    dureemoderesansport = formDeplacement.cleaned_data['dureemoderesansport']
-                    dureemodereavecport = formDeplacement.cleaned_data['dureemodereavecport']
-                    dureeintense = formDeplacement.cleaned_data['dureeintense']
+                    deplacements.append(float(formDeplacement.cleaned_data['dureelentsansport']))
+                    deplacements.append(float(formDeplacement.cleaned_data['dureemoderesansport']))
+                    deplacements.append(float(formDeplacement.cleaned_data['dureemodereavecport']))
+                    deplacements.append(float(formDeplacement.cleaned_data['dureeintense']))
                 elif valrd == "Non":
-                    dureelentsansport = 0
-                    dureemoderesansport = 0
-                    dureemodereavecport = 0
-                    dureeintense = 0
+                    deplacements = [0,0,0,0]
 
             return redirect(reverse(calculdejusuelle))
 
@@ -193,19 +183,30 @@ def calculdejsport(request):
 
 # Calcul d'une DE en fonction d'une Catégorie et de sa liste d'Activités
 def calculDE( cat, activites, MB, TD ):
+    global deplacements
+
     dureeNap = 0
     sommeNap = 0
     for tmp in activites:
-        if cat == "Professionnelles" or cat == "Usuelles":
+        if cat == "Professionnelles":
             dureeNap += tmp.dureeTrav
-            sommeNap += tmp.dureeTrav * tmp.activiteTrav.coef
+            sommeNap += (tmp.dureeTrav-Decimal(sum(deplacements))) * tmp.activiteTrav.coef
         if cat == "Loisirs" or cat == "Sportives":
             dureeNap += tmp.dureeTrav/7
             sommeNap += tmp.dureeTrav/7 * tmp.activiteTrav.coef
+        if cat == "Usuelles":
+            dureeNap += tmp.dureeTrav
+            sommeNap += tmp.dureeTrav * tmp.activiteTrav.coef
+
     if dureeNap == 0:
         return 0
     else:
-        nap = sommeNap / dureeNap
+        if cat == "Professionnelles":
+            sommeDeplacements = Decimal(deplacements[0]*2.0 + deplacements[1]*4.0 + deplacements[2]*5.0 + deplacements[3]*7.0)
+            nap = (sommeNap+sommeDeplacements) / dureeNap
+        else:
+            nap = sommeNap / dureeNap
+
         return float(nap) * float(MB) / float(TD) * float(dureeNap)
 
 @login_required
@@ -214,10 +215,6 @@ def calculdejresultat(request):
     global taille
     global sexe
     global age
-    global dureelentsansport
-    global dureemoderesansport
-    global dureemodereavecport
-    global dureeintense
 
     MB = 0 # Métabolisme de Base
     TD = 0 # Temps total
@@ -302,11 +299,6 @@ def calculdejresultat(request):
     dossier.dernier=False
     dossier.save()
 
-    d1 = dureelentsansport
-    d2 = dureemoderesansport
-    d3 = dureemodereavecport
-    d4 = dureeintense
-    d5 = 55
     return render(request, 'calculdej/calculdejresultat.html', locals())
 
 
