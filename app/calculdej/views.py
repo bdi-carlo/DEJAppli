@@ -7,6 +7,7 @@ from calculdej.models import Travail
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from decimal import Decimal
@@ -278,6 +279,13 @@ def calculdejresultat(request):
 
     # Calcul DE Totale
     DE = round(((DEProfessionnelles+DEUsuelles+DELoisirs+DESports)/24/60),2)
+    total =DEProfessionnelles+DEUsuelles+DELoisirs+DESports
+
+    #pourcentages de chaques depenses energetiques
+    pPro=round(DEProfessionnelles/total,2)*100
+    pUse=round(DEUsuelles/total,2)*100
+    pLois=round(DELoisirs/total,2)*100
+    pSport=round(DESports/total,2)*100
 
     # Détermination du niveau d'activité journalière
     if DE < naj1:
@@ -289,6 +297,8 @@ def calculdejresultat(request):
     else:
         niveau = "très intense"
 
+    #on crée un json avec les DE
+
     # Enregistrement des informations dans le dossier
     dossier = Dossier.objects.filter(dernier=True).reverse()[0]
     dossier.imc = imc
@@ -299,7 +309,11 @@ def calculdejresultat(request):
     dossier.dernier=False
     dossier.save()
 
+
+
+
     return render(request, 'calculdej/calculdejresultat.html', locals())
+
 
 
 @login_required
