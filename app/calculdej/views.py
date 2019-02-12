@@ -219,7 +219,10 @@ def calculdejresultat(request):
 
     MB = 0 # Métabolisme de Base
     TD = 0 # Temps total
-    imc = round((poids/((taille/100)*(taille/100))),2)
+    if taille > 0:
+        imc = round((poids/((taille/100)*(taille/100))),2)
+    else:
+        imc = 0
 
     # Récupération du dossier en cours et sauvegarde de celui-ci
     dossier = Dossier.objects.filter(dernier=True)
@@ -279,13 +282,16 @@ def calculdejresultat(request):
 
     # Calcul DE Totale
     DE = round(((DEProfessionnelles+DEUsuelles+DELoisirs+DESports)/24/60),2)
-    total =DEProfessionnelles+DEUsuelles+DELoisirs+DESports
+    total = DEProfessionnelles+DEUsuelles+DELoisirs+DESports
 
     #pourcentages de chaques depenses energetiques
-    pPro=round(DEProfessionnelles/total,2)*100
-    pUse=round(DEUsuelles/total,2)*100
-    pLois=round(DELoisirs/total,2)*100
-    pSport=round(DESports/total,2)*100
+    if total > 0:
+        pPro=round(DEProfessionnelles/total,2)*100
+        pUse=round(DEUsuelles/total,2)*100
+        pLois=round(DELoisirs/total,2)*100
+        pSport=round(DESports/total,2)*100
+
+    MB = round(MB,2)
 
     # Détermination du niveau d'activité journalière
     if DE < naj1:

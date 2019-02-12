@@ -1,39 +1,52 @@
-{% extends "base.html" %}
+{% extends "baseActivite.html" %}
 
 {% block title %}DEJAppli - Ma DEJ{% endblock %}
 {% block header %}<h1>Résultats</h1>{% endblock %}
 
+{% block explication %}
 
+{% endblock %}
 
+{% block form %}
 
-
-{% block content %}
-
-
-<table class="table">
-  <thead>
-       <tr>
-           <th>Categorie</th>
-           <th>Activités</th>
-           <th>Durée</th>
-       </tr>
+<table class="table table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>Informations</th>
+      <th>Résultats</th>
+   </tr>
    </thead>
    <tbody>
-       {% for trav in travails %}
-       <tr>
-           <td>{{ trav.categorieTrav }} </td>
-           <td>{{ trav.activiteTrav }} </td>
-           <td>{{ trav.dureeTrav }} </td>
-       </tr>
-       <tr>
-      {%endfor%}
+     <tr>
+       <td>IMC</td>
+       <td>{{ imc }}</td>
+     </tr>
+     <tr>
+       <td>Métabolisme de base</td>
+       <td>{{ MB }}</td>
+     </tr>
+     <tr>
+       <td>DEJ</td>
+       <td>{{ DE }}</td>
+     </tr>
+     <tr>
+       <td>Niveau d'activité journalière</td>
+       <td>{{ niveau }}</td>
+     </tr>
+   </<tbody>
 </table>
 
-<h3>Votre dépense énergétique instantanée est de {{ DE }} kcal/min</h3>
-<h4>Votre niveau d'activité journalière est {{ niveau }} !</h4>
+{% endblock %}
 
+
+{% block tab %}
+
+<div class="row col-sm-offset-2 col-sm-8 col-sm-offset-2">
 
 <canvas id="myChart" width="400" height="400"></canvas>
+
+</div>
+
 <script>
 var label = [];
 var results = [];
@@ -81,7 +94,10 @@ var myChart = new Chart(ctx, {
 });
 </script>
 
+{% endblock %}
 
+{% block footer %}
 
+<a class="btn btn-default" href="{% url 'connexion' %}" role="button">Acceuil</a>
 
 {% endblock %}
