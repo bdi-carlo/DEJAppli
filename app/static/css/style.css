@@ -59,3 +59,13 @@ header{
 #btnSuivant{
   margin-top: 20px;
 }
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 40%;
+    transform: translatex(-40%);
+}
+
+nav {
+  margin-bottom: 20px;
+}

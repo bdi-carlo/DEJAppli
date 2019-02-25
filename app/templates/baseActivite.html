@@ -35,6 +35,29 @@
         </section>
       </div>
 
+
+      <nav class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-center">
+                <li class="nav-item"><a href="/calculdej/calculdejprofessionnelle">Activités Professionnelles</a></li>
+                <li class="nav-item"><a href="/calculdej/calculdejusuelle">Activités Usuelles</a></li>
+                <li class="nav-item"><a href="/calculdej/calculdejloisir">Activités Loisirs</a></li>
+                <li class="nav-item"><a href="/calculdej/calculdejsport">Activités Sportives</a></li>
+            </ul>
+        </div>
+      </nav>
+
+      <script type="text/javascript">
+        $(document).ready(function () {
+            var url = window.location;
+            $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+            $('ul.nav a').filter(function() {
+                 return this.href == url;
+            }).parent().addClass('active');
+        });
+      </script>
+
+
       <footer>
         {% block footer %}{% endblock %}
       </footer>
