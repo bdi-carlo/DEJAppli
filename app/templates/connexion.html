@@ -12,7 +12,7 @@
 <a class="btn btn-default btn-block" href="/calculdej" role="button">Calculer ma DEJ</a>
 <a class="btn btn-default btn-block" href="/consulterdossier" role="button">Consulter Mes Dossiers</a>
 
-{% if user.username == 'admin' %}
+{% if user.username == 'admin' or user.username == 'beaune' %}
 <a class="btn btn-default btn-block" href="/consultertouslesdossiers" role="button">Consulter Tous les Dossiers</a>
 </br></br>
 {% endif %}
