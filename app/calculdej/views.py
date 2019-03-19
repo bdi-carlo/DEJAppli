@@ -16,6 +16,7 @@ poids = 0
 taille = 0
 sexe = "M"
 age = 0
+pathologie = ""
 
 deplacements = []
 
@@ -29,6 +30,8 @@ def calculdejmb(request):
     global taille
     global sexe
     global age
+    global pathologie
+
 
     formImc = CalculMBForm(request.POST or None)
     if request.method == 'POST' and 'btnsuivantt' in request.POST:
@@ -37,6 +40,7 @@ def calculdejmb(request):
             taille = formImc.cleaned_data['taille']
             sexe = formImc.cleaned_data['sexe']
             age = formImc.cleaned_data['age']
+            pathologie = formImc.cleaned_data['pathologie']
             return redirect(reverse(calculdejprofessionnelle))
 
     return render(request, 'calculdej/calculdejmb.html', locals())
@@ -216,6 +220,8 @@ def calculdejresultat(request):
     global taille
     global sexe
     global age
+    global pathologie
+
 
     MB = 0 # Métabolisme de Base
     TD = 0 # Temps total

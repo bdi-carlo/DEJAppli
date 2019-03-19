@@ -51,9 +51,11 @@ class CalculMBForm(forms.Form):
              ('F','F'),
                  ]
     sexe = forms.ChoiceField(choices=CHOICES, widget=forms.RadioSelect)
-    poids = forms.DecimalField(decimal_places=2,min_value=0.0)
-    taille = forms.DecimalField(decimal_places=2,min_value=0.0)
+    poids = forms.DecimalField(label='poids (en kg)',decimal_places=2,min_value=0.0)
+    taille = forms.DecimalField(label='taille (en cm)',decimal_places=2,min_value=0.0)
     age = forms.IntegerField(min_value=0)
+    pathologie = forms.CharField(label='pathologie ?',required=False)
+
 
 class DeplacementForm(forms.Form):
     dureelentsansport = forms.DecimalField(initial=0, label="Lent sans port de charge",decimal_places=2,min_value=0)
