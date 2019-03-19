@@ -23,9 +23,9 @@ LOGIN_URL = '/'
 SECRET_KEY = 'xp3h)$c-+zu_cqwp@i_xop6syqe_!y+v=72i9plypx+(qlcs$n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['.univ-lemans.fr', 'localhost']
+ALLOWED_HOSTS = ['.univ-lemans.fr', 'localhost', '127.0.0.1']
 
 
 # Application definition
