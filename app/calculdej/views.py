@@ -69,7 +69,7 @@ def calculdejprofessionnelle(request):
             duree = formDej.cleaned_data['duree']
             coef_act = act.coef
             dp = duree * coef_act
-            Travail.objects.create(dossierTrav=dossier,categorieTrav=cat,activiteTrav=act,dureeTrav=duree)
+            Travail.objects.create(dossierTrav=dossier,categorieTrav=cat,activiteTrav=act,dureeTrav=duree,coefTrav=coef_act)
             # envoi = True
             if 'rdouinon' in request.POST:
                 valrd = str(request.POST.get('rdouinon'))
@@ -108,7 +108,7 @@ def calculdejusuelle(request):
             duree = formDej.cleaned_data['duree']
             coef_act = act.coef
             dp = duree * coef_act
-            Travail.objects.create(dossierTrav=dossier,categorieTrav=cat,activiteTrav=act,dureeTrav=duree)
+            Travail.objects.create(dossierTrav=dossier,categorieTrav=cat,activiteTrav=act,dureeTrav=duree,coefTrav=coef_act)
             envoi = True
 
     elif request.method == 'POST' and 'btnsupprimer' in request.POST:
@@ -139,7 +139,7 @@ def calculdejloisir(request):
             duree = formDej.cleaned_data['duree']
             coef_act = act.coef
             dp = duree * coef_act
-            Travail.objects.create(dossierTrav=dossier,categorieTrav=cat,activiteTrav=act,dureeTrav=duree)
+            Travail.objects.create(dossierTrav=dossier,categorieTrav=cat,activiteTrav=act,dureeTrav=duree,coefTrav=coef_act)
             envoi = True
 
     elif request.method == 'POST' and 'btnsupprimer' in request.POST:
@@ -170,7 +170,7 @@ def calculdejsport(request):
             duree = formDej.cleaned_data['duree']
             coef_act = act.coef
             dp = duree * coef_act
-            Travail.objects.create(dossierTrav=dossier,categorieTrav=cat,activiteTrav=act,dureeTrav=duree)
+            Travail.objects.create(dossierTrav=dossier,categorieTrav=cat,activiteTrav=act,dureeTrav=duree,coefTrav=coef_act)
             envoi = True
     elif request.method == 'POST' and 'btnterminer' in request.POST:
         # dossier.dernier=False
@@ -276,7 +276,6 @@ def calculdejresultat(request):
 
     # Calcul DE Professionnelles
     DEProfessionnelles = calculDE( "Professionnelles", pros, MB, TD )
-
     # Calcul DE Usuelles
     DEUsuelles = calculDE( "Usuelles", usuelles, MB, TD )
 
@@ -297,7 +296,7 @@ def calculdejresultat(request):
         pLois=round(DELoisirs/total,2)*100
         pSport=round(DESports/total,2)*100
 
-    MB = round(MB,2)
+
 
     # Détermination du niveau d'activité journalière
     if DE < naj1:
@@ -309,8 +308,68 @@ def calculdejresultat(request):
     else:
         niveau = "très intense"
 
-    #on crée un json avec les DE
+    #on calcul les DE par niveau d intensité
+    prosNiveau1 = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Professionnelles').filter(coefTrav__lt=2.49)
+    prosNiveau2 = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Professionnelles').filter(coefTrav__gt=2.5).filter(coefTrav__lt=5.0)
+    prosNiveau3 = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Professionnelles').filter(coefTrav__gt=5.01)
 
+    sportsNiveau1 = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Sportives').filter(coefTrav__lt=2.49)
+    sportsNiveau2 = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Sportives').filter(coefTrav__gt=2.5).filter(coefTrav__lt=5.0)
+    sportsNiveau3 = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Sportives').filter(coefTrav__gt=5.01)
+
+    usuellesNiveau1 = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Usuelles').filter(coefTrav__lt=2.49)
+    usuellesNiveau2 = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Usuelles').filter(coefTrav__gt=2.5).filter(coefTrav__lt=5.0)
+    usuellesNiveau3 = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Usuelles').filter(coefTrav__gt=5.01)
+
+    loisirsNiveau1 = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Loisirs').filter(coefTrav__lt=2.49)
+    loisirsNiveau2 = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Loisirs').filter(coefTrav__gt=2.5).filter(coefTrav__lt=5.0)
+    loisirsNiveau3 = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Loisirs').filter(coefTrav__gt=5.01)
+
+
+    pros_Niveau1 =calculDE( "Professionnelles", prosNiveau1, MB, TD )
+    usuelles_Niveau1=calculDE( "Usuelles", usuellesNiveau1, MB, TD )
+    loisirs_Niveau1=calculDE( "Loisirs", loisirsNiveau1, MB, TD )
+    sports_Niveau1=calculDE( "Sportives", sportsNiveau1, MB, TD )
+
+    pros_Niveau2 =calculDE( "Professionnelles", prosNiveau2, MB, TD )
+    usuelles_Niveau2=calculDE( "Usuelles", usuellesNiveau2, MB, TD )
+    loisirs_Niveau2=calculDE( "Loisirs", loisirsNiveau2, MB, TD )
+    sports_Niveau2=calculDE( "Sportives", sportsNiveau2, MB, TD )
+
+    pros_Niveau3 =calculDE( "Professionnelles", prosNiveau3, MB, TD )
+    usuelles_Niveau3=calculDE( "Usuelles", usuellesNiveau3, MB, TD )
+    loisirs_Niveau3=calculDE( "Loisirs", loisirsNiveau3, MB, TD )
+    sports_Niveau3=calculDE( "Sportives", sportsNiveau3, MB, TD )
+
+    DENiveau1 = pros_Niveau1+usuelles_Niveau1+loisirs_Niveau1+sports_Niveau1
+    DENiveau2 = pros_Niveau2+usuelles_Niveau2+loisirs_Niveau2+sports_Niveau2
+    DENiveau3 = pros_Niveau3+usuelles_Niveau3+loisirs_Niveau3+sports_Nivseau3
+
+    total=DENiveau1+DENiveau2+DENiveau3
+
+    if total > 0:
+        pNiveau1=round(DENiveau1/total,2)*100
+        pNiveau2=round(DENiveau2/total,2)*100
+        pNiveau3=round(DENiveau3/total,2)*100
+
+        pProsNiveau1=round(pros_Niveau1/total,2)*100
+        pProsNiveau2=round(pros_Niveau2/total,2)*100
+        pProsNiveau3=round(pros_Niveau3/total,2)*100
+
+        pUsuellesNiveau1=round(usuelles_Niveau1/total,2)*100
+        pUsuellesNiveau2=round(usuelles_Niveau2/total,2)*100
+        pUsuellesNiveau3=round(usuelles_Niveau3/total,2)*100
+
+        pLoisirsNiveau1=round(loisirs_Niveau1/total,2)*100
+        pLoisirsNiveau2=round(loisirs_Niveau2/total,2)*100
+        pLoisirsNiveau3=round(loisirs_Niveau3/total,2)*100
+
+        pSportsNiveau1=round(sports_Niveau1/total,2)*100
+        pSportsNiveau2=round(sports_Niveau2/total,2)*100
+        pSportsNiveau3=round(sports_Niveau3/total,2)*100
+
+
+    MB = round(MB,2)
     # Enregistrement des informations dans le dossier
     dossier = Dossier.objects.filter(dernier=True).reverse()[0]
     dossier.imc = imc

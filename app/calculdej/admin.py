@@ -20,7 +20,7 @@ class DossierAdmin(admin.ModelAdmin):
     search_fields  = ('date', 'auteur')
 
 class TravailAdmin(admin.ModelAdmin):
-    list_display   = ('dossierTrav','categorieTrav','activiteTrav','dureeTrav')
+    list_display   = ('dossierTrav','categorieTrav','activiteTrav','dureeTrav','coefTrav')
     list_filter    = ('dossierTrav',)
     ordering       = ('dossierTrav',)
     search_fields  = ('dossierTrav',)

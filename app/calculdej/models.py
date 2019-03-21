@@ -49,3 +49,4 @@ class Travail(models.Model):
     categorieTrav = models.ForeignKey('Categorie', on_delete=models.CASCADE)
     activiteTrav = models.ForeignKey('Activite', on_delete=models.CASCADE)
     dureeTrav = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
+    coefTrav = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)

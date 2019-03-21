@@ -86,7 +86,7 @@ var myChart = new Chart(ctx, {
     options: {
         title: {
             display: true,
-            text: 'Répartition des domaines d activité en pourcentage sur 24h',
+            text: 'Répartition de la DEJ par catégories d activités ',
             fontSize:22
         }
     }
@@ -94,6 +94,112 @@ var myChart = new Chart(ctx, {
 });
 </script>
 
+<canvas id="myChart2" width="400" height="400"></canvas>
+
+<script>
+var label = [];
+var results = [];
+label = ["Niveau1","Niveau2","Niveau3"]
+results = [{{pNiveau1}},{{pNiveau2}},{{pNiveau3}}]
+
+console.log(label);
+console.log(results);
+
+var ctx = document.getElementById("myChart2").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: label,
+        datasets: [{
+            label: '# of Votes',
+            data: results,
+            backgroundColor: [
+                'rgba(0, 255, 0, 0.2)',
+                'rgba(0, 0, 255, 0.2)',
+                'rgba(255, 0, 0, 0.2)'
+            ],
+            borderColor: [
+                'rgba(0, 255, 0, 1)',
+                'rgba(0, 0, 255, 1)',
+                'rgba(255, 0, 0, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        title: {
+            display: true,
+            text: 'DEJ par niveau d intensité',
+            fontSize:22
+        }
+    }
+
+});
+</script>
+
+
+<canvas id="myChart3" width="400" height="400"></canvas>
+
+
+
+<script>
+var label = [];
+var results = [];
+label = ["Pro-N1","Pro-N2","Pro-N3","Usuelles-N1","Usuelles-N2","Usuelles-N3","Loisirs-N1","Loisirs-N2","Loisirs-N3","Sports-N1","Sports-N2","Sports-N3"]
+results = [{{pProsNiveau1}},{{pProsNiveau2}},{{pProsNiveau3}},{{pUsuellesNiveau1}},{{pUsuellesNiveau2}},{{pUsuellesNiveau3}},{{pLoisirsNiveau1}},{{pLoisirsNiveau2}},{{pLoisirsNiveau3}},{{pSportsNiveau1}},{{pSportsNiveau2}},{{pSportsNiveau3}}]
+
+console.log(label);
+console.log(results);
+
+var ctx = document.getElementById("myChart3").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: label,
+        datasets: [{
+            label: '# of Votes',
+            data: results,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 255, 255, 0.2)',
+                'rgba(0, 0, 0, 0.2)',
+                'rgba(206, 206, 206, 0.2)',
+                'rgba(237, 127, 16, 0.2)',
+                'rgba(253, 108, 158, 0.2)',
+                'rgba(102, 0, 153, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 255, 255, 1)',
+                'rgba(0, 0, 0, 1)',
+                'rgba(206, 206, 206, 1)',
+                'rgba(237, 127, 16, 1)',
+                'rgba(253, 108, 158, 1)',
+                'rgba(102, 0, 153, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        title: {
+            display: true,
+            text: 'DEJ par catégories et niveaux d intensité',
+            fontSize:22
+        }
+    }
+
+});
+</script>
 {% endblock %}
 
 {% block footer %}
