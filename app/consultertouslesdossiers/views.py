@@ -25,7 +25,13 @@ def consultertouslesdossiers(request):
         dossier = Dossier.objects.get(id=id_dossier)
         auteur = dossier.auteur
         date = dossier.date
-        imc = dossier.imc
+        taille = dossier.taille
+        poids = dossier.poids
+        if taille > 0:
+            imc = round((poids/((taille/100)*(taille/100))),2)
+        else:
+            imc = 0
+        pathologie = dossier.pathologie
         de = dossier.de
 
     return render(request, 'consultertouslesdossiers/consultertouslesdossiers.html', locals())

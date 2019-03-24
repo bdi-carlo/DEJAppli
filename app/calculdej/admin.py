@@ -14,7 +14,7 @@ class ActiviteAdmin(admin.ModelAdmin):
    search_fields  = ('titre', 'categorie')
 
 class DossierAdmin(admin.ModelAdmin):
-    list_display   = ('date','auteur','imc','age','sexe','de','dernier')
+    list_display   = ('date','auteur','taille','poids','pathologie','age','sexe','de','dernier')
     list_filter    = ('auteur',)
     ordering       = ('auteur', )
     search_fields  = ('date', 'auteur')

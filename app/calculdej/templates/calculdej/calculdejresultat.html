@@ -1,13 +1,15 @@
-{% extends "baseActivite.html" %}
+{% extends "baseResultats.html" %}
 
 {% block title %}DEJAppli - Ma DEJ{% endblock %}
 {% block header %}<h1>Résultats</h1>{% endblock %}
 
 {% block explication %}
 
+<h4>Voici vos résultats</h4>
+
 {% endblock %}
 
-{% block form %}
+{% block datas %}
 
 <table class="table table-bordered table-hover">
   <thead class="thead-dark">
@@ -18,16 +20,20 @@
    </thead>
    <tbody>
      <tr>
-       <td>IMC</td>
+       <td>IMC (kg/m2)</td>
        <td>{{ imc }}</td>
      </tr>
      <tr>
-       <td>Métabolisme de base</td>
+       <td>Métabolisme de base (kcal/j)</td>
        <td>{{ MB }}</td>
      </tr>
      <tr>
-       <td>DEJ</td>
-       <td>{{ DE }}</td>
+       <td>Dépense énergétique totale (kcal/j)</td>
+       <td>{{ DET }}</td>
+     </tr>
+     <tr>
+       <td>Dépense énergétique instantanée (kcal/min)</td>
+       <td>{{ DEI }}</td>
      </tr>
      <tr>
        <td>Niveau d'activité journalière</td>
@@ -39,7 +45,7 @@
 {% endblock %}
 
 
-{% block tab %}
+{% block graphique3 %}
 
 <div class="row col-sm-offset-2 col-sm-8 col-sm-offset-2">
 
@@ -94,7 +100,15 @@ var myChart = new Chart(ctx, {
 });
 </script>
 
+{% endblock %}
+
+{% block graphique2 %}
+
+<div class="row col-sm-offset-2 col-sm-8 col-sm-offset-2">
+
 <canvas id="myChart2" width="400" height="400"></canvas>
+
+</div>
 
 <script>
 var label = [];
@@ -137,10 +151,15 @@ var myChart = new Chart(ctx, {
 });
 </script>
 
+{% endblock %}
+
+{% block graphique1 %}
+
+<div class="row col-sm-offset-2 col-sm-8 col-sm-offset-2">
 
 <canvas id="myChart3" width="400" height="400"></canvas>
 
-
+</div>
 
 <script>
 var label = [];
@@ -200,6 +219,7 @@ var myChart = new Chart(ctx, {
 
 });
 </script>
+
 {% endblock %}
 
 {% block footer %}

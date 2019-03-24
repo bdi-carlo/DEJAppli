@@ -286,7 +286,8 @@ def calculdejresultat(request):
     DESports = calculDE( "Sportives", sports, MB, TD )
 
     # Calcul DE Totale
-    DE = round(((DEProfessionnelles+DEUsuelles+DELoisirs+DESports)/24/60),2)
+    DET = round((DEProfessionnelles+DEUsuelles+DELoisirs+DESports),2)
+    DEI = round((DET/24/60),2)
     total = DEProfessionnelles+DEUsuelles+DELoisirs+DESports
 
     #pourcentages de chaques depenses energetiques
@@ -299,11 +300,11 @@ def calculdejresultat(request):
 
 
     # Détermination du niveau d'activité journalière
-    if DE < naj1:
+    if DEI < naj1:
         niveau = "faible"
-    elif DE < naj2:
+    elif DEI < naj2:
         niveau = "modéré"
-    elif DE < naj3:
+    elif DEI < naj3:
         niveau = "intense"
     else:
         niveau = "très intense"
@@ -343,7 +344,7 @@ def calculdejresultat(request):
 
     DENiveau1 = pros_Niveau1+usuelles_Niveau1+loisirs_Niveau1+sports_Niveau1
     DENiveau2 = pros_Niveau2+usuelles_Niveau2+loisirs_Niveau2+sports_Niveau2
-    DENiveau3 = pros_Niveau3+usuelles_Niveau3+loisirs_Niveau3+sports_Nivseau3
+    DENiveau3 = pros_Niveau3+usuelles_Niveau3+loisirs_Niveau3+sports_Niveau3
 
     total=DENiveau1+DENiveau2+DENiveau3
 
@@ -372,10 +373,12 @@ def calculdejresultat(request):
     MB = round(MB,2)
     # Enregistrement des informations dans le dossier
     dossier = Dossier.objects.filter(dernier=True).reverse()[0]
-    dossier.imc = imc
+    dossier.taille = taille
+    dossier.poids = poids
     dossier.age = age
     dossier.sexe = sexe
-    dossier.de = DE
+    dossier.de = DEI
+    dossier.pathologie = pathologie
 
     dossier.dernier=False
     dossier.save()

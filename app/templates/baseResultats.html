@@ -14,15 +14,36 @@
 
   <body>
     <div class="container">
+
       <header>
-        {% if user.is_authenticated %}<a id="home" href="{% url 'connexion' %}"> <img src="/static/img/home_icon.PNG" class="img-responsive float-left" alt="logo" width="50px" height="50px"> </a>{% endif %}
+        <a id="home" href="{% url 'connexion' %}"> <img src="/static/img/home_icon.PNG" class="img-responsive float-left" alt="logo" width="50px" height="50px"> </a>
         {% block header %}{% endblock %}
       </header>
 
+      <div class="row" id="explication">
+        <div class="col-sm-12">
+          {% block explication %}{% endblock %}
+        </div>
+      </div>
+
       <div class="row">
-        <section id="content" class="col-sm-offset-4 col-sm-4 col-sm-offset-4">
-          {% block content %}{% endblock %}
-        </section>
+        <div class="col-sm-6">
+          <div class="col-sm-offset-2 col-sm-8 col-sm-offset-2">
+            {% block datas %}{% endblock %}
+          </div>
+        </div>
+        <div class="col-sm-6">
+          {% block graphique1 %}{% endblock %}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          {% block graphique2 %}{% endblock %}
+        </div>
+        <div class="col-sm-6">
+          {% block graphique3 %}{% endblock %}
+        </div>
       </div>
 
       <footer>

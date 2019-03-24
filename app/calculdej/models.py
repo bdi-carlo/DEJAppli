@@ -35,10 +35,13 @@ class Dossier(models.Model):
     #titre = models.CharField(max_length=30,default="")
     date = models.DateTimeField(default=timezone.now, blank=True, verbose_name="Date création")
     auteur = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    imc = models.DecimalField(default=0.00,max_digits=5, decimal_places=2)
+    taille = models.DecimalField(default=0.0,max_digits=5, decimal_places=2)
+    poids = models.DecimalField(default=0.0,max_digits=5, decimal_places=2)
+    pathologie = models.CharField(default="",max_length=20)
     age = models.IntegerField(default=0)
     de = models.DecimalField(default=0.00,max_digits=5, decimal_places=2)
     sexe = models.CharField(default="",max_length=1)
+
     dernier = models.BooleanField(default=True)
 
     def modif(self):
