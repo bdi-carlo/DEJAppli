@@ -13,6 +13,8 @@
        </tr>
    </thead>
    <tbody>
+     <a class="btn btn-default" href="{% url 'downloadcsv' %}" role="button">Download</a>
+
        {% for d in dossiers %}
        <tr>
            <td>{{ d }}</td>
