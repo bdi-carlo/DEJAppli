@@ -11,6 +11,10 @@ from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from decimal import Decimal
+from weasyprint import HTML, CSS
+from django.conf import settings
+import os
+from django.template.loader import render_to_string
 
 poids = 0
 taille = 0
@@ -383,8 +387,18 @@ def calculdejresultat(request):
     dossier.dernier=False
     dossier.save()
 
-
-
+    if request.method == 'POST' and 'pdf' in request.POST:
+        module_dir = os.path.dirname(__file__)  # get current directory
+        file_path = os.path.join(module_dir, 'templates/calculdej/calculdejresultat.html')
+        file_pathCss=os.path.join(module_dir, "../static/css/style.css")
+        file_pathBase=os.path.join(module_dir, "../templates/baseActivite.html")
+        html_string = render_to_string(file_path, {'imc': imc,'DET': DET,'MB': MB,'DEI': DEI,'niveau':niveau})
+        HTML(string=html_string).write_pdf("pdfResultats.pdf" ,stylesheets=[CSS(file_pathCss),CSS("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")])
+        with open("pdfResultats.pdf", 'rb') as pdf:
+            response = HttpResponse(pdf.read(),content_type='application/pdf')
+            response['Content-Disposition'] = 'inline;filename=pdfResultats.pdf'
+            return response
+        pdf.closed
 
     return render(request, 'calculdej/calculdejresultat.html', locals())
 

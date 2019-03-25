@@ -1,229 +1,276 @@
-{% extends "baseResultats.html" %}
+<html lang="fr">
+  {% load static %}
 
-{% block title %}DEJAppli - Ma DEJ{% endblock %}
-{% block header %}<h1>Résultats</h1>{% endblock %}
+  <head>
+    <title>{% block title %}DEJAppli - Ma DEJ{% endblock %}</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 
-{% block explication %}
+  </head>
 
-<h4>Voici vos résultats</h4>
+  <body>
+    <div class="container">
 
-{% endblock %}
+      <header>
+        <a id="home" href="{% url 'connexion' %}"> <img src="/static/img/home_icon.PNG" class="img-responsive float-left" alt="logo" width="50px" height="50px"> </a>
+        {% block header %}<h1>Résultats</h1>{% endblock %}
+      </header>
 
-{% block datas %}
+      <div class="row" id="explication">
+        <div class="col-sm-12">
+          {% block explication %}
 
-<table class="table table-bordered table-hover">
-  <thead class="thead-dark">
-    <tr>
-      <th>Informations</th>
-      <th>Résultats</th>
-   </tr>
-   </thead>
-   <tbody>
-     <tr>
-       <td>IMC (kg/m2)</td>
-       <td>{{ imc }}</td>
-     </tr>
-     <tr>
-       <td>Métabolisme de base (kcal/j)</td>
-       <td>{{ MB }}</td>
-     </tr>
-     <tr>
-       <td>Dépense énergétique totale (kcal/j)</td>
-       <td>{{ DET }}</td>
-     </tr>
-     <tr>
-       <td>Dépense énergétique instantanée (kcal/min)</td>
-       <td>{{ DEI }}</td>
-     </tr>
-     <tr>
-       <td>Niveau d'activité journalière</td>
-       <td>{{ niveau }}</td>
-     </tr>
-   </<tbody>
-</table>
+          <h4>Voici vos résultats</h4>
 
-{% endblock %}
+          <form method="post">
+             {% csrf_token %}
+            <button class="btn btn-default" type="submit" name="pdf">Pdf</button>
+          </form>
+
+          {% endblock %}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="col-sm-offset-2 col-sm-8 col-sm-offset-2">
+            {% block datas %}
+
+            <table class="table table-bordered table-hover">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Informations</th>
+                  <th>Résultats</th>
+               </tr>
+               </thead>
+               <tbody>
+                 <tr>
+                   <td>IMC (kg/m2)</td>
+                   <td>{{ imc }}</td>
+                 </tr>
+                 <tr>
+                   <td>Métabolisme de base (kcal/j)</td>
+                   <td>{{ MB }}</td>
+                 </tr>
+                 <tr>
+                   <td>Dépense énergétique totale (kcal/j)</td>
+                   <td>{{ DET }}</td>
+                 </tr>
+                 <tr>
+                   <td>Dépense énergétique instantanée (kcal/min)</td>
+                   <td>{{ DEI }}</td>
+                 </tr>
+                 <tr>
+                   <td>Niveau d'activité journalière</td>
+                   <td>{{ niveau }}</td>
+                 </tr>
+               </<tbody>
+            </table>
+
+            {% endblock %}
+          </div>
+        </div>
+        <div class="col-sm-6">
+
+          {% block graphique1 %}
+
+          <div class="row col-sm-offset-2 col-sm-8 col-sm-offset-2">
+
+          <canvas id="myChart3" width="400" height="400"></canvas>
+
+          </div>
+
+          <script>
+          var label = [];
+          var results = [];
+          label = ["Pro-N1","Pro-N2","Pro-N3","Usuelles-N1","Usuelles-N2","Usuelles-N3","Loisirs-N1","Loisirs-N2","Loisirs-N3","Sports-N1","Sports-N2","Sports-N3"]
+          results = [{{pProsNiveau1}},{{pProsNiveau2}},{{pProsNiveau3}},{{pUsuellesNiveau1}},{{pUsuellesNiveau2}},{{pUsuellesNiveau3}},{{pLoisirsNiveau1}},{{pLoisirsNiveau2}},{{pLoisirsNiveau3}},{{pSportsNiveau1}},{{pSportsNiveau2}},{{pSportsNiveau3}}]
+
+          console.log(label);
+          console.log(results);
+
+          var ctx = document.getElementById("myChart3").getContext('2d');
+          var myChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                  labels: label,
+                  datasets: [{
+                      label: '# of Votes',
+                      data: results,
+                      backgroundColor: [
+                          'rgba(255, 99, 132, 0.2)',
+                          'rgba(54, 162, 235, 0.2)',
+                          'rgba(255, 206, 86, 0.2)',
+                          'rgba(75, 192, 192, 0.2)',
+                          'rgba(153, 102, 255, 0.2)',
+                          'rgba(255, 159, 64, 0.2)',
+                          'rgba(255, 255, 255, 0.2)',
+                          'rgba(0, 0, 0, 0.2)',
+                          'rgba(206, 206, 206, 0.2)',
+                          'rgba(237, 127, 16, 0.2)',
+                          'rgba(253, 108, 158, 0.2)',
+                          'rgba(102, 0, 153, 0.2)'
+                      ],
+                      borderColor: [
+                          'rgba(255,99,132,1)',
+                          'rgba(54, 162, 235, 1)',
+                          'rgba(255, 206, 86, 1)',
+                          'rgba(75, 192, 192, 1)',
+                          'rgba(153, 102, 255, 1)',
+                          'rgba(255, 159, 64, 1)',
+                          'rgba(255, 255, 255, 1)',
+                          'rgba(0, 0, 0, 1)',
+                          'rgba(206, 206, 206, 1)',
+                          'rgba(237, 127, 16, 1)',
+                          'rgba(253, 108, 158, 1)',
+                          'rgba(102, 0, 153, 1)'
+                      ],
+                      borderWidth: 1
+                  }]
+              },
+              options: {
+                  title: {
+                      display: true,
+                      text: 'DEJ par catégories et niveaux d intensité',
+                      fontSize:22
+                  }
+              }
+
+          });
+          </script>
+
+          {% endblock %}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+
+          {% block graphique2 %}
+
+          <div class="row col-sm-offset-2 col-sm-8 col-sm-offset-2">
+
+          <canvas id="myChart2" width="400" height="400"></canvas>
+
+          </div>
+
+          <script>
+          var label = [];
+          var results = [];
+          label = ["Niveau1","Niveau2","Niveau3"]
+          results = [{{pNiveau1}},{{pNiveau2}},{{pNiveau3}}]
+
+          console.log(label);
+          console.log(results);
+
+          var ctx = document.getElementById("myChart2").getContext('2d');
+          var myChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                  labels: label,
+                  datasets: [{
+                      label: '# of Votes',
+                      data: results,
+                      backgroundColor: [
+                          'rgba(0, 255, 0, 0.2)',
+                          'rgba(0, 0, 255, 0.2)',
+                          'rgba(255, 0, 0, 0.2)'
+                      ],
+                      borderColor: [
+                          'rgba(0, 255, 0, 1)',
+                          'rgba(0, 0, 255, 1)',
+                          'rgba(255, 0, 0, 1)'
+                      ],
+                      borderWidth: 1
+                  }]
+              },
+              options: {
+                  title: {
+                      display: true,
+                      text: 'DEJ par niveau d intensité',
+                      fontSize:22
+                  }
+              }
+
+          });
+          </script>
+
+          {% endblock %}
+        </div>
+        <div class="col-sm-6">
+          {% block graphique3 %}
+
+          <div class="row col-sm-offset-2 col-sm-8 col-sm-offset-2">
+
+          <canvas id="myChart" width="400" height="400"></canvas>
+
+          </div>
+
+          <script>
+          var label = [];
+          var results = [];
+          label = ["Professionnelles","Usuelles","Loisirs","Sports"]
+          results = [{{pPro}},{{pUse}},{{pLois}},{{pSport}}]
+
+          console.log(label);
+          console.log(results);
+
+          var ctx = document.getElementById("myChart").getContext('2d');
+          var myChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                  labels: label,
+                  datasets: [{
+                      label: '# of Votes',
+                      data: results,
+                      backgroundColor: [
+                          'rgba(255, 99, 132, 0.2)',
+                          'rgba(54, 162, 235, 0.2)',
+                          'rgba(255, 206, 86, 0.2)',
+                          'rgba(75, 192, 192, 0.2)',
+                          'rgba(153, 102, 255, 0.2)',
+                          'rgba(255, 159, 64, 0.2)'
+                      ],
+                      borderColor: [
+                          'rgba(255,99,132,1)',
+                          'rgba(54, 162, 235, 1)',
+                          'rgba(255, 206, 86, 1)',
+                          'rgba(75, 192, 192, 1)',
+                          'rgba(153, 102, 255, 1)',
+                          'rgba(255, 159, 64, 1)'
+                      ],
+                      borderWidth: 1
+                  }]
+              },
+              options: {
+                  title: {
+                      display: true,
+                      text: 'Répartition de la DEJ par catégories d activités ',
+                      fontSize:22
+                  }
+              }
+
+          });
+          </script>
+
+          {% endblock %}
+        </div>
+      </div>
+
+      <footer>
+        {% block footer %}
 
 
-{% block graphique3 %}
 
-<div class="row col-sm-offset-2 col-sm-8 col-sm-offset-2">
+        <a class="btn btn-default" href="{% url 'connexion' %}" role="button">Acceuil</a>
 
-<canvas id="myChart" width="400" height="400"></canvas>
+        {% endblock %}
+      </footer>
 
-</div>
+    </div>
+  </body>
 
-<script>
-var label = [];
-var results = [];
-label = ["Professionnelles","Usuelles","Loisirs","Sports"]
-results = [{{pPro}},{{pUse}},{{pLois}},{{pSport}}]
-
-console.log(label);
-console.log(results);
-
-var ctx = document.getElementById("myChart").getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: label,
-        datasets: [{
-            label: '# of Votes',
-            data: results,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        title: {
-            display: true,
-            text: 'Répartition de la DEJ par catégories d activités ',
-            fontSize:22
-        }
-    }
-
-});
-</script>
-
-{% endblock %}
-
-{% block graphique2 %}
-
-<div class="row col-sm-offset-2 col-sm-8 col-sm-offset-2">
-
-<canvas id="myChart2" width="400" height="400"></canvas>
-
-</div>
-
-<script>
-var label = [];
-var results = [];
-label = ["Niveau1","Niveau2","Niveau3"]
-results = [{{pNiveau1}},{{pNiveau2}},{{pNiveau3}}]
-
-console.log(label);
-console.log(results);
-
-var ctx = document.getElementById("myChart2").getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: label,
-        datasets: [{
-            label: '# of Votes',
-            data: results,
-            backgroundColor: [
-                'rgba(0, 255, 0, 0.2)',
-                'rgba(0, 0, 255, 0.2)',
-                'rgba(255, 0, 0, 0.2)'
-            ],
-            borderColor: [
-                'rgba(0, 255, 0, 1)',
-                'rgba(0, 0, 255, 1)',
-                'rgba(255, 0, 0, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        title: {
-            display: true,
-            text: 'DEJ par niveau d intensité',
-            fontSize:22
-        }
-    }
-
-});
-</script>
-
-{% endblock %}
-
-{% block graphique1 %}
-
-<div class="row col-sm-offset-2 col-sm-8 col-sm-offset-2">
-
-<canvas id="myChart3" width="400" height="400"></canvas>
-
-</div>
-
-<script>
-var label = [];
-var results = [];
-label = ["Pro-N1","Pro-N2","Pro-N3","Usuelles-N1","Usuelles-N2","Usuelles-N3","Loisirs-N1","Loisirs-N2","Loisirs-N3","Sports-N1","Sports-N2","Sports-N3"]
-results = [{{pProsNiveau1}},{{pProsNiveau2}},{{pProsNiveau3}},{{pUsuellesNiveau1}},{{pUsuellesNiveau2}},{{pUsuellesNiveau3}},{{pLoisirsNiveau1}},{{pLoisirsNiveau2}},{{pLoisirsNiveau3}},{{pSportsNiveau1}},{{pSportsNiveau2}},{{pSportsNiveau3}}]
-
-console.log(label);
-console.log(results);
-
-var ctx = document.getElementById("myChart3").getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: label,
-        datasets: [{
-            label: '# of Votes',
-            data: results,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 255, 255, 0.2)',
-                'rgba(0, 0, 0, 0.2)',
-                'rgba(206, 206, 206, 0.2)',
-                'rgba(237, 127, 16, 0.2)',
-                'rgba(253, 108, 158, 0.2)',
-                'rgba(102, 0, 153, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(255, 255, 255, 1)',
-                'rgba(0, 0, 0, 1)',
-                'rgba(206, 206, 206, 1)',
-                'rgba(237, 127, 16, 1)',
-                'rgba(253, 108, 158, 1)',
-                'rgba(102, 0, 153, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        title: {
-            display: true,
-            text: 'DEJ par catégories et niveaux d intensité',
-            fontSize:22
-        }
-    }
-
-});
-</script>
-
-{% endblock %}
-
-{% block footer %}
-
-<a class="btn btn-default" href="{% url 'connexion' %}" role="button">Acceuil</a>
-
-{% endblock %}
+</html>
