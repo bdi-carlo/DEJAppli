@@ -107,10 +107,7 @@ def calculdejprofessionnelle(request):
             return redirect(reverse(calculdejusuelle))
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Professionnelles')
-    travails_all = Travail.objects.filter(dossierTrav=dossier)
-    duree_tot = 0
-    for t in travails_all:
-        duree_tot += t.dureeTrav
+    
     return render(request, 'calculdej/calcdejprofessionnelle.html', locals())
 
 
@@ -148,9 +145,20 @@ def calculdejusuelle(request):
         return HttpResponseRedirect(request.path_info)
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Usuelles')
-    travails_all = Travail.objects.filter(dossierTrav=dossier)
+
+    travails_s = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Sportives')
+    travails_l = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Loisirs')
+    travails_u = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Usuelles')
+    travails_p = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Professionnelles')
+
     duree_tot = 0
-    for t in travails_all:
+    for t in travails_s:
+        duree_tot += t.dureeTrav/7
+    for t in travails_l:
+        duree_tot += t.dureeTrav/7
+    for t in travails_u:
+        duree_tot += t.dureeTrav
+    for t in travails_p:
         duree_tot += t.dureeTrav
     duree_depassee = False
     if duree_tot > 24:
@@ -187,9 +195,19 @@ def calculdejloisir(request):
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Loisirs')
 
-    travails_all = Travail.objects.filter(dossierTrav=dossier)
+    travails_s = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Sportives')
+    travails_l = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Loisirs')
+    travails_u = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Usuelles')
+    travails_p = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Professionnelles')
+
     duree_tot = 0
-    for t in travails_all:
+    for t in travails_s:
+        duree_tot += t.dureeTrav/7
+    for t in travails_l:
+        duree_tot += t.dureeTrav/7
+    for t in travails_u:
+        duree_tot += t.dureeTrav
+    for t in travails_p:
         duree_tot += t.dureeTrav
     duree_depassee = False
     if duree_tot > 24:
@@ -232,9 +250,19 @@ def calculdejsport(request):
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Sportives')
 
-    travails_all = Travail.objects.filter(dossierTrav=dossier)
+    travails_s = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Sportives')
+    travails_l = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Loisirs')
+    travails_u = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Usuelles')
+    travails_p = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Professionnelles')
+
     duree_tot = 0
-    for t in travails_all:
+    for t in travails_s:
+        duree_tot += t.dureeTrav/7
+    for t in travails_l:
+        duree_tot += t.dureeTrav/7
+    for t in travails_u:
+        duree_tot += t.dureeTrav
+    for t in travails_p:
         duree_tot += t.dureeTrav
     duree_depassee = False
     if duree_tot > 24:
