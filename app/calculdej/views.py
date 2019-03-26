@@ -124,8 +124,6 @@ def calculdejprofessionnelle(request):
             return redirect(reverse(calculdejusuelle))
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Professionnelles')
-    travails_all = Travail.objects.filter(dossierTrav=dossier)
-    duree_tot = calculDureeTotale( travails_all )
 
     return render(request, 'calculdej/calcdejprofessionnelle.html', locals())
 
