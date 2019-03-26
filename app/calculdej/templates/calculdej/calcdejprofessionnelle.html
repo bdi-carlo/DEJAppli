@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
 {% load crispy_forms_tags %}
+{% block css %}
+body{
+  background-image: url("/static/img/work.jpg");
+  background-size: cover;
+}
+{% endblock %}
 {% block title %}DEJAppli - Ma DEJ{% endblock %}
 {% block header %}<h1>Activités Professionnelles</h1>{% endblock %}
 
