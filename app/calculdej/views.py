@@ -36,6 +36,20 @@ def calculdejmb(request):
     global age
     global pathologie
 
+    quitter1 = False
+    if request.method == 'GET':
+        a = request.GET.get('calculdejprofessionnelle')
+        b = request.GET.get('calculdejusuelle')
+        c = request.GET.get('calculdejloisir')
+        d = request.GET.get('calculdejsport')
+        if a is None:
+            quitter1 = True
+        if b is None:
+            quitter1 = True
+        if c is None:
+            quitter1 = True
+        if d is None:
+            quitter1 = True
 
     formImc = CalculMBForm(request.POST or None)
     if request.method == 'POST' and 'btnsuivantt' in request.POST:
@@ -48,6 +62,11 @@ def calculdejmb(request):
             return redirect(reverse(calculdejprofessionnelle))
 
     return render(request, 'calculdej/calculdejmb.html', locals())
+
+
+@login_required
+def alertmsg(request):
+    return render(request, 'calculdej/alertmsg.html', locals())
 
 
 @login_required
@@ -94,6 +113,11 @@ def calculdejprofessionnelle(request):
 
 @login_required
 def calculdejusuelle(request):
+
+    quitter = False
+    if request.method == 'GET' and (not ('btnsuivant' in request.GET)):
+        quitter = True
+
     formDej = CalculDejForm(request.POST or None)
     formDej.CatUsuelles()
     cat = None

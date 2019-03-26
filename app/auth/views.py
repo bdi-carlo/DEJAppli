@@ -5,9 +5,11 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm
 from .forms import CustomUserCreationForm
+from calculdej.models import Dossier
 
 def connexion(request):
     error = False
+
     if request.method == "POST":
         form = ConnexionForm(request.POST)
         if form.is_valid():
@@ -21,6 +23,10 @@ def connexion(request):
                 error = True
     else:
         form = ConnexionForm()
+
+    dossier = Dossier.objects.filter(dernier=True)
+    if dossier:
+        Dossier.objects.filter(dernier=True).delete()
 
     return render(request, 'connexion.html', locals())
 

@@ -10,4 +10,5 @@ urlpatterns = [
     path('calculdejsport', views.calculdejsport, name='calculdejsport'),
     path('calculdejresultat', views.calculdejresultat, name='calculdejresultat'),
     path('load_act/', views.load_act, name='load_act'),
+    path('alertmsg/', views.alertmsg, name='alertmsg'),
 ]
