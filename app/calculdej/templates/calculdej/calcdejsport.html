@@ -74,8 +74,7 @@
 
 <form method="post">
   {% csrf_token %}
-  <button class="btn btn-default" type="submit" name="btnterminer">Terminer</button>
-    <!-- <a href="{% url 'calculdejresultat' %}"> <input type="button" name="btnterminer" value="Terminer"> </a> -->
+  <a class="btn btn-default" href="{% url 'calculdejresultat' %}" role="button">Terminer</a>
 </form>
 
 {% endblock %}
