@@ -106,8 +106,11 @@ def calculdejprofessionnelle(request):
 
             return redirect(reverse(calculdejusuelle))
 
-
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Professionnelles')
+    travails_all = Travail.objects.filter(dossierTrav=dossier)
+    duree_tot = 0
+    for t in travails_all:
+        duree_tot += t.dureeTrav
     return render(request, 'calculdej/calcdejprofessionnelle.html', locals())
 
 
@@ -145,6 +148,13 @@ def calculdejusuelle(request):
         return HttpResponseRedirect(request.path_info)
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Usuelles')
+    travails_all = Travail.objects.filter(dossierTrav=dossier)
+    duree_tot = 0
+    for t in travails_all:
+        duree_tot += t.dureeTrav
+    duree_depassee = False
+    if duree_tot > 24:
+        duree_depassee = True
     return render(request, 'calculdej/calcdejusuelle.html', locals())
 
 @login_required
@@ -176,6 +186,15 @@ def calculdejloisir(request):
         return HttpResponseRedirect(request.path_info)
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Loisirs')
+
+    travails_all = Travail.objects.filter(dossierTrav=dossier)
+    duree_tot = 0
+    for t in travails_all:
+        duree_tot += t.dureeTrav
+    duree_depassee = False
+    if duree_tot > 24:
+        duree_depassee = True
+
     return render(request, 'calculdej/calcdejloisir.html', locals())
 
 @login_required
@@ -212,6 +231,14 @@ def calculdejsport(request):
         return HttpResponseRedirect(request.path_info)
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Sportives')
+
+    travails_all = Travail.objects.filter(dossierTrav=dossier)
+    duree_tot = 0
+    for t in travails_all:
+        duree_tot += t.dureeTrav
+    duree_depassee = False
+    if duree_tot > 24:
+        duree_depassee = True
     return render(request, 'calculdej/calcdejsport.html', locals())
 
 # Calcul d'une DE en fonction d'une Catégorie et de sa liste d'Activités
