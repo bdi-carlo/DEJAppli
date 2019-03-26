@@ -68,6 +68,23 @@ def calculdejmb(request):
 def alertmsg(request):
     return render(request, 'calculdej/alertmsg.html', locals())
 
+def calculDureeTotale( travails ):
+    # Calcul Durée Totale
+    duree = 0
+    for tmp in travails:
+        test = False
+        for cat in Categorie.objects.filter(typeCat="Sportives"):
+            if tmp.categorieTrav == cat:
+                test = True
+        for cat in Categorie.objects.filter(typeCat="Loisirs"):
+            if tmp.categorieTrav == cat:
+                test = True
+        if test:
+            duree += tmp.dureeTrav/7
+        else:
+            duree += tmp.dureeTrav
+
+    return round(duree, 2)
 
 @login_required
 def calculdejprofessionnelle(request):
@@ -108,9 +125,8 @@ def calculdejprofessionnelle(request):
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Professionnelles')
     travails_all = Travail.objects.filter(dossierTrav=dossier)
-    duree_tot = 0
-    for t in travails_all:
-        duree_tot += t.dureeTrav
+    duree_tot = calculDureeTotale( travails_all )
+
     return render(request, 'calculdej/calcdejprofessionnelle.html', locals())
 
 
@@ -149,12 +165,9 @@ def calculdejusuelle(request):
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Usuelles')
     travails_all = Travail.objects.filter(dossierTrav=dossier)
-    duree_tot = 0
-    for t in travails_all:
-        duree_tot += t.dureeTrav
-    duree_depassee = False
-    if duree_tot > 24:
-        duree_depassee = True
+    duree_tot = calculDureeTotale( travails_all )
+    duree_depassee = duree_tot > 24
+
     return render(request, 'calculdej/calcdejusuelle.html', locals())
 
 @login_required
@@ -186,14 +199,9 @@ def calculdejloisir(request):
         return HttpResponseRedirect(request.path_info)
 
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Loisirs')
-
     travails_all = Travail.objects.filter(dossierTrav=dossier)
-    duree_tot = 0
-    for t in travails_all:
-        duree_tot += t.dureeTrav
-    duree_depassee = False
-    if duree_tot > 24:
-        duree_depassee = True
+    duree_tot = calculDureeTotale( travails_all )
+    duree_depassee = duree_tot > 24
 
     return render(request, 'calculdej/calcdejloisir.html', locals())
 
@@ -233,12 +241,9 @@ def calculdejsport(request):
     travails = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Sportives')
 
     travails_all = Travail.objects.filter(dossierTrav=dossier)
-    duree_tot = 0
-    for t in travails_all:
-        duree_tot += t.dureeTrav
-    duree_depassee = False
-    if duree_tot > 24:
-        duree_depassee = True
+    duree_tot = calculDureeTotale( travails_all )
+    duree_depassee = duree_tot > 24
+
     return render(request, 'calculdej/calcdejsport.html', locals())
 
 # Calcul d'une DE en fonction d'une Catégorie et de sa liste d'Activités
@@ -315,19 +320,7 @@ def calculdejresultat(request):
         naj2 = 4.6
         naj3 = 6.0
 
-    # Calcul Durée Totale
-    for tmp in travails:
-        test = False
-        for cat in Categorie.objects.filter(typeCat="Sportives"):
-            if tmp.categorieTrav == cat:
-                test = True
-        for cat in Categorie.objects.filter(typeCat="Loisirs"):
-            if tmp.categorieTrav == cat:
-                test = True
-        if test:
-            TD += tmp.dureeTrav/7
-        else:
-            TD += tmp.dureeTrav
+    TD = calculDureeTotale( travails )
 
     # Calcul DE Professionnelles
     DEProfessionnelles = calculDE( "Professionnelles", pros, MB, TD )
