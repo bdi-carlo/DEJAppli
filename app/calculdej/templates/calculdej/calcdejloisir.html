@@ -1,6 +1,12 @@
 {% extends "baseActivite.html" %}
 
 {% load crispy_forms_tags %}
+{% block css %}
+body{
+  background-image: url("/static/img/loisir.jpg");
+  background-size: cover;
+}
+{% endblock %}
 {% block title %}DEJAppli - Ma DEJ{% endblock %}
 {% block header %}<h1>Activités Loisirs</h1>{% endblock %}
 
