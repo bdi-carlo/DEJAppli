@@ -1,12 +1,6 @@
 {% extends "base.html" %}
 
 {% load crispy_forms_tags %}
-{% block css %}
-body{
-  background-image: url("/static/img/home.png");
-  background-size: cover;
-}
-{% endblock %}
 {% block header %}
     {% if user.is_authenticated %}<h1>Bienvenue {{user.username}}</h1> <a id="deco" class="btn btn-danger btn-xs" href="/deconnexion" role="button">Déconnexion</a>{% else %}<h1>Connexion</h1>{% endif %}
 {% endblock %}
