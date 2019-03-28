@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 
+
   </head>
 
   <body>
@@ -25,12 +26,16 @@
 
           <h4>Voici vos résultats</h4>
 
+
+
+
           <form method="post">
-             {% csrf_token %}
-            <button class="btn btn-default" type="submit" name="pdf">Pdf</button>
+            {% csrf_token %}
+            <a class="btn btn-default" href="{% url 'generate_pdf' %}" role="button">PDF</a>
           </form>
 
           {% endblock %}
+
         </div>
       </div>
 
@@ -267,6 +272,8 @@
       </footer>
 
     </div>
+
   </body>
+
 
 </html>

@@ -425,26 +425,36 @@ def calculdejresultat(request):
     dossier.sexe = sexe
     dossier.de = DEI
     dossier.pathologie = pathologie
-
-    dossier.dernier=False
+    dossier.imc= imc
+    dossier.det=DET
+    dossier.mb=MB
+    dossier.niveau=niveau
     dossier.save()
 
-    if request.method == 'POST' and 'pdf' in request.POST:
-        module_dir = os.path.dirname(__file__)  # get current directory
-        file_path = os.path.join(module_dir, 'templates/calculdej/calculdejresultat.html')
-        file_pathCss=os.path.join(module_dir, "../static/css/style.css")
-        file_pathBase=os.path.join(module_dir, "../templates/baseActivite.html")
-        html_string = render_to_string(file_path, {'imc': imc,'DET': DET,'MB': MB,'DEI': DEI,'niveau':niveau})
-        HTML(string=html_string).write_pdf("pdfResultats.pdf" ,stylesheets=[CSS(file_pathCss),CSS("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")])
-        with open("pdfResultats.pdf", 'rb') as pdf:
-            response = HttpResponse(pdf.read(),content_type='application/pdf')
-            response['Content-Disposition'] = 'inline;filename=pdfResultats.pdf'
-            return response
-        pdf.closed
+
 
     return render(request, 'calculdej/calculdejresultat.html', locals())
 
 
+@login_required
+def generate_pdf(request):
+    module_dir = os.path.dirname(__file__)  # get current directory
+    file_path = os.path.join(module_dir, 'templates/calculdej/calculdejresultat.html')
+    file_pathCss=os.path.join(module_dir, "../static/css/style.css")
+    file_pathBase=os.path.join(module_dir, "../templates/baseActivite.html")
+
+    dossier = Dossier.objects.filter(dernier=True).reverse()[0]
+
+    html_string = render_to_string(file_path, {'imc': dossier.imc,'DET': dossier.det,'MB': dossier.mb,'DEI': dossier.de ,'niveau':dossier.niveau})
+    HTML(string=html_string, base_url=request.build_absolute_uri()).write_pdf("pdfResultats.pdf" ,stylesheets=[CSS(file_pathCss),CSS("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")])
+    with open("pdfResultats.pdf", 'rb') as pdf:
+        response = HttpResponse(pdf.read(),content_type='application/pdf')
+        response['Content-Disposition'] = 'inline;filename=pdfResultats.pdf'
+        return response
+    pdf.closed
+    dossier.dernier=False
+    dossier.save()
+    return render(request, 'calculdej/pdf.html',locals())
 
 @login_required
 def load_act(request):

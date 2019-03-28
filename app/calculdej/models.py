@@ -41,7 +41,10 @@ class Dossier(models.Model):
     age = models.IntegerField(default=0)
     de = models.DecimalField(default=0.00,max_digits=5, decimal_places=2)
     sexe = models.CharField(default="",max_length=1)
-
+    det=models.DecimalField(default=0.00,max_digits=10, decimal_places=2)
+    imc=models.DecimalField(default=0.00,max_digits=10, decimal_places=2)
+    mb=models.DecimalField(default=0.00,max_digits=10, decimal_places=2)
+    niveau=models.CharField(default="",max_length=20)
     dernier = models.BooleanField(default=True)
 
     def modif(self):
