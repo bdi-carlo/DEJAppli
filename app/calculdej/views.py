@@ -306,7 +306,7 @@ def calculdejresultat(request):
     usuelles = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Usuelles')
     loisirs = Travail.objects.filter(dossierTrav=dossier).filter(categorieTrav__typeCat__contains='Loisirs')
 
-    # Calcul du Métabolisme de Base
+    # Calcul du Métabolisme de Base, formule de Harris et Benedict
     if sexe == "M":
         MB = 13.707*float(poids)+492.3*(float(taille)/100)-6.673*int(age)+77.607
         naj1 = 2.5
