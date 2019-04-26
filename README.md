@@ -1,4 +1,5 @@
 # DEJAppli
+DEJAppli is a Django application intended to calculate the daily energy consumption by simulating a 24 hours day with differents activity.
 
 * pip3 install Django==2.0
 * pip3 install --upgrade --user django-crispy-forms
