@@ -8,4 +8,5 @@ urlpatterns = [
         url('calculdej/', include('calculdej.urls')),
         url('consulterdossier/', include('consulterdossier.urls')),
         url('consultertouslesdossiers/', include('consultertouslesdossiers.urls')),
+        url(r'^captcha/', include('captcha.urls')),
 ]

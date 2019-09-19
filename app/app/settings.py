@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'consultertouslesdossiers',
     'calculimc',
     'crispy_forms',
+    'captcha',
 ]
 
 MIDDLEWARE = [
